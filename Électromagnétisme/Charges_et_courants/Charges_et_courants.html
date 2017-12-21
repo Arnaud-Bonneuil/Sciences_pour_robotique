@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Charges et courants</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="../../CSS_et_JS/styles_impr.css"/>
+		<script type="text/javascript"
+			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/javascript" src="../../CSS_et_JS/visibilite_div.js"></script> 
+	</head>
+	<body>
+
+		<header>
+			<div id="application_document">Électromagnétisme</div>
+			<div id="titre_document">Charges et courants</div>
+		</header>
+
+		<section>
+		
+			<h1>Les différentes distributions</h1>
+			
+			<h2>Définitions</h2>
+			
+			<p>
+				On appelle charges libres des charges susceptibles d’effectuer des mouvements macroscopiques comme les électrons émis par un canon à 
+				électrons ou les porteurs de charge mobiles d’un conducteur.<br />
+				On appelle charges liées des charges ne pouvant effectuer qu’un mouvement d’amplitude limitée au sein de la matière à laquelle elles 
+				appartiennent comme les électrons des isolants.<br />
+				Le déplacement des charges libres ou liées engendre des courants libres ou des courants liés.<br />
+				Remarque&nbsp;: le déplacement des charges liées ne doit pas être négligé car il est à l’origine du mécanisme de polarisation des
+				diélectriques (isolants) plongés dans un champ extérieur, de sorte que ces charges liées font partie des sources du champ électrique.
+			</p>
+			
+			<h2>Distributions de charges</h2>
+			
+			<p>
+				A l’échelle microscopique les charges électriques peuvent être représentées par une distribution discrète&nbsp;:
+				\( (q_i)_{1\leq i\leq n} \).
+			</p>
+			
+			<p>
+				Dans le cas général, on préfère utiliser une modélisation volumique&#x202f;; on définit alors la densité volumique de charges 
+				\( \rho \) (en \(C.m^{-3}\)). Cette densité est une grandeur moyenne locale définie à une échelle mésoscopique&nbsp;: la charge 
+				élémentaire \(\delta q\) contenue dans un volume élémentaire \(d\tau\) centré en \(M\) est&nbsp;:<br />
+				$$ \quad \boxed{ \delta q = \rho(M)d\tau } $$
+			</p>
+			
+			<h3>Distribution surfacique de charges</h3>
+			
+			<p>
+				Si la distribution, à l’échelle macroscopique, présente l’aspect d’une nappe, on peut définir la densité surfacique de charges
+				\(\sigma(M,t) \) (en \(C.m^{-2}\))&nbsp;: la charge élémentaire \(\delta q\) portée par une surface élémentaire \(dS\) centrée 
+				en \(M\) est&nbsp;:<br />
+				$$ \quad \boxed{ \delta q = \sigma(M)dS } $$
+			</p>
+			
+			<h3>Distribution linéique de charges</h3>
+			
+			<p>
+				Si la distribution, à l’échelle macroscopique, présente l’aspect d’un fil, on peut définir la densité linéique de charges
+				\(\lambda(M,t) \) (en \(C.m^{-1}\))&nbsp;: la charge élémentaire \(\delta q\) portée par une longueur élémentaire \(d\ell\) centrée 
+				en \(M\) est&nbsp;:<br />
+				$$ \quad \boxed{ \delta q = \lambda(M)d\ell } $$
+			</p>
+			
+			<h2>Distributions de courants</h2>
+			
+			<h3>Cas unidimensionnel</h3>
+			
+			<p>
+				On étudie le mouvement d’ensemble des charges mobiles dans un cylindre. On suppose qu’il n’y a qu’un type de porteur: soit 
+				\( {\delta Q}_S \) la charge qui traverse \(S\) pendant une durée \(dt\)&nbsp;:
+			</p>
+			
+			<figure>
+				<img src="ressources/schema_cylindre_distributions_courants.png" alt="cylindre_distributions_courants"/>
+			</figure>
+			
+			<p>
+				Par définition,l’intensité du courant électrique associé à ce mouvement est&nbsp;:<br />
+				$$ \quad   \boxed{ \begin{aligned} I_S = \frac{ {\delta Q}_S }{ dt } \end{aligned} } $$
+			</p>
+			
+			<p>
+				Soient&nbsp;:<br />
+				&emsp;&mdash;&nbsp;\(n\) le nombre de porteurs par unité de volume&#x202f;;<br />
+				&emsp;&mdash;&nbsp;\(q\) la charge d’un porteur&#x202f;;<br />
+				&emsp;&mdash;&nbsp;\(\overrightarrow{v_m}\) la vitesse moyenne d’un porteur&#x202f;;<br />
+				&emsp;&mdash;&nbsp;\(dn\) le nombre de porteur traversant la surface \(S\) entre \(t\) et \(t + dt\).<br />
+				Les porteurs traversant la surface \(S\) entre \(t\) et \(t + dt\) sont dans le cylindre de section \(S\) et de génératrice 
+				\(\overrightarrow{v_m} dt\) d’où&nbsp;:<br />
+				$$ \quad dn = nSv_{m}dt $$
+				et
+				$$ \quad {\delta Q}_S = qdn $$
+				donc
+				$$
+				\begin{aligned}
+					& {\delta Q}_S = qnSv_{m}dt \\
+					\Rightarrow & I_S = qnSv_{m} = jS
+				\end{aligned}
+				$$
+				avec \( j = qnv_m = \rho_m v_m \)
+			</p>
+
+			<p>
+				L’intensité \(I_S\) du courant électrique traversant la surface \(S\) est égale au flux du vecteur densité de courant
+				\(\overrightarrow{j} = \rho_m\overrightarrow{v_m} \) où \(\rho_m\) est la densité volumique de porteurs de charges 
+				mobiles&nbsp;:
+				$$ \quad I_S = jS  $$
+				Unités&nbsp;: \(\overrightarrow{j}\) s’exprime en \( A.m^{-2} \) et I_S en \(A\).
+			</p>
+			
+			<h3>Cas général</h3>
+			
+			<figure>
+				<img src="ressources/schema_surface_distributions_courants.png" alt="surface_distributions_courants"/>
+			</figure>
+			
+			<p>
+				Soit une surface \(S\)&#x202f;; on cherche l’intensité \(I_S\) du courant électrique traversant la surface \(S\)&nbsp;:<br />
+				Avec les mêmes notations que précédement, les porteurs traversant la surface \(dS\) entre \(t\) et \(t + dt\) sont dans le cylindre de
+				section \(dS\) et de génératrice \(\overrightarrow{v_m} dt\) d’où&nbsp;:<br />
+				$$
+				\begin{aligned}
+					d^{2}n & = nd\overrightarrow{S}.\overrightarrow{v_m}dt \\
+						   & \Rightarrow {\delta^{2} Q}_S = qnd\overrightarrow{S}.\overrightarrow{v_m}dt \\
+						   & \Rightarrow {\delta Q}_S = \iint_{S} {\delta^{2} Q}_S = \iint_{S} qnd\overrightarrow{S}.\overrightarrow{v_m}dt \\
+					I_S    & = \frac{ {\delta Q}_S }{ dt } = \iint_{S} qnd\overrightarrow{S}.\overrightarrow{v_m}
+				\end{aligned}
+				$$
+			</p>
+			
+			<p>
+				L’intensité \(I_S\) du courant électrique traversant la surface \(S\) est égale au flux du vecteur densité de courant
+				\(\overrightarrow{j} = \rho_m\overrightarrow{v_m} \) où \(\rho_m = nq\) est la densité volumique de porteurs de charges mobiles&nbsp;:
+				$$ \quad I_S = \iint_{S} \overrightarrow{j}.d\overrightarrow{S} $$
+			</p>
+			
+			<p>
+				Remarques&nbsp;:<br />
+			</p>
+			
+			<p>
+				1. S’il y a plusieurs types de porteurs de charges (cas des électrolytes par exemple) alors&nbsp;:<br />
+				$$ \quad \overrightarrow{j} = \sum_{k=1}^{N} n_k.q_k.\overrightarrow{v_k} $$
+			</p>
+			
+			<p>
+				2. La densité volumique de charges \(\rho\) ne s’identifie pas nécessairement à celle des charges mobiles \(\rho_m\). Un métal 
+				globalement neutre (\(\rho=0\)) peut être le siège de courants créés par les déplacements des électrons de conduction.
+			</p>
+			
+			<p>
+				3. Si la distribution présente l’aspect d’une nappe on définit alors la densité de courant surfacique \( \overrightarrow{j_S} \)
+				(en \(A.m^{-1}\))&#x202f;; l’intensité \(I_C\) du courant électrique traversant la courbe \(C\) tracée sur la nappe surfacique et 
+				«&nbsp;orientée&nbsp;» par le vecteur \( \overrightarrow{u} \) (normal à la courbe et tangent à la nappe) est&nbsp;:<br />
+				$$ \quad I_C = \int{C} \overrightarrow{j_S}(M,t).\overrightarrow{u}d\ell $$
+			</p>
+			
+			<figure>
+				<img src="ressources/schema_nappe_distributions_courants.png" alt="nappe_surface_courants"/>
+			</figure>
+			
+			<p>
+				4. Dans le cas de courants filiformes on utilisera seulement les intensités de ces courants.
+			</p>
+			
+			<h1>Conservation de la charge électrique</h1>
+			
+			<h2>Principe de conservation</h2>
+			
+			<p>
+				L’expérience montre que la charge électrique est une grandeur conservative&nbsp;: la charge totale d’un système fermé se conserve au 
+				cours du temps.<br />
+				Ce principe de conservation de la charge est applicable dans toute expérience de physique.
+			</p>
+			
+			<h2>Loi locale de conservation de la charge électrique</h2>
+			
+			<h3>Cas unidimensionnel</h3>
+			
+			<figure>
+				<img src="ressources/schema_loi_locale_conservation_charge.png" alt=""/>
+			</figure>
+			
+			<p>
+				Le volume \(V\), compris entre les sections \(S\) en \(x\) et \(x + dx\), contient à l’instant \(t\) la charge mobile \(\delta q(t)\) 
+				avec&nbsp;:<br />
+				$$ \quad \delta q(t) = \rho(x,t)Sdx $$
+			</p>
+			
+			<p>
+				Pendant la durée \(dt\), le courant électrique est responsable de l’entrée de la charge \(j(x, t)Sdt\) et de la sortie de la charge
+				\(j(x + dx, t)Sdt\), donc d’une variation de la charge&nbsp;:<br/>
+				$$ d(\delta q) = j(x, t)Sdt - j(x + dx, t)Sdt = [j(x, t) - j(x + dx, t)] Sdt $$
+				La charge électrique se conserve, on a donc&nbsp;:<br/>
+				$$
+				\begin{aligned}
+					\frac{ d(\delta q) }{dt} & = [j(x, t) - j(x + dx, t)] S = \frac{ \partial ( \rho(x,t)Sdx ) }{\partial t} \\
+						   & \Rightarrow - \frac{ \partial j(x,t) }{\partial x}dx = \frac{ \partial \rho(x,t) }{\partial t}dx \\
+						   & \Rightarrow  \frac{ \partial j(x,t) }{\partial x} + \frac{ \partial \rho(x,t) }{\partial t} = 0
+				\end{aligned}
+				$$
+			</p>
+			
+			<p>
+				Dans le cas unidimensionnel la conservation de la charge électrique se traduit par l’éqation locale&nbsp;:<br/>
+				$$ \quad \boxed{ \begin{aligned} \frac{ \partial j(x,t) }{\partial x} + \frac{ \partial \rho(x,t) }{\partial t} = 0 \end{aligned} } $$
+			</p>
+			
+			<h3>Cas général</h3>
+			
+			<p>
+				Dans le cas à 3 dimensions on applique la conservation de la charge à un parallélépipède élémentaire placé en \(M\) et de cotés 
+				\(dx\), \(dy\), \(dz\).<br />
+				On effectue un bilan dans chaque direction.<br />
+				Le long de l’axe \(Ox\) on obtient&nbsp;:<br />
+				$$ \quad d(\delta q)_x = j_x(x,y,z,t)dydzdt - j_x(x+dx,y,z,t)dydzdt = - \frac{\partial j_x(x,y,z,t)}{\partial x}dxdydzdt $$
+				La conservation de la charge s’écrit alors&nbsp;:<br />
+				$$
+				\begin{aligned}
+					\frac{ \partial( \rho(x,y,z,t) d \tau ) }{ \partial t}  & = - \frac{ \partial j_x(x,y,z,t) } {\partial x} dxdydz 
+					- \frac{ \partial j_y(x,y,z,t) } {\partial y} dxdydz  - \frac{ \partial j_z(x,y,z,t) } {\partial z} dxdydz \\
+					& = - \operatorname{div}\overrightarrow{j} d \tau
+				\end{aligned}
+				$$
+			</p>
+			
+			<p>
+				Dans le cas tridimensionnel la conservation de la charge électrique se traduit par l’équation locale&nbsp;:<br />
+				$$ \quad \boxed{ \begin{aligned} \operatorname{div}\overrightarrow{j} + \frac{\partial \rho}{\partial t} = 0 \end{aligned} } $$
+			</p>
+			
+			<p>
+				Remarque&nbsp;: on obtient l’expression de cette loi dans un système de coordonnées donné en exprimant l’opérateur divergence
+				dans ce système de coordonnées.
+			</p>
+		
+			<h2>Loi intégrale de conservation de la charge électrique</h2>
+			
+			<p>
+				Soit un volume fini \(V\) de l’espace délimité par une surface (fermée) \(S\) fixe dans le référentiel d’étude.<br />
+				À un instant \(t\) la charge contenue dans ce volume est&nbsp;:<br />
+				$$ \quad Q(t) = \iiint_V \rho(M,t)d\tau $$
+				sa variation par unité de temps est donc&nbsp;:<br />
+				$$ \quad \frac{ dQ(t)}{dt} = \frac{d}{dt} \left( \iiint_V \rho(M,t)d\tau \right) = \iiint_V \frac{ \partial \rho(M,t) } { \partial t} d\tau $$
+			</p>
+			
+			<p>
+				D’après le principe de conservation de la charge électrique cette variation de charge est dûe aux échanges de charges avec le
+				milieu extérieur à travers la surface \(S\)&nbsp;:<br />
+				$$ \quad \frac{ dQ(t)}{dt} = I = - \iint_S \overrightarrow{j} . d \overrightarrow{S} $$
+				(\(I\) est le courant électrique entrant dans le volume \(V\) ) 
+			</p>
+				
+			<p>
+				Pour un volume fini \(V\) de l’espace délimité par une surface fermée \(S\) fixe dans le référentiel d’étude, la conservation de la 
+				charge électrique se traduit par l’équation intégrale&nbsp;:<br />
+				$$ \boxed{ \begin{aligned} \quad
+					\iiint_V \frac{\partial \rho(M,t)}{\partial t}d\tau = - \iint_S \overrightarrow{j} . d \overrightarrow{S} 
+				\end{aligned} }	$$
+			</p>
+			
+			<p>
+				Remarque&nbsp;: on retrouve l’équation locale de conservation de la charge à partir de l’équation intégrale&nbsp;:<br />
+				D’après le théorème de Green-Ostrogradsky&nbsp;:<br />
+				$$ \begin{aligned} \quad
+				\iiint_V \frac{\partial \rho(M,t)}{\partial t}d\tau & = - \iint_S \overrightarrow{j} . d \overrightarrow{S} 
+					 = \iiint_V \operatorname{div}\overrightarrow{j} d\tau \\
+					& \Rightarrow \iiint_V \left( \frac{\partial \rho(M,t)}{\partial t} + \operatorname{div}\overrightarrow{j} \right) d\tau = 0 \\
+					& \Rightarrow \frac{\partial \rho}{\partial t}  + \operatorname{div}\overrightarrow{j} = 0
+				\end{aligned} $$
+			</p>
+				
+			<h2>Cas des régimes permanents</h2>
+			
+			<p>
+				Dans le cas des régimes permanents (ou stationnaire) l’équation locale de conservation de la charge donne&nbsp;:<br />
+				$$ \operatorname{div}\overrightarrow{j} = - frac{\partial \rho(M,t)}{\partial t} = 0 $$
+			</p>
+			
+			<p>
+				En régime permanent le vecteur densité de courant est à flux conservatif. On a donc&nbsp;:<br />
+				&emsp;&mdash;&nbsp;le courant entrant dans un volume fixe donné est nul car le flux du vecteur densité de courant électrique
+				à travers une surface fermée est nul&#x202f;;<br />
+				&emsp;&mdash;&nbsp;le courant électrique a même valeur à travers toutes les sections d’un tube de courant donné.
+			</p>
+			
+			<h2>Approximations des régimes quasipermanents (ARQP ou ARQS)</h2>
+			
+			<p>
+				En électrocinétique les fils sont des tubes de courants et lorsque que nous parlons de l’intensité dans un fil (entre deux
+				noeuds voisins) nous supposons implicitement que cette intensité est unique et donc que \(\overrightarrow{j}\) est à flux conservatif.
+			</p>
+			
+			<p>
+				De même, la loi des noeuds est équivalente à annuler le flux du vecteur densité de courant électrique sur une surface
+				fermée entourant le noeud&nbsp;:<br />
+			</p>
+			
+			<figure>
+				<img src="ressources/schema_loi_des_noeuds.png" alt="schema_loi_des_noeuds"/>
+			</figure>
+			
+			<p>
+				$$ \begin{aligned} \quad
+					I_0 & = I_1 + I_2 \\
+					    & \Rightarrow \iint_{S_0} \overrightarrow{j} . d \overrightarrow{S} = 
+						\iint_{S_1} \overrightarrow{j} . d \overrightarrow{S} + 
+						\iint_{S_2} \overrightarrow{j} . d \overrightarrow{S} \\
+						& \Rightarrow \iint_{S} \overrightarrow{j} . d \overrightarrow{S} = 0
+				\end{aligned} $$
+			</p>
+			
+			<p>
+			
+			</p>
+				
+			
+			<h1>Conduction électrique</h1>
+			
+		</section>
+		
+	</body>
+</html>
+			
+			

@@ -1,0 +1,1 @@
+\Phi_{\mathscr{S}} = \oiint_{ \mathscr{S} }{  \overrightarrow{A(M,t)} \cdot \overrightarrow{d^2\mathscr{S}} }

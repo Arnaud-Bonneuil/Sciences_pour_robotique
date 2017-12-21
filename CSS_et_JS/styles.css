@@ -1,0 +1,312 @@
+/**************************************************************************************************\ 
+Mise en page
+\**************************************************************************************************/
+
+body{
+	background: #222222;
+	counter-reset: indice_figure;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	width: 21cm;
+	padding-top: 1cm;
+	padding-bottom: 1cm;
+	margin-top: 0.5cm;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+}
+
+#type_document{
+	float: left;
+	margin-left: 1.25cm;
+}
+#application_document{
+	float: right;
+	margin-right: 1.25cm;
+}
+#titre_document{
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 20pt;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 2cm;
+	margin-left: 1.25cm;
+	margin-right: 1.25cm;
+	padding: 0.1cm;
+	background: #FFFFFF;
+	border: solid 2px black;
+}
+
+nav{
+	display: none;
+	width: 21cm;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1.2cm;
+	padding-bottom: 0;
+	background: #FFFFFF;
+	counter-reset: compteur_titre_1;
+}
+span.h1_nav{
+    margin: 0 0 0 0;
+    counter-reset: compteur_titre_2;
+}
+span.h1_nav::before {
+    counter-increment: compteur_titre_1;
+    content: counter(compteur_titre_1)". ";
+}
+span.h2_nav{
+    margin: 0 0 0 1em;
+    counter-reset: compteur_titre_3;
+}
+span.h2_nav::before {
+    counter-increment: compteur_titre_2;
+    content: counter(compteur_titre_1)"."counter(compteur_titre_2)". ";
+}
+span.h3_nav{
+    margin: 0 0 0 2em;
+    counter-reset: compteur_titre_4;
+}
+span.h3_nav::before { 
+    counter-increment: compteur_titre_3;
+    content: counter(compteur_titre_1)"."counter(compteur_titre_2)"."counter(compteur_titre_3)". ";
+}
+span.h4_nav{ margin: 0 0 0 3em; }
+span.h4_nav::before {
+    counter-increment: compteur_titre_4;
+    content: counter(compteur_titre_1)"."counter(compteur_titre_2)"."counter(compteur_titre_3)"."counter(compteur_titre_4)". ";
+}
+
+section{
+	width: 21cm;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1cm;
+	padding-bottom: 2cm;
+	background: #FFFFFF;
+	counter-reset: section;
+}
+
+section.draft {
+	background-image: url("draft.png");
+}
+
+footer{
+	width: 21cm;
+	margin-top: 0;
+	margin-bottom: 1cm;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1cm;
+	padding-bottom: 2cm;
+	background: #FFFFFF;
+}
+#auteur_document{
+	float: right;
+	padding-right: 1.25cm;
+}
+
+/**************************************************************************************************\
+Titres
+\**************************************************************************************************/
+h1_sans_num{
+	display: block;
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 16pt;
+	font-weight: normal;
+	border-bottom: 2px solid black;
+	margin: 16pt 1.25cm 0em 1.25cm;
+}
+
+h1{
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 16pt;
+	font-weight: normal;
+	border-bottom: 2px solid black;
+	margin: 16pt 1.25cm 0em 1.25cm;
+	counter-reset: sous-section;
+}
+h1::before {
+	counter-increment: section;
+	content: counter(section)". ";
+}
+h2{
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 14pt;
+	font-weight: normal;
+	border-bottom: 1px solid black;
+	margin: 14pt 1.25cm 0 1.5cm;
+	counter-reset: sous-sous-section;
+}
+h2::before {
+	counter-increment: sous-section;
+	content: counter(section)"."counter(sous-section)". ";
+}
+h3{
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 12pt;
+	font-weight: normal;
+	border-bottom: 1px solid black;
+	margin: 12pt 1.25cm 0 1.75cm;
+	counter-reset: sous-sous-sous-section;
+}
+h3::before {
+	counter-increment: sous-sous-section;
+	content: counter(section)"."counter(sous-section)"."counter(sous-sous-section)". ";
+}
+h4{
+	color: black;
+	font-family: "Times New Roman", serif;
+	font-size: 12pt;
+	font-weight: normal;
+	border-bottom: 1px dashed black;
+	margin: 12pt 1.25cm 0 2cm;
+}
+h4::before {
+	counter-increment: sous-sous-sous-section;
+	content: counter(section)"."counter(sous-section)"."counter(sous-sous-section)"."counter(sous-sous-sous-section)". ";
+}
+
+
+/**************************************************************************************************\ 
+Paragraphes
+\**************************************************************************************************/
+p{
+	font-family: "Times New Roman", serif; 
+	font-size: 12pt;
+	text-align: justify;
+	orphans: 3;
+	widows: 3;
+	margin-top: 12pt;
+	margin-bottom: 0;
+	margin-left: 1.25cm;
+	margin-right: 1.25cm;
+}
+
+sup {
+	font-size: 8pt;
+}
+
+span.mot-etranger{ font-style: italic; }
+
+span.barre-menu{
+	font-family: monospace; 
+	font-size: 10pt;
+	padding: 0.125em;
+	background: Silver;
+	border: 0.0625em solid black;
+	border-color: gray;
+	border-radius: 0.1875em;
+	vertical-align: 0.0625em;
+}
+
+
+span.variable{ font-style: italic; }
+span.fonction{ font-style: italic; font-weight: bold; }
+
+
+kbd{
+	font-family: monospace; 
+	font-size: 10pt;
+	padding: 0.125em;
+	border: 0.0625em solid gray;
+	border-radius: 0.1875em;
+	vertical-align: 0.0625em;
+}
+
+a{
+	color: Black;
+}
+
+/**************************************************************************************************\ 
+Images
+\**************************************************************************************************/
+figure{
+	margin-top: 12pt;
+	margin-bottom: 12pt;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	max-width : 100%;
+}
+
+figcaption{
+	text-align: center;
+	font-style: italic;
+}
+
+figcaption::before{ 
+	counter-increment: indice_figure;
+	content: "figure "counter(indice_figure)" : ";
+}
+
+img{
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	padding: 0;
+	/*text-align: center;*/
+	max-width : 18cm;
+}
+
+img.encadree{
+	border: 0.0625em solid Gray;
+	border-radius: 0.1875em;
+}
+
+/**************************************************************************************************\
+Relations mathématiques
+\**************************************************************************************************/
+.MathJax_Display {
+	text-align: left !important;
+	font-size: medium;
+}
+
+
+/**************************************************************************************************\
+Tableaux
+\**************************************************************************************************/
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Propriétés générales des tableaux */
+table {
+	border-collapse: collapse; /* les bordures des tableaux seront collées */
+	margin-left: auto; /* pour centrer les tableaux */
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0.5cm;
+	margin-bottom: 0.5cm;
+	max-width : 18.5cm;
+}
+caption /* titre du tableau */ {
+	text-align: left;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+}
+th {
+	border: 1px solid black;
+	text-align: center;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+td {
+	border: 1px solid black;
+	text-align: center;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+.justifie { text-align: justify; }

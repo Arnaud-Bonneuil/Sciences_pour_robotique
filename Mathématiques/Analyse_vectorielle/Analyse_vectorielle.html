@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Analyse vectorielle</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="../../CSS_et_JS/styles_impr.css"/>
+		<script type="text/javascript"
+			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/javascript" src="../../CSS_et_JS/visibilite_div.js"></script> 
+	</head>
+	<body>
+
+		<header>
+			<div id="application_document">Mathématiques</div>
+			<div id="titre_document">Analyse vectorielle</div>
+		</header>
+
+		<section>
+		
+			<h1>Champs</h1>
+			
+			<h2>Champ de scalaires</h2>
+			
+			<p>
+				Un champ de scalaires (par exemple un champ de températures) est défini en un point \(M\) et à un instant donné \(t\) par&nbsp;:</br>
+				$$ \begin{align}
+					\mathbb{R}^4 & \overset { V }{ \longrightarrow  } \mathbb{R} \\
+					(M,t) & \longrightarrow V(M,t)
+				\end{align} $$
+			</p>
+			
+			<p>
+			
+			<p>
+				Un champ de scalaires est uniforme s’il est indépendant du point \(M\), ce qui se note&nbsp;:</br> 
+				$$ \frac{\partial V}{\partial M} = 0 $$</br> 
+				En coordonnées cartésiennes cela donne&nbsp;:</br> 
+				$$ \frac{\partial V}{\partial x} = \frac{\partial V}{\partial y} = \frac{\partial V}{\partial z} = 0 $$
+			</p>
+			
+			<p>
+				Un champ de scalaires est stationnaire (ou permanent) s’il  garde la même valeur en un point \(M\) donné au cours du temps, ce qui se 
+				note&nbsp;:</br> 
+				$$ \frac{\partial V}{\partial t} = 0 $$
+			</p>
+			
+			<h2>Champ de vecteurs</h2>
+			
+			<h3>Définitions</h3>
+			
+			<p>
+				Un champ de vecteurs (par exemple un champ de forces) est défini en un point \(M\) et à un instant donné \(t\) par&nbsp;:</br>
+				$$ \begin{align}
+					\mathbb{R}^4 & \overset { \overrightarrow{A} }{ \longrightarrow  } \mathbb{R}^3 \\
+					(M,t) & \longrightarrow \overrightarrow{A(M,t)}
+				\end{align} $$
+			</p>
+			
+			<p>
+				Un champ de vecteurs est uniforme s’il est indépendant du point \(M\), ce qui se note&nbsp;:</br> 
+				$$ \frac{\partial \overrightarrow{A}}{\partial M} = \overrightarrow{0} $$</br> 
+				En coordonnées cartésiennes cela donne&nbsp;:</br> 
+				$$ \frac{\partial \overrightarrow{A}}{\partial x} = \frac{\partial \overrightarrow{A}}{\partial y} 
+				= \frac{\partial \overrightarrow{A}}{\partial z} = \overrightarrow{0} $$</br>
+				Avec \( \frac{\partial \overrightarrow{A}}{\partial x} = \left( \begin{matrix} \frac{\partial A_x}{\partial x} \\ 
+				\frac{\partial A_y}{\partial x}  \\ \frac{\partial A_z}{\partial x}  \end{matrix} \right) \)
+			</p>
+			
+			<p>
+				Un champ de vecteurs est stationnaire (ou permanent) s’il  garde la même valeur en un point \(M\) donné au cours du temps, ce qui se 
+				note&nbsp;:</br> 
+				$$ \frac{\partial \overrightarrow{A}}{\partial t} = \overrightarrow{0} $$</br> 
+				En coordonnées cartésiennes cela donne&nbsp;:</br> 
+				$$ \frac{\partial \overrightarrow{A}}{\partial t} = \left( \begin{matrix} \frac{\partial A_x}{\partial t} \\ 
+				\frac{\partial A_y}{\partial t}  \\ \frac{\partial A_z}{\partial t}  \end{matrix} \right) $$
+			</p>
+			
+			<h4>Lignes de champ</h4>
+			
+			<p>
+				À un instant \(t\) fixé, une ligne de champ relie les points \(M\) tels que le champ \(\overrightarrow{A(M,t)}\) soit tangent à la 
+				ligne. On l’oriente dans le sens du champ.
+			</p>
+			
+			<h4>Cartes de champ</h4>
+			
+			<p>
+				Un ensemble de lignes de champ passant par un réseau de points donnés constitue une carte de champ.
+			</p> 
+			
+			<h4>Tubes de champ</h4>
+			
+			<p>
+				L’ensemble des lignes de champ qui s’appuient sur un contour fermé \(\gamma\) constitue un tube de champ (c’est donc une surface). 
+			</p>
+			
+			<h3>Circulation d’un champ de vecteurs</h3>
+			
+			<p>
+				On définit la circulation d’un champ de vecteur à un instant \(t\) si le champ n’est pas stationnaire.
+			</p>
+			
+			<p>
+				Considérons un déplacement élémentaire \(d\overrightarrow{OM}\) à partir du point \(M\). Par définition, la circulation élémentaire du
+				champ de vecteurs \(\overrightarrow{A(M,t)}\) le long de ce déplacement élémentaire est&nbsp;:</br>
+				$$ \delta \mathscr{C} = \overrightarrow{A(M,t)}\cdot d\overrightarrow{OM} $$
+			</p>
+			
+			<p>
+				La circulation d’un champ de vecteurs le long d’un contour orienté \(\gamma\) est&nbsp;:</br>
+				$$ \mathscr{C}^{\gamma}_{M_1 \rightarrow M_2} = \int_{ M_1 }^{ M_2 }{ \overrightarrow{A(M,t)}\cdot d\overrightarrow{OM} } $$</br>
+				Elle dépend à priori du chemin \(\gamma\) choisi pour aller de \(M_1\) à \(M_2\).
+			</p>
+			
+			<p>
+				On a en conséquence \( \mathscr{C}^{\gamma}_{M_1 \rightarrow M_2} = -\mathscr{C}^{\gamma}_{M_2 \rightarrow M_1} \).
+			</p>
+			
+			<p>
+				Si le contour \(\gamma\) est fermé, on note&nbsp;:</br>
+				$$ \mathscr{C}^{\gamma} = \oint_{ \gamma }{ \overrightarrow{A(M,t)}\cdot d\overrightarrow{OM} } $$
+			</p>
+			
+			<h3>Flux d’un champ de vecteurs</h3>
+			
+			<p>
+				On définit le flux d’un champ de vecteur à un instant \(t\) si le champ n’est pas stationnaire. 
+			</p>
+			
+			<h4>Flux d’un champ de vecteurs à travers une surface élémentaire</h4>
+			
+			<p>
+				Considérons une surface élémentaire \(d^2\mathscr{S}\) autour d’un point \(M\). Cette surface est limitée par un contour élémentaire 
+				fermé \(\gamma\) dont l’orientation détermine celle du vecteur surface \(\overrightarrow{d^2\mathscr{S}}\) (de norme 
+				\(d^2\mathscr{S}\) orthogonal à l’élément de surface). 
+			</p>
+		
+			<p>
+				Le flux élémentaire du champ \(\overrightarrow{A(M,t)}\) à travers \(d^2\mathscr{S}\) est la grandeur orientée&nbsp;:</br>
+				$$ d^2\Phi = \overrightarrow{A(M,t)} \cdot \overrightarrow{d^2\mathscr{S}} $$
+			</p>
+		
+			<h4>Flux d’un champ de vecteurs à travers une surface finie</h4>
+		
+			<p>
+				Si la surface s’appuie sur un contour fermé \(\gamma\) orienté, on a par définition&nbsp;:</br>
+				$$ \Phi_{\mathscr{S}} = \iint_{ \mathscr{S} }{  \overrightarrow{A(M,t)} \cdot \overrightarrow{d^2\mathscr{S}} } $$
+				Ce flux dépend de la surface \(\mathscr{S}\) choisie s’appuyant sur \(\gamma\). Les vecteurs surface élémentaires sont orientés dès 
+				que le contour l’est.
+			</p>
+			
+			<p>
+				Si la surface est fermée, tous les vecteurs surfaces élémentaires sont orientés par convention de l’intérieur vers l’extérieur, et
+				on note&nbsp;:</br>
+				<!--$$ \Phi_{\mathscr{S}} =\oiint_{ \mathscr{S} }{  \overrightarrow{A(M,t)} \cdot \overrightarrow{d^2\mathscr{S}} } $$-->
+				$$ \Phi_{\mathscr{S}} = \bigcirc \!\!\!\!\!\!\!\!\iint_{ \mathscr{S} }{  \overrightarrow{A(M,t)} \cdot \overrightarrow{d^2\mathscr{S}} } $$
+			</p>
+		
+			<h1>Les opérateurs linéaires</h1>
+			
+			<h2>Opérateur formel nabla</h2>
+			
+			<p>
+				L’opérateur nabla \(\nabla\) tire son nom d’une lyre antique qui avait la même forme de triangle pointant vers le bas. Il s'agit d'un 
+				opérateur formel de \(\mathbb{R}^3\) défini en coordonnées cartésiennes par&nbsp;:<br />
+				$$ \overrightarrow\nabla = \left( 
+				\begin{matrix} 
+				\frac{\partial}{\partial x}  \\
+				\frac{\partial}{\partial y}  \\
+				\frac{\partial}{\partial z}  
+				\end{matrix} \right) 
+				$$
+			</p>
+			
+			<p>
+				On écrit \(\overrightarrow\nabla\) pour souligner que formellement, l’opérateur nabla a les caractéristiques d’un vecteur. Il ne contient 
+				certes pas de valeurs scalaires, mais on va utiliser ses éléments constitutifs (que l’on peut voir comme des opérations en attente 
+				d’argument &mdash;&nbsp;des opérateurs différentiels) très exactement comme on aurait utilisé les valeurs scalaires composant un 
+				vecteur.<br />
+				La notation nabla fournit un moyen commode pour exprimer les opérateurs vectoriels en coordonnées cartésiennes.
+			</p>
+			
+			<h2>Gradient</h2>
+			
+			<p>
+				Cet opérateur linéaire s’applique à un champ de scalaire \(V(M,t)\).
+			</p>
+			
+			<h3>Expression en coordonnées cartésiennes</h3>
+			
+			<p>
+				$$\overrightarrow{grad}(V) = 
+				\left( \begin{matrix} 
+				\frac{\partial V}{\partial x}  \\
+				\frac{\partial V}{\partial y}  \\
+				\frac{\partial V}{\partial z}  
+				\end{matrix} \right) 
+				= \overrightarrow{\nabla}(V) $$
+			</p>
+			
+			<h3>Expression en coordonnées cylindriques</h3>
+			
+			<p>
+				$$\overrightarrow{grad}(V) = 
+				\left( \begin{matrix} 
+				\frac{\partial V}{\partial r}  \\
+				\frac{1}{r}\frac{\partial V}{\partial \theta}  \\
+				\frac{\partial V}{\partial z}  
+				\end{matrix} \right) $$
+			</p>
+			
+			<h3>Expression en coordonnées sphériques</h3>
+			
+			<p>
+				$$\overrightarrow{grad}(V) = 
+				\left( \begin{matrix} 
+				\frac{\partial V}{\partial r}  \\
+				\frac{1}{r}\frac{\partial V}{\partial \theta}  \\
+				\frac{1}{r\sin(\theta)}\frac{\partial V}{\partial \varphi}  
+				\end{matrix} \right) $$
+			</p>
+			
+			<h3>Interprétation physique</h3>
+			
+			<p>
+				La norme du vecteur gradient «&nbsp;mesure&nbsp;» les variations spatiales locales 
+				de \(V\)&nbsp;: plus \(V\) varie fortement au voisinage de M, plus \(\left\| \overrightarrow{grad}(V) \right\| \) est grand.</br>
+				Le vecteur \( \overrightarrow{grad}(V) \) indique dans quelles direction et sens varie localement \(V\).
+			</p>
+			
+			<h2>Rotationnel</h2>
+			
+			<h3>Définition</h3>
+			
+			<p>
+				$$\overrightarrow{rot}\left(\overrightarrow{A}\right) = 
+				\left( \begin{matrix} 
+				\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\
+				\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\
+				\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}
+				\end{matrix} \right) 
+				= \overrightarrow{\nabla} \wedge \overrightarrow{A} $$
+			</p>
+			
+			<h3>Théorème de Stokes</h3>
+			
+			<h3>Expression en coordonnées cylindriques</h3>
+			
+			<p>
+				$$\overrightarrow{rot}\left(\overrightarrow{A}\right) = 
+				\left( \begin{matrix} 
+				\frac{1}{r}\frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \\
+				\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}  \\
+				\frac{1}{r} \left( \frac{\partial rA_\theta}{\partial r}  - \frac{\partial A_r}{\partial \theta} \right)
+				\end{matrix} \right) $$
+			</p>
+			
+			<h3>Expression en coordonnées sphériques</h3>
+			
+			<p>
+				$$\overrightarrow{rot}\left(\overrightarrow{A}\right) = 
+				\left( \begin{matrix} 
+				\frac{1}{r\sin(\theta)}\left(\frac{\partial A_\varphi \sin(\theta)}{\partial \theta} - \frac{\partial A_\theta}{\partial \varphi} \right) \\
+				\frac{1}{r\sin(\theta)}\frac{\partial A_r}{\partial \varphi} - \frac{1}{r}\frac{\partial rA_\varphi}{\partial r}  \\
+				\frac{1}{r} \left( \frac{\partial rA_\theta}{\partial r}  - \frac{\partial A_r}{\partial \theta} \right)
+				\end{matrix} \right) $$
+			</p>
+			
+			<h3>Interprétation physique</h3>
+			
+			<p>
+				Le rotationnel permet de quantifier le caractère tourbillonnaire d’un champ au voisinage d’un point.
+			</p>
+			
+			<h2>Divergence</h2>
+			
+			<h3>Définition</h3>
+			
+			<h3>Théorème de Green-Ostrogradski</h3>
+			
+			<h3>Interprétation physique</h3>
+			
+			<h2>Laplacien</h2>
+			
+			<h2>Formules utiles</h2>
+			
+			<h2>Théorème de Helmholtz</h2>
+			
+<!--
+			<h1>Introduction</h1>
+				
+			<h1>Opérateur formel nabla</h1>
+			
+			<p>
+				L’opérateur nabla \(\nabla\) tire son nom d’une lyre antique qui avait la même forme de triangle pointant vers le bas. Il s'agit d'un 
+				opérateur formel de \(\mathbb{R}^3\) défini en coordonnées cartésiennes par&nbsp;:<br />
+				$$ \quad \nabla = \left( 
+				\begin{matrix} 
+				\frac{\partial}{\partial x}  \\
+				\frac{\partial}{\partial y}  \\
+				\frac{\partial}{\partial z}  
+				\end{matrix} \right) 
+				$$
+			</p>
+			
+			<p>
+				On écrit aussi \(\vec\nabla\) pour souligner que formellement, l’opérateur nabla a les caractéristiques d’un vecteur. Il ne contient 
+				certes pas de valeurs scalaires, mais on va utiliser ses éléments constitutifs (que l’on peut voir comme des opérations en attente 
+				d’argument &mdash;&nbsp;des opérateurs différentiels) très exactement comme on aurait utilisé les valeurs scalaires composant un 
+				vecteur.<br />
+				La notation nabla fournit un moyen commode pour exprimer les opérateurs vectoriels en coordonnées cartésiennes.
+			</p>
+			
+			<h1>Opérateur différentiel gradient</h1>
+			
+			<h2>Définition physique</h2>
+			
+			<p>
+				Le gradient est un opérateur qui s’applique à un champ de scalaires et décrit un champ de vecteurs qui représente la variation de la 
+				valeur du champ scalaire dans l’espace. Pratiquement, le gradient indique la direction de la plus grande variation du champ scalaire 
+				et l’intensité de cette variation.
+			</p>
+			
+			<p>
+				On note le gradient d’un champ \(f\) ainsi&nbsp;:<br />
+				$$ \quad \overrightarrow{ \operatorname{grad} }(f) = \overrightarrow{ \nabla } f $$
+			</p>
+				
+			<h2>Exemple&nbsp;: gradient de température sur une dimension</h2>
+			
+			<p>
+				Supposons que l’on place une poutre rectiligne entre deux murs qui n’ont pas la même température, le mur de gauche étant le plus 
+				froid. On observe que la température de la poutre n’est pas constante et qu’elle varie de façon croissante de la gauche vers la 
+				droite. À ce phénomène thermodynamique, on associe un phénomène de flux de chaleur, lui-même lié à un gradient de température, 
+				c’est-à-dire à une variation le long de la poutre de la température.<br />
+				Si l’on part de l’extrémité gauche de la poutre avec une abscisse \(x = 0\) et que l’on atteint l’autre extrémité de la poutre pour 
+				une abscisse \(x = L\) (la longueur de la poutre), on définit la température en un point \(x\) que l’on écrit \(T(x)\). La 
+				température \(T\) est dite fonction de \(x\).<br />
+				Entre deux points très proches, distants d'une longueur \(\delta x\), on mesure un écart de température \(\delta T\). Au sens usuel, 
+				le gradient (de température) est justement le rapport entre ces deux grandeurs&nbsp;:<br />
+				$$ \quad \overrightarrow{\operatorname{grad}} T = \frac{\delta T}{\delta x} \cdot \vec i $$
+				Au sens analytique (mathématique), on parle de gradient si cette grandeur admet une limite quand \(\delta x\) tend vers 0, limite 
+				notée&nbsp;:<br />
+				$$ \quad \overrightarrow{ \nabla } T(x) = T'(x)\cdot \vec i = \frac{dT}{dx}(x)\cdot \vec i $$
+			</p>
+			
+			<h1>Opérateur divergence</h1>
+
+-->			
+		</section>
+	</body>
+</html>

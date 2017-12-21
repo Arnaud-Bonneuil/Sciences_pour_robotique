@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Équations différentielles</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="../../CSS_et_JS/styles_impr.css"/>
+		<script type="text/javascript"
+			src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/javascript" src="../../CSS_et_JS/visibilite_div.js"></script> 
+	</head>
+	<body>
+
+		<header>
+			<div id="application_document">Mathématiques</div>
+			<div id="titre_document">Équations différentielles</div>
+		</header>
+
+		<section>
+		
+			<h1>Introduction</h1>
+			
+			<h1>Équations différentielles du premier ordre</h1>
+			
+			<p>
+				$$ \frac{ds}{dt} + \frac{1}{\tau}s = e(t) $$
+			</p>
+			
+			<h2>Solution de l’équation sans second membre</h2>
+			
+			<p>
+				$$ \frac{ds}{dt} + \frac{1}{\tau}s = 0 $$
+			</p>
+			
+			<p>
+				$$ s(t) = A e^{ -t/\tau } $$
+			</p>
+			
+			<p>
+				La constante est déterminée grâce aux conditions initiales.
+			</p>
+			
+			<h1>Équations différentielles du second ordre</h1>
+			
+			<p>
+				$$ \frac{d^2s}{dt^2} + \frac{\omega_0}{Q}\frac{ds}{dt} + {\omega_0}^2 s = e(t) $$
+			</p>
+			
+			<p>
+				\(\omega_0\) est la pulsation propre.<br/>
+				\(Q\) est le facteur de qualité.
+			</p>
+			
+			<h2>Solution de l’équation sans second membre</h2>
+			
+			<h3>Avec amortissement</h3>
+			
+			<p>
+				$$ \frac{d^2s}{dt^2} + \frac{\omega_0}{Q}\frac{ds}{dt} + {\omega_0}^2 s = 0 $$
+			</p>
+			
+			<p>
+				Équation caractéristique&nbsp;:</br>
+				$$ r^2 + \frac{\omega_0}{Q}r + {\omega_0}^2 = 0 $$
+			</p>
+			
+			<p>
+				Déterminant&nbsp;:</br>
+				$$ \Delta = {\omega_0}^2 \left( \frac{1}{Q^2} - 4 \right) $$
+			</p>
+			
+			<h4>Régime apériodique (déterminant positif)</h4>
+			
+			<p>
+			
+			</p>
+			
+			<h4>Régime critique (déterminant nul)</h4>
+			
+			<p>
+			
+			</p>
+			
+			<h4>Régime pseudo&#x2010périodique (déterminant négatif)</h4>
+			
+			<p>
+			
+			</p>
+			
+			<h3>Sans amortissement</h3>
+			
+			<p>
+				$$ \frac{d^2s}{dt^2} + {\omega_0}^2 s = 0 $$
+			</p>
+			
+			<p>
+				$$ s(t) = A \cos( \omega_0 t + \varphi ) = A \cos( \omega_0 t )+ B \sin( \omega_0 t ) $$
+			</p>
+			
+			<p>
+				\(A\) est l’amplitude.<br/>
+				\(\varphi\) est la pahse.<br/>
+				Ces constantes sont déterminées grâce aux conditions initiales.
+			</p>
+			
+		</section>
+	</body>
+</html>
