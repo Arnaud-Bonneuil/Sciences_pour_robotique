@@ -7,10 +7,13 @@ body{
 	counter-reset: indice_figure;
 	margin: 0;
 	padding: 0;
+    --marge-gauche: 2.5cm;
+    --marge-droite: 2.5cm;
+    --largeur-page: 21cm;
 }
 
 header{
-	width: 21cm;
+	width: var(--largeur-page);
 	padding-top: 1cm;
 	padding-bottom: 1cm;
 	margin-top: 0.5cm;
@@ -21,11 +24,11 @@ header{
 
 #type_document{
 	float: left;
-	margin-left: 1.25cm;
+	margin-left: var(--marge-gauche);
 }
 #application_document{
 	float: right;
-	margin-right: 1.25cm;
+	margin-right: var(--marge-droite);
 }
 #titre_document{
 	color: black;
@@ -34,69 +37,25 @@ header{
 	font-weight: normal;
 	text-align: center;
 	margin-top: 2cm;
-	margin-left: 1.25cm;
-	margin-right: 1.25cm;
+	margin-left: var(--marge-gauche);
+	margin-right: var(--marge-droite);
 	padding: 0.1cm;
 	background: #FFFFFF;
 	border: solid 2px black;
 }
 
-nav{
-	display: none;
-	width: 21cm;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1.2cm;
-	padding-bottom: 0;
-	background: #FFFFFF;
-	counter-reset: compteur_titre_1;
-}
-span.h1_nav{
-    margin: 0 0 0 0;
-    counter-reset: compteur_titre_2;
-}
-span.h1_nav::before {
-    counter-increment: compteur_titre_1;
-    content: counter(compteur_titre_1)". ";
-}
-span.h2_nav{
-    margin: 0 0 0 1em;
-    counter-reset: compteur_titre_3;
-}
-span.h2_nav::before {
-    counter-increment: compteur_titre_2;
-    content: counter(compteur_titre_1)"."counter(compteur_titre_2)". ";
-}
-span.h3_nav{
-    margin: 0 0 0 2em;
-    counter-reset: compteur_titre_4;
-}
-span.h3_nav::before { 
-    counter-increment: compteur_titre_3;
-    content: counter(compteur_titre_1)"."counter(compteur_titre_2)"."counter(compteur_titre_3)". ";
-}
-span.h4_nav{ margin: 0 0 0 3em; }
-span.h4_nav::before {
-    counter-increment: compteur_titre_4;
-    content: counter(compteur_titre_1)"."counter(compteur_titre_2)"."counter(compteur_titre_3)"."counter(compteur_titre_4)". ";
-}
-
 section{
-	width: 21cm;
+	width: var(--largeur-page);
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 1cm;
 	padding-bottom: 2cm;
 	background: #FFFFFF;
-	counter-reset: section;
-}
-
-section.draft {
-	background-image: url("draft.png");
+	counter-reset: titre_1;
 }
 
 footer{
-	width: 21cm;
+	width: var(--largeur-page);
 	margin-top: 0;
 	margin-bottom: 1cm;
 	margin-left: auto;
@@ -105,36 +64,27 @@ footer{
 	padding-bottom: 2cm;
 	background: #FFFFFF;
 }
+
 #auteur_document{
 	float: right;
-	padding-right: 1.25cm;
+	padding-right: var(--marge-droite);
 }
 
 /**************************************************************************************************\
 Titres
 \**************************************************************************************************/
-h1_sans_num{
-	display: block;
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 16pt;
-	font-weight: normal;
-	border-bottom: 2px solid black;
-	margin: 16pt 1.25cm 0em 1.25cm;
-}
-
 h1{
 	color: black;
 	font-family: "Times New Roman", serif;
 	font-size: 16pt;
 	font-weight: normal;
 	border-bottom: 2px solid black;
-	margin: 16pt 1.25cm 0em 1.25cm;
-	counter-reset: sous-section;
+	margin: 16pt var(--marge-droite) 0 var(--marge-gauche);
+	counter-reset: titre_2;
 }
-h1::before {
-	counter-increment: section;
-	content: counter(section)". ";
+h1:before {
+	counter-increment: titre_1;
+	content: counter(titre_1)". ";
 }
 h2{
 	color: black;
@@ -142,12 +92,12 @@ h2{
 	font-size: 14pt;
 	font-weight: normal;
 	border-bottom: 1px solid black;
-	margin: 14pt 1.25cm 0 1.5cm;
-	counter-reset: sous-sous-section;
+	margin: 14pt var(--marge-droite) 0 var(--marge-gauche);
+	counter-reset: titre_3;
 }
-h2::before {
-	counter-increment: sous-section;
-	content: counter(section)"."counter(sous-section)". ";
+h2:before {
+	counter-increment: titre_2;
+	content: counter(titre_1)"."counter(titre_2)". ";
 }
 h3{
 	color: black;
@@ -155,12 +105,12 @@ h3{
 	font-size: 12pt;
 	font-weight: normal;
 	border-bottom: 1px solid black;
-	margin: 12pt 1.25cm 0 1.75cm;
-	counter-reset: sous-sous-sous-section;
+	margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
+	counter-reset: titre_4;
 }
-h3::before {
-	counter-increment: sous-sous-section;
-	content: counter(section)"."counter(sous-section)"."counter(sous-sous-section)". ";
+h3:before {
+	counter-increment: titre_3;
+	content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)". ";
 }
 h4{
 	color: black;
@@ -168,11 +118,11 @@ h4{
 	font-size: 12pt;
 	font-weight: normal;
 	border-bottom: 1px dashed black;
-	margin: 12pt 1.25cm 0 2cm;
+	margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
 }
-h4::before {
-	counter-increment: sous-sous-sous-section;
-	content: counter(section)"."counter(sous-section)"."counter(sous-sous-section)"."counter(sous-sous-sous-section)". ";
+h4:before {
+	counter-increment: titre_4;
+	content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)"."counter(titre_4)". ";
 }
 
 
@@ -183,20 +133,69 @@ p{
 	font-family: "Times New Roman", serif; 
 	font-size: 12pt;
 	text-align: justify;
-	orphans: 3;
-	widows: 3;
 	margin-top: 12pt;
 	margin-bottom: 0;
-	margin-left: 1.25cm;
-	margin-right: 1.25cm;
+	margin-left: var(--marge-gauche);
+	margin-right: var(--marge-droite);
 }
 
+a{
+	color: Black;
+}
+
+/* Exposant */
 sup {
 	font-size: 8pt;
 }
 
-span.mot-etranger{ font-style: italic; }
+/* Mots étrangers */
+i {
+    font-style: italic;
+}
 
+/* Citations */
+q { 
+    display: inline;
+}
+q:before { 
+    content: "«\2060\2005\2060";
+}
+q:after {
+    content: "\2060\2005\2060»";
+}
+
+/* Modification dans citation */
+span.modif:before {
+    content: "[\2060";
+}
+span.modif:after {
+    content: "\2060]";
+}  
+
+/* Incise */
+span.incise:before {
+    content: "—\2060\2005\2060";
+}
+span.incise:after {
+    content: "\2060\2005\2060—";
+}    
+
+/* Code en ligne */
+var{ font-style: italic; }
+
+span.fonction{ font-style: italic; font-weight: bold; }
+
+/* Touche de clavier */
+kbd{
+	font-family: monospace; 
+	font-size: 10pt;
+	padding: 0.125em;
+	border: 0.0625em solid gray;
+	border-radius: 0.1875em;
+	vertical-align: 0.0625em;
+}
+
+/* Barre de menu de programmes fenétrés */
 span.barre-menu{
 	font-family: monospace; 
 	font-size: 10pt;
@@ -208,23 +207,10 @@ span.barre-menu{
 	vertical-align: 0.0625em;
 }
 
-
-span.variable{ font-style: italic; }
-span.fonction{ font-style: italic; font-weight: bold; }
-
-
-kbd{
-	font-family: monospace; 
-	font-size: 10pt;
-	padding: 0.125em;
-	border: 0.0625em solid gray;
-	border-radius: 0.1875em;
-	vertical-align: 0.0625em;
+span.p_cap{
+    font-variant: small-caps;
 }
 
-a{
-	color: Black;
-}
 
 /**************************************************************************************************\ 
 Images
@@ -243,7 +229,7 @@ figcaption{
 	font-style: italic;
 }
 
-figcaption::before{ 
+figcaption:before{ 
 	counter-increment: indice_figure;
 	content: "figure "counter(indice_figure)" : ";
 }
@@ -264,43 +250,43 @@ img.encadree{
 }
 
 /**************************************************************************************************\
-Relations math�matiques
+Relations mathématiques
 \**************************************************************************************************/
 .MathJax_Display {
+    font-family: "Times New Roman", serif; 
 	text-align: left !important;
-	font-size: medium;
+	font-size: 12pt;
 }
 
 
 /**************************************************************************************************\
 Tableaux
 \**************************************************************************************************/
-
-/* ---------------------------------------------------------------------------------------------- */
-/* Propri�t�s g�n�rales des tableaux */
 table {
-	border-collapse: collapse; /* les bordures des tableaux seront coll�es */
-	margin-left: auto; /* pour centrer les tableaux */
+	/* Coller les bordures */
+    border-collapse: collapse; 
+    
+    /* Centrer les tableaux sur la page */
+	margin-left: auto; 
 	margin-right: auto;
-	margin-left: auto;
+    
+    /* Séparer d’avec les autres éléments */
 	margin-top: 0.5cm;
 	margin-bottom: 0.5cm;
-	max-width : 18.5cm;
+    
+    /* Limiter la largeur à la zone d’écriture */
+	max-width : calc( var(--largeur-page) - var(--marge-droite) - var(--marge-gauche) );
 }
-caption /* titre du tableau */ {
+
+/* Titre du tableau */ 
+caption {
 	text-align: left;
 	margin-left: 1em;
 	margin-bottom: 0.5em;
 }
-th {
-	border: 1px solid black;
-	text-align: center;
-	padding-left: 0.4em;
-	padding-right: 0.4em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-}
-td {
+
+/* Celulles */
+th, td {
 	border: 1px solid black;
 	text-align: center;
 	padding-left: 0.4em;
@@ -310,3 +296,37 @@ td {
 }
 
 .justifie { text-align: justify; }
+
+
+
+
+/**************************************************************************************************\
+Codes sources
+\**************************************************************************************************/
+code {
+    display:block;
+
+    /* Afficher tel que dans la source */
+    white-space:pre-wrap;
+    
+    /* Texte*/
+    color: black;
+	text-shadow: none;
+	font-family: monospace;
+	font-size: 8pt;
+    
+    /* Marges */
+    padding: 0.2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0;
+	margin-left: var(--marge-gauche);
+	margin-right: var(--marge-droite);
+    
+    /* Cadre */
+    background: #f5f2f0;
+    border: 1px dashed black;
+	border-radius: 0.5cm;
+    
+    /* Ajouter une barre de défilement au cas où la ligne de code > 100 caractères */
+	overflow: auto;
+}
