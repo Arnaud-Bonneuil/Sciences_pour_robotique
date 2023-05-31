@@ -1,128 +1,120 @@
-/**************************************************************************************************\ 
+/**************************************************************************************************\
 Mise en page
 \**************************************************************************************************/
 
 body{
-	background: #222222;
-	counter-reset: indice_figure;
-	margin: 0;
-	padding: 0;
-    --marge-gauche: 2.5cm;
-    --marge-droite: 2.5cm;
-    --largeur-page: 21cm;
+  background: #222222;
+  counter-reset: indice_figure;
+  margin: 0;
+  padding: 0;
+  --marge-gauche: 2.5cm;
+  --marge-droite: 2.5cm;
+  --largeur-page: 21cm;
 }
 
 header{
-	width: var(--largeur-page);
-	padding-top: 1cm;
-	padding-bottom: 1cm;
-	margin-top: 0.5cm;
-	margin-left: auto;
-	margin-right: auto;
-	background: #FFFFFF;
+  width: var(--largeur-page);
+  padding-top: 1cm;
+  padding-bottom: 1cm;
+  margin-top: 0.5cm;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFFFFF;
 }
 
-#type_document{
-	float: left;
-	margin-left: var(--marge-gauche);
-}
 #application_document{
-	float: right;
-	margin-right: var(--marge-droite);
+  float: right;
+  margin-right: var(--marge-droite);
 }
 #titre_document{
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 20pt;
-	font-weight: normal;
-	text-align: center;
-	margin-top: 2cm;
-	margin-left: var(--marge-gauche);
-	margin-right: var(--marge-droite);
-	padding: 0.1cm;
-	background: #FFFFFF;
-	border: solid 2px black;
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-size: 20pt;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 2cm;
+  margin-left: var(--marge-gauche);
+  margin-right: var(--marge-droite);
+  padding: 0.1cm;
+  background: #FFFFFF;
+  border: solid 2px black;
 }
 
 section{
-	width: var(--largeur-page);
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1cm;
-	padding-bottom: 2cm;
-	background: #FFFFFF;
-	counter-reset: titre_1;
+  width: var(--largeur-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1cm;
+  padding-bottom: 2cm;
+  background: #FFFFFF;
+  counter-reset: titre_1;
 }
 
 footer{
-	width: var(--largeur-page);
-	margin-top: 0;
-	margin-bottom: 1cm;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1cm;
-	padding-bottom: 2cm;
-	background: #FFFFFF;
+  width: var(--largeur-page);
+  margin-top: 0;
+  margin-bottom: 1cm;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1cm;
+  padding-bottom: 2cm;
+  background: #FFFFFF;
 }
 
-#auteur_document{
-	float: right;
-	padding-right: var(--marge-droite);
-}
 
 /**************************************************************************************************\
 Titres
 \**************************************************************************************************/
 h1{
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 16pt;
-	font-weight: normal;
-	border-bottom: 2px solid black;
-	margin: 16pt var(--marge-droite) 0 var(--marge-gauche);
-	counter-reset: titre_2;
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-size: 16pt;
+  font-weight: normal;
+  border-bottom: 2px solid black;
+  margin: 16pt var(--marge-droite) 0 var(--marge-gauche);
+  counter-reset: titre_2;
 }
 h1:before {
-	counter-increment: titre_1;
-	content: counter(titre_1)". ";
+  counter-increment: titre_1;
+  content: counter(titre_1)". ";
 }
 h2{
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 14pt;
-	font-weight: normal;
-	border-bottom: 1px solid black;
-	margin: 14pt var(--marge-droite) 0 var(--marge-gauche);
-	counter-reset: titre_3;
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-size: 14pt;
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  margin: 14pt var(--marge-droite) 0 var(--marge-gauche);
+  counter-reset: titre_3;
 }
 h2:before {
-	counter-increment: titre_2;
-	content: counter(titre_1)"."counter(titre_2)". ";
+  counter-increment: titre_2;
+  content: counter(titre_1)"."counter(titre_2)". ";
 }
 h3{
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 12pt;
-	font-weight: normal;
-	border-bottom: 1px solid black;
-	margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
-	counter-reset: titre_4;
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid black;
+  margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
+  counter-reset: titre_4;
 }
 h3:before {
-	counter-increment: titre_3;
-	content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)". ";
+  counter-increment: titre_3;
+  content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)". ";
 }
 h4{
-	color: black;
-	font-family: "Times New Roman", serif;
-	font-size: 12pt;
-	font-weight: normal;
-	border-bottom: 1px dashed black;
-	margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px dashed black;
+  margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
 }
 h4:before {
-	counter-increment: titre_4;
-	content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)"."counter(titre_4)". ";
+  counter-increment: titre_4;
+  content: counter(titre_1)"."counter(titre_2)"."counter(titre_3)"."counter(titre_4)". ";
 }
 
 
@@ -130,55 +122,55 @@ h4:before {
 Paragraphes
 \**************************************************************************************************/
 p{
-	font-family: "Times New Roman", serif; 
-	font-size: 12pt;
-	text-align: justify;
-	margin-top: 12pt;
-	margin-bottom: 0;
-	margin-left: var(--marge-gauche);
-	margin-right: var(--marge-droite);
+  font-family: "Times New Roman", serif; 
+  font-size: 12pt;
+  text-align: justify;
+  margin-top: 12pt;
+  margin-bottom: 0;
+  margin-left: var(--marge-gauche);
+  margin-right: var(--marge-droite);
 }
 
 a{
-	color: Black;
+  color: Black;
 }
 
 /* Exposant */
 sup {
-	font-size: 8pt;
+  font-size: 8pt;
 }
 
 /* Mots étrangers */
 i {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* Citations */
 q { 
-    display: inline;
+  display: inline;
 }
 q:before { 
-    content: "«\2060\2005\2060";
+  content: "«\2060\2005\2060";
 }
 q:after {
-    content: "\2060\2005\2060»";
+  content: "\2060\2005\2060»";
 }
 
 /* Modification dans citation */
 span.modif:before {
-    content: "[\2060";
+  content: "[\2060";
 }
 span.modif:after {
-    content: "\2060]";
+  content: "\2060]";
 }  
 
 /* Incise */
 span.incise:before {
-    content: "—\2060\2005\2060";
+  content: "—\2060\2005\2060";
 }
 span.incise:after {
-    content: "\2060\2005\2060—";
-}    
+  content: "\2060\2005\2060—";
+}  
 
 /* Code en ligne */
 var{ font-style: italic; }
@@ -187,28 +179,28 @@ span.fonction{ font-style: italic; font-weight: bold; }
 
 /* Touche de clavier */
 kbd{
-	font-family: monospace; 
-	font-size: 10pt;
-	padding: 0.125em;
-	border: 0.0625em solid gray;
-	border-radius: 0.1875em;
-	vertical-align: 0.0625em;
+  font-family: monospace; 
+  font-size: 10pt;
+  padding: 0.125em;
+  border: 0.0625em solid gray;
+  border-radius: 0.1875em;
+  vertical-align: 0.0625em;
 }
 
 /* Barre de menu de programmes fenétrés */
 span.barre-menu{
-	font-family: monospace; 
-	font-size: 10pt;
-	padding: 0.125em;
-	background: Silver;
-	border: 0.0625em solid black;
-	border-color: gray;
-	border-radius: 0.1875em;
-	vertical-align: 0.0625em;
+  font-family: monospace; 
+  font-size: 10pt;
+  padding: 0.125em;
+  background: Silver;
+  border: 0.0625em solid black;
+  border-color: gray;
+  border-radius: 0.1875em;
+  vertical-align: 0.0625em;
 }
 
 span.p_cap{
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 
@@ -216,46 +208,47 @@ span.p_cap{
 Images
 \**************************************************************************************************/
 figure{
-	margin-top: 12pt;
-	margin-bottom: 12pt;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	max-width : 100%;
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width : 100%;
 }
 
 figcaption{
-	text-align: center;
-	font-style: italic;
+  text-align: center;
+  font-style: italic;
 }
 
 figcaption:before{ 
-	counter-increment: indice_figure;
-	content: "figure "counter(indice_figure)" : ";
+  counter-increment: indice_figure;
+  content: "figure "counter(indice_figure)" : ";
 }
 
 img{
-	margin-top: 0pt;
-	margin-bottom: 0pt;
-	margin-left: 0pt;
-	margin-right: 0pt;
-	padding: 0;
-	/*text-align: center;*/
-	max-width : 18cm;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+  margin-left: 0pt;
+  margin-right: 0pt;
+  padding: 0;
+  /*text-align: center;*/
+  max-width : 18cm;
 }
 
 img.encadree{
-	border: 0.0625em solid Gray;
-	border-radius: 0.1875em;
+  border: 0.0625em solid Gray;
+  border-radius: 0.1875em;
 }
+
 
 /**************************************************************************************************\
 Relations mathématiques
 \**************************************************************************************************/
 .MathJax_Display {
-    font-family: "Times New Roman", serif; 
-	text-align: left !important;
-	font-size: 12pt;
+  font-family: "Times New Roman", serif; 
+  text-align: left !important;
+  font-size: 12pt;
 }
 
 
@@ -263,70 +256,71 @@ Relations mathématiques
 Tableaux
 \**************************************************************************************************/
 table {
-	/* Coller les bordures */
-    border-collapse: collapse; 
-    
-    /* Centrer les tableaux sur la page */
-	margin-left: auto; 
-	margin-right: auto;
-    
-    /* Séparer d’avec les autres éléments */
-	margin-top: 0.5cm;
-	margin-bottom: 0.5cm;
-    
-    /* Limiter la largeur à la zone d’écriture */
-	max-width : calc( var(--largeur-page) - var(--marge-droite) - var(--marge-gauche) );
+  /* Coller les bordures */
+  border-collapse: collapse; 
+  
+  /* Centrer les tableaux sur la page */
+  margin-left: auto; 
+  margin-right: auto;
+  
+  /* Séparer d’avec les autres éléments */
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+  
+  /* Limiter la largeur à la zone d’écriture */
+  max-width : calc( var(--largeur-page) - var(--marge-droite) - var(--marge-gauche) );
+  
+  font-family: "Times New Roman", serif; 
+  font-size: 12pt;
 }
 
 /* Titre du tableau */ 
 caption {
-	text-align: left;
-	margin-left: 1em;
-	margin-bottom: 0.5em;
+  text-align: left;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
 }
 
 /* Celulles */
 th, td {
-	border: 1px solid black;
-	text-align: center;
-	padding-left: 0.4em;
-	padding-right: 0.4em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
+  border: 1px solid black;
+  text-align: center;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .justifie { text-align: justify; }
-
-
 
 
 /**************************************************************************************************\
 Codes sources
 \**************************************************************************************************/
 code {
-    display:block;
+  display:block;
 
-    /* Afficher tel que dans la source */
-    white-space:pre-wrap;
-    
-    /* Texte*/
-    color: black;
-	text-shadow: none;
-	font-family: monospace;
-	font-size: 8pt;
-    
-    /* Marges */
-    padding: 0.2cm;
-	margin-top: 0.5cm;
-	margin-bottom: 0;
-	margin-left: var(--marge-gauche);
-	margin-right: var(--marge-droite);
-    
-    /* Cadre */
-    background: #f5f2f0;
-    border: 1px dashed black;
-	border-radius: 0.5cm;
-    
-    /* Ajouter une barre de défilement au cas où la ligne de code > 100 caractères */
-	overflow: auto;
+  /* Afficher tel que dans la source */
+  white-space:pre-wrap;
+  
+  /* Texte*/
+  color: black;
+  text-shadow: none;
+  font-family: monospace;
+  font-size: 8pt;
+  
+  /* Marges */
+  padding: 0.2cm;
+  margin-top: 0.5cm;
+  margin-bottom: 0;
+  margin-left: var(--marge-gauche);
+  margin-right: var(--marge-droite);
+  
+  /* Cadre */
+  background: #f5f2f0;
+  border: 1px dashed black;
+  border-radius: 0.5cm;
+  
+  /* Ajouter une barre de défilement au cas où la ligne de code > 100 caractères */
+  overflow: auto;
 }

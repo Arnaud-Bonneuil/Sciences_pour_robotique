@@ -9,100 +9,100 @@ body {
 /**************************************************************************************************\ 
 Volet de navigation
 \**************************************************************************************************/
-nav{
-	font-family: "Times New Roman";
-	line-height: 1.5;
-	width: 400px;
-	padding: 0px;
-	margin : 10px;
+nav {
+  font-family: "Times New Roman";
+  line-height: 1.5;
+  width: 400px;
+  padding: 0px;
+  margin : 10px;
 }
 .titre h5 {
-	font-size: large;
-	font-weight: bold;
-	padding: 7px 12px;
-	background: radial-gradient(#555555, #222222 );
-	color: #fff;
-	margin: 0px;
-	border-bottom: 4px solid #d0d0d0;
+  font-size: large;
+  font-weight: bold;
+  padding: 7px 12px;
+  background: radial-gradient(#555555, #222222);
+  color: #fff;
+  margin: 0px;
+  border-bottom: 4px solid #d0d0d0;
 }
 .chapitre {
-	background: #fff;
+  background: #fff;
 }
 .chapitre h5 {
-	color: #fff;
-	font-size: medium;
-	font-weight: normal;
-	padding: 7px 12px;
-	background: radial-gradient(#555555, #222222 );
-	margin: 0px;
+  color: #fff;
+  font-size: large;
+  font-weight: normal;
+  padding: 7px 12px;
+  background: radial-gradient(#555555, #222222);
+  margin: 0px;
 }
 .chapitre h5:hover {
-	background: radial-gradient(#666666, #333333 );
+  background: radial-gradient(#666666, #333333);
 }
 .chapitre ul {
-	background: #fff;
-	font-size: small;
-	line-height: 30px;
-	height: 0px;
-	list-style-type: none;
-	overflow: hidden;
-	padding: 0px;
-	margin: 0px;
-	transition: height 0.5s ease;
+  background: #fff;
+  font-size: medium;
+  line-height: 30px;
+  height: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  transition: height 0.5s ease;
 }
 .un_doc:hover ul {
-	height: 31px;
+  height: 31px;
 }
 .deux_doc:hover ul {
-	height: 62px;
+  height: 62px;
 }
 .trois_doc:hover ul {
-	height: 93px;
+  height: 93px;
 }
 .quatre_doc:hover ul {
-	height: 124px;
+  height: 124px;
 }
 .cinq_doc:hover ul {
-	height: 155px;
+  height: 155px;
 }
 .six_doc:hover ul {
-	height: 186px;
+  height: 186px;
 }
 .sept_doc:hover ul {
-	height: 217px;
+  height: 217px;
 }
 .huit_doc:hover ul {
-	height: 248px;
+  height: 248px;
 }
 .chapitre ul a {
-	margin-left: 10px;
-	text-decoration: none;
-	color: #222222;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #222222;
 }
 .chapitre li {
-	border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 .chapitre li:hover {
-	background: #eee;
+  background: #eee;
 }
 
 
-/**************************************************************************************************\ 
+/**************************************************************************************************\
 Contenu
 \**************************************************************************************************/
 section {
-	position : absolute;
-	top : 10px;
-	left : 430px;
-	right : 10px;  
-	bottom : 10px;
-	border-style : solid;
-	border-color : black;
-	border-width : 1px;
+  position : absolute;
+  top : 10px;
+  left : 430px;
+  right : 10px;
+  bottom : 10px;
+  border-style : solid;
+  border-color : black;
+  border-width : 1px;
 }
 
-iframe { 
-	border-style : none;
-	border:0;
-	margin:0;
-  }
+iframe {
+  border-style : none;
+  border:0;
+  margin:0;
+}
