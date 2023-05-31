@@ -121,7 +121,7 @@ h4:before {
 /**************************************************************************************************\ 
 Paragraphes
 \**************************************************************************************************/
-p{
+div:not(#application_document, #titre_document){
   font-family: "Times New Roman", serif; 
   font-size: 12pt;
   text-align: justify;
@@ -130,6 +130,42 @@ p{
   margin-left: var(--marge-gauche);
   margin-right: var(--marge-droite);
 }
+
+
+/* Idem div*/
+ul{
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+ul li{
+  list-style-type: none; /* Suppression du bullet*/
+}
+ul li:before { 
+  content: "\2003\2014\2005"; /* espace cadratin, tiret cadratin, espace normale */
+}
+ul li:not(:has(ul)):after {
+  content: "\202f;";
+}
+ul li:not(:has(ul)):last-child:after {
+  content: ".";
+}
+
+ul li ul {
+  margin: 0;
+  padding: 0;
+}
+ul li ul li:before { 
+  content: "\2003\2003\2014\2005";
+}
+ul li ul li:after {
+  content: ",";
+}
+ul li:not(:last-child) ul li:last-child:after {
+  content: "\202f;";
+}
+
 
 a{
   color: Black;
