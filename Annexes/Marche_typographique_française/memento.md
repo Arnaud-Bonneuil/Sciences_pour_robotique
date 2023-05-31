@@ -18,23 +18,23 @@
 
 On le déduit de ce qui précède.
 
-Voici une liste d’éléments\&#x202f;:\<br />
-\&emsp;\&mdash;\&#x2005;le premier\&#x202f;;\<br />
-\&emsp;\&mdash;\&#x2005;le suivant\&#x202f;;\<br />
-\&emsp;\&mdash;\&#x2005;le dernier.\<br />
+Voici une liste d’éléments\&#x202f;:\<br />  
+\&emsp;\&mdash;\&#x2005;le premier\&#x202f;;\<br />  
+\&emsp;\&mdash;\&#x2005;le suivant\&#x202f;;\<br />  
+\&emsp;\&mdash;\&#x2005;le dernier.\<br />  
 
 Remarque : on n’encadre pas \&emsp; (espace cadratin) et \&mdash; (tiret long) avec \&#x2060;
 (Word Joiner) car il y a très peu de chance que la suite soit d'un seule bloc et entraine un retour
 à la ligne.
 
-Pour les énumérations avec sous-termes \&#x202f;:\<br />
-\&emsp;\&mdash\;&#x2005;premier terme&#x202f;;\<br />
-\&emsp;\&mdash;\&#x2005;deuxième terme&#x202f;;\<br />
-\&emsp;\&mdash;\&#x2005;troisième terme&#x202f;:\<br />
-\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 1,\<br />
-\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 2,\<br />
-\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 3\&#x202f;;\<br />
-\&emsp;\&mdash;\&#x2005;quatrième terme.\<br />
+Pour les énumérations avec sous-termes \&#x202f;:\<br />  
+\&emsp;\&mdash\;&#x2005;premier terme&#x202f;;\<br />  
+\&emsp;\&mdash;\&#x2005;deuxième terme&#x202f;;\<br />  
+\&emsp;\&mdash;\&#x2005;troisième terme&#x202f;:\<br />  
+\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 1,\<br />  
+\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 2,\<br />  
+\&emsp;\&emsp;\&mdash;\&#x2005;sous-terme 3\&#x202f;;\<br />  
+\&emsp;\&mdash;\&#x2005;quatrième terme.\<br />  
 
 ## Capitales avec diacritique
 
