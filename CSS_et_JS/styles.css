@@ -223,18 +223,7 @@ kbd{
   vertical-align: 0.0625em;
 }
 
-/* Barre de menu de programmes fenétrés */
-span.barre-menu{
-  font-family: monospace; 
-  font-size: 10pt;
-  padding: 0.125em;
-  background: Silver;
-  border: 0.0625em solid black;
-  border-color: gray;
-  border-radius: 0.1875em;
-  vertical-align: 0.0625em;
-}
-
+/* Petite capitale */
 span.p_cap{
   font-variant: small-caps;
 }
