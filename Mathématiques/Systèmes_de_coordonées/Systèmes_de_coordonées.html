@@ -1,449 +1,448 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Systèmes de coordonées</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
-        <link rel="stylesheet" type="text/css" media="print"
-            href="../../CSS_et_JS/styles_impr.css"/>
-        <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
-    </head>
-    <body>
-        <header>
-            <div id="application_document">Mathématiques</div>
-            <div id="titre_document">Systèmes de coordonées</div>
-        </header>
-        <section>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Systèmes de coordonées</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
+    <script
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="application_document">Mathématiques</div>
+      <div id="titre_document">Systèmes de coordonées</div>
+    </header>
+    <section>
+
+      <h1>Choix d’un système de coordonnées</h1>
+
+      <div>
+        On considère que l'espace physique est un espace affine euclidien de dimension 3.<br/>
+        Cela signifie qu’il faut 3 coordonnées pour définir la position d’un point \(M\) quelconque
+        dans l’espace.
+      </div>
+
+      <div>
+        On note \(O\) un point fixe de l’espace qui sert de référence (point origine).<br/>
+        Le point \(M\) est alors repéré par rapport à \(O\)&#x202f;: on note
+        \( \overrightarrow { r } = \overrightarrow { OM } \) 
+        le vecteur position de \(M\).
+      </div>
+
+      <div>
+        Le vecteur \( \overrightarrow{OM} \) est repéré grâce à une base vectorielle notée
+        \( \left(
+          \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
+           \right) \).<br/>
+        La base vectorielle et le point origine constituent un repère d’espace (ou repère de
+        référence)
+        \( \left(
+          O, \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
+           \right) \).<br/>
+        Le vecteur \( \overrightarrow { OM } \) peut alors se décomposer dans cette base
+        en&#x202f;:<br/>
+        $$ \overrightarrow { OM } = u_1\overrightarrow{ e_1 } + u_2\overrightarrow{ e_2 }
+        + u_3\overrightarrow{ e_3 } $$
+        \( (u_1, u_2, u_3) \) sont les coordonnées du vecteur \( \overrightarrow { OM } \)
+        dans la base 
+        \( \left( 
+          \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
+           \right) \).
+      </div>
+
+      <div>
+        Pour des raisons pratiques, il important que la base utilisée soit orthonormée
+        directe.<br/>
+        Cela signifie que&#x202f;:<br/>
+        $$
+        \begin{align}
+        & \overrightarrow{ e_1 } \cdot \overrightarrow{ e_2 } = 0 \\
+        & \overrightarrow{ e_1 } \cdot \overrightarrow{ e_3 } = 0 \\
+        & \overrightarrow{ e_2 } \cdot \overrightarrow{ e_3 } = 0 \\
+        & \overrightarrow{ e_1 } \wedge \overrightarrow{ e_2 } = \overrightarrow{ e_3 } \\
+        & \overrightarrow{ e_2 } \wedge \overrightarrow{ e_3 } = \overrightarrow{ e_1 } \\
+        & \overrightarrow{ e_3 } \wedge \overrightarrow{ e_1 } = \overrightarrow{ e_2 }
+        \end{align}
+        $$
+      </div>
+
+      <div>
+        Il est très important de bien choisir le système de coordonnées dans lequel la description
+        du problème va être faite pour simplifier les calculs.
+      </div>
+
+      <h1>Coordonnées cartésiennes</h1>
+
+      <h2>Définition</h2>
+
+      <div>
+        Soit un point fixe \(O\) (appelé origine), et une base orthonormée directe 
+        \( \left(
+          \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z }
+           \right) \) fixe.
+        Le vecteur position se note&#x202f;:<br/>
+        $$
+        \overrightarrow{ OM } =
+        x\overrightarrow{ e_x }
+        + y\overrightarrow{ e_y }
+        + z\overrightarrow{ e_z }
+        $$
+        L’abscisse \(x\), l’ordonnée \(y\) et la cote \(z\) sont les coordonnées cartésiennes du
+        point \(M\).
+      </div>
+
+      <h2>Dérivées temporelles par rapport au repère 
+        \(\left(
+          O, \overrightarrow{e_x}, \overrightarrow{e_y}, \overrightarrow{e_z}
+        \right)\)
+      </h2>
+
+      <div>
+        Les vecteurs \(\overrightarrow{ e_x }\), \(\overrightarrow{ e_y }\) et
+        \(\overrightarrow{ e_z }\) étant fixes dans le repère de référence \( \left( O, 
+        \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z } \right) \),
+        leur dérivée par rapport au temps est nulle.
+      </div>
+
+      <h1>Coordonnées cylindriques</h1>
+
+      <h2>Définition</h2>
+
+      <div>
+        Soit le repère \( \left( O,\overrightarrow{e_x}, \overrightarrow{e_y},
+        \overrightarrow{e_z} \right) \) précédemment défini.<br/>
+        Soit \(M\) un point que l’on cherche à repérer.<br/>
+        L’axe privilégié du problème est placé suivant \(\left(O,\overrightarrow{ e_z }
+        \right)\).<br/>
+        Soit \(H\) le projeté de \(M\) sur le plan \( \left( O,\overrightarrow{ e_x },
+        \overrightarrow{ e_y } \right) \), et \(Z\) le projeté de M sur l’axe \(\left(O,
+        \overrightarrow{ e_z }\right)\).
+      </div>
+
+      <div>
+        Le point \(M\) est repéré par&#x202f;:
+        <ul>
+          <li>\(r\) la distance de \(M\) à l’axe \(\left(O,
+          \overrightarrow{ e_z }\right)\), soit la distance \(ZM\)</li>
+          <li>\(\theta\) l’angle \( \left( \overrightarrow{ e_x }, \overrightarrow{ OM }
+          \right) \)</li>
+          <li>\(z\) la distance \(HM\)</li>
+        </ul>
+      </div>
+      
+      <div>
+        La base locale associée à ce système de coordonnées cylindriques est notée 
+        \( \left( \overrightarrow{ e_r }, \overrightarrow{ e_\theta },
+        \overrightarrow{ e_z } \right) \) avec&#x202f;:
+        <ul>
+          <li>\(\overrightarrow{ e_r } = \frac{\overrightarrow{OH}}{OH}\), c’est le vecteur
+            radial</li>
+          <li>\(\overrightarrow{ e_\theta }\) se déduit de \(\overrightarrow{ e_r }\) d’une rotation
+          de \(\frac{\pi}{2}\) autour de \(\left(O,\overrightarrow{ e_z }\right)\), c’est le vecteur
+            orthoradial</li>
+          <li>\(\overrightarrow{ e_z }\) complète le trièdre direct (\(\overrightarrow{ e_z } =
+            \overrightarrow{ e_r } \wedge \overrightarrow{ e_\theta }\))</li>
+        </ul>
+      </div>
+      
+      <figure>
+        <img src="ressources/coordonnées_cylindriques.svg">
+        <figcaption>schéma coordonnées cylindriques</figcaption>
+      </figure>
+      
+      <div>
+        Le vecteur position se note&#x202f;:<br/>
+        $$ \overrightarrow{ OM } = r\overrightarrow{ e_r } + z\overrightarrow{ e_z } $$
+        Le rayon polaire \(r\), angle polaire \(\theta\) et la cote \(z\) sont les coordonnées
+        cylindriques du point \(M\).
+      </div>
+      
+      <div>
+        La position de chaque point doit être définie par un unique triplet
+        \( \left( r,\theta,z \right) \). \(r\) ne varie donc que de \(0\)  à \(\infty \),
+        \(\theta\) varie de \(0\) à \(2\pi\) et \(z\) varie de \(-\infty \) à \(\infty \).
+      </div>
+      
+      <h2>Projection des vecteurs mobiles dans le repère \( R = \left(  O, \overrightarrow{ e_x },
+        \overrightarrow{ e_y }, \overrightarrow{ e_z } \right) \)
+      </h2>
+      
+      <div>
+        $$ \begin{align}
+        \overrightarrow{e_r} & = \cos{\theta} \overrightarrow{ e_x } 
+        + \sin{\theta} \overrightarrow{ e_y } \\
+        \overrightarrow{e_\theta} & = -\sin{\theta} \overrightarrow{ e_x }
+        + \cos{\theta} \overrightarrow{ e_y }
+        \end{align} $$
+      </div>
+      
+      <h2>Dérivées temporelles par rapport au repère 
+        \( R = \left(  O, \overrightarrow{ e_x }, \overrightarrow{ e_y },
+        \overrightarrow{ e_z } \right) \)
+      </h2>
+
+      <h3>Dérivée temporelle du vecteur \(\overrightarrow{ e_r }\) mobile dans \(R\)</h3>
+      
+      <div>
+      $$ \begin{align}
+        { \left. \frac{ d\overrightarrow{e_r} }{ dt } \right | }_{R}
+        & = { \left.  \frac{d}{dt}\left( \cos(\theta) \overrightarrow{ e_x }
+          + \sin(\theta) \overrightarrow{ e_y }\right) \right| }_{R} \\
         
-            <h1>Choix d’un système de coordonnées</h1>
-
-            <p>
-                On considère que l'espace physique est un espace affine euclidien de dimension
-                3.</br>
-                Cela signifie qu’il faut 3 coordonnées pour définir la position d’un point \(M\)
-                quelconque dans l’espace.
-            </p>
-            
-            <p>
-                On note \(O\) un point fixe de l’espace qui sert de référence (point origine).</br>
-                Le point \(M\) est alors repéré par rapport à \(O\)&#x202f;: on note
-                \( \overrightarrow { r } = \overrightarrow { OM } \) 
-                le vecteur position de \(M\).
-            </p>
-            
-            <p>
-                Le vecteur \( \overrightarrow{OM} \) est repéré grâce à une base vectorielle notée
-                \( \left(
-                    \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
-                   \right) \).</br>
-                La base vectorielle et le point origine constituent un repère d’espace (ou repère de
-                référence)
-                \( \left(
-                    O, \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
-                   \right) \).</br>
-                Le vecteur \( \overrightarrow { OM } \) peut alors se décomposer dans cette base
-                en&#x202f;:</br>
-                $$ \overrightarrow { OM } = u_1\overrightarrow{ e_1 } + u_2\overrightarrow{ e_2 }
-                + u_3\overrightarrow{ e_3 } $$
-                \( (u_1, u_2, u_3) \) sont les coordonnées du vecteur \( \overrightarrow { OM } \)
-                dans la base 
-                \( \left( 
-                    \overrightarrow{ e_1 }, \overrightarrow{ e_2 }, \overrightarrow{ e_3 }
-                   \right) \).
-            </p>
-            
-            <p>
-                Pour des raisons pratiques, il important que la base utilisée soit orthonormée
-                directe.</br>
-                Cela signifie que&#x202f;:</br>
-                $$
-                \begin{align}
-                & \overrightarrow{ e_1 } \cdot \overrightarrow{ e_2 } = 0 \\
-                & \overrightarrow{ e_1 } \cdot \overrightarrow{ e_3 } = 0 \\
-                & \overrightarrow{ e_2 } \cdot \overrightarrow{ e_3 } = 0 \\
-                & \overrightarrow{ e_1 } \wedge \overrightarrow{ e_2 } = \overrightarrow{ e_3 } \\
-                & \overrightarrow{ e_2 } \wedge \overrightarrow{ e_3 } = \overrightarrow{ e_1 } \\
-                & \overrightarrow{ e_3 } \wedge \overrightarrow{ e_1 } = \overrightarrow{ e_2 }
-                \end{align}
-                $$
-            </p>
-            
-            <p>
-                Il est très important de bien choisir le système de coordonnées dans lequel la
-                description du problème va être faite pour simplifier les calculs.
-            </p>
+        & = \frac{d\cos(\theta)}{dt}\overrightarrow{ e_x } 
+          + \cos(\theta) { \left. \frac{d\overrightarrow{ e_x }}{dt}\right | }_{R}
+          + \frac{d\sin(\theta)}{dt}\overrightarrow{ e_y }
+          + \sin(\theta) { \left. \frac{d\overrightarrow{ e_y }}{dt}\right | }_{R} \\
         
-            <h1>Coordonnées cartésiennes</h1>
+        & = -\dot{\theta}\sin(\theta) \overrightarrow{ e_x }
+          + \dot{\theta}\cos(\theta) \overrightarrow{ e_y } \\
+        
+        & = \dot{\theta}\overrightarrow{ e_\theta } \\
+      \end{align}
+      $$
+      </div>
+      
+      <h3>Dérivée temporelle du vecteur \(\overrightarrow{ e_\theta }\) mobile dans \(R\)</h3>
+      
+      <div>
+      $$ \begin{align}
+        { \left. \frac{ d \overrightarrow{ e_\theta } }{ dt } \right | }_{R}
+        & = { \left. \frac{d}{dt} \left( -\sin(\theta)\overrightarrow{e_x}
+          + \cos(\theta)\overrightarrow{e_y} \right) \right| }_{R} \\
+        
+        & = -\dot{\theta}\cos(\theta) \overrightarrow{ e_x }
+          - \dot{\theta}\sin(\theta) \overrightarrow{ e_y } \\
+        
+        & = -\dot{\theta}\overrightarrow{e_r}
+      \end{align} $$
+      </div>
+      
+      <h1>Coordonnées sphériques</h1>
+      
+      <h2>Définition</h2>
+      
+      <div>
+        Soit le repère \( R= \left( O,\overrightarrow{e_x}, \overrightarrow{e_y},
+        \overrightarrow{e_z} \right) \) précédemment défini.<br/>
+        Soit \(M\) un point que l’on cherche à repérer.<br/>
+        Soit \(H\) le projeté de \(M\) sur le plan \( \left( O,\overrightarrow{ e_x },
+        \overrightarrow{ e_y } \right) \).
+      </div>
+      
+      <div>
+        Le point \(M\) est repéré par&#x202f;:
+        <ul>
+          <li>\(r\) la distance de \(M\) au point \(O\)</li>
+          <li>\(\theta\) l’angle \( \left(\overrightarrow{e_z}, \overrightarrow{OM}\right) \)</li>
+          <li>\(\varphi\) l’angle \( \left(\overrightarrow{e_x}, \overrightarrow{OH}\right) \)</li>
+        </ul>
+      </div>
+      
+      <div>
+        La base locale associée à ce système de coordonnées sphériques est notée 
+        \( \left( \overrightarrow{ e_r }, \overrightarrow{ e_\theta },
+        \overrightarrow{ e_\varphi } \right) \) avec&#x202f;:
+        <ul>
+          <li>\(\overrightarrow{e_r}= \frac{\overrightarrow{OM}}{OM}\), c’est le vecteur radial</li>
+          <li>\(\overrightarrow{ e_\theta }\) est alors un vecteur du plan vectoriel
+            \( \left(\overrightarrow{ e_z },\overrightarrow{ e_r }\right) \) et se déduit de
+            \(\overrightarrow{ e_r }\) d’une rotation de \(\frac{\pi}{2}\), c’est le vecteur
+            orthoradial</li>
+          <li>\(\overrightarrow{ e_\varphi }\) complète le trièdre direct 
+            (\(\overrightarrow{ e_\varphi } = \overrightarrow{ e_r } \wedge
+            \overrightarrow{ e_\theta }\)). C’est un vecteur du plan vectoriel
+            \( \left(\overrightarrow{ e_x },\overrightarrow{ e_y }\right) \) car il est
+            orthogonal à \( \overrightarrow{ e_z } \)</li>
+        </ul> 
+      </div>
+      
+      <figure>
+        <img src="ressources/coordonnées_sphériques.svg">
+        <figcaption>schéma coordonnées sphériques</figcaption>
+      </figure>
+      
+      <div>
+        Le vecteur position se note&#x202f;:<br/>
+        $$ \overrightarrow{ OM } = r\overrightarrow{ e_r }$$
+        Le rayon \(r\), la colatitude \(\theta\) et l’azimut \(\varphi\) sont les
+        coordonnées sphériques du point \(M\).
+      </div>
+      
+      <div>
+        La position de chaque point doit être définie par un unique triplet
+        \( \left( r,\theta,\varphi \right) \). \(r\) ne varie donc que de \(0\) à
+        \(\infty \), \(\theta\) varie de \(0\) à \(\pi\) et \(\varphi\) varie de \(0 \) à
+        \(2\pi \).
+      </div>
+      
+      <h2>Projection des vecteurs mobiles dans le repère
+        \( R = \left(  
+        O, \overrightarrow{e_x}, \overrightarrow{e_y}, \overrightarrow{e_z}
+        \right) \)
+      </h2>
+      
+      <div>
+        Exprimons les vecteurs \(\overrightarrow{ e_r }\), \(\overrightarrow{ e_\theta }\)
+        et \(\overrightarrow{ e_\varphi }\) dans le repère \( \left( O,
+        \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z } \right) \).
+      </div>
+      
+      <div>
+        Soit \(H\) la projection de \(M\) sur le plan \( \left( O, \overrightarrow{ e_x },
+        \overrightarrow{ e_y } \right) \).<br/>
+        Le vecteur unitaire \(\overrightarrow{ u } \) suivant la droite \((OH)\) a pour
+        expression&#x202f;:<br/>
+        $$
+        \overrightarrow{u} = \cos(\varphi)\overrightarrow{e_x} 
+        + \sin(\varphi)\overrightarrow{e_y}
+        $$
+        Le vecteur \(\overrightarrow{e_\varphi}\) est directement perpendiculaire à
+        \(\overrightarrow{ u }\) et s’écrit donc&#x202f;:<br/>
+        $$
+          \overrightarrow{ e_\varphi } = -\sin(\varphi)\overrightarrow{e_x} 
+                           +\cos(\varphi)\overrightarrow{e_y}
+        $$
+      </div>
+      
+      <div>
+        On peut en déduire l’expression du vecteur \(\overrightarrow{e_r}\)&#x202f;:<br/>
+        $$ \begin{align}
+        
+          \overrightarrow{ e_r } & = \sin(\theta)\overrightarrow{u} 
+                       + \cos(\theta)\overrightarrow{ e_z } \\
+                       
+          & = \sin(\theta)\times\left( \cos(\varphi)\overrightarrow{e_x} 
+            + \sin(\varphi)\overrightarrow{e_y} \right)
+            + \cos(\theta)\overrightarrow{e_z} \\
+          
+          & = \sin(\theta)cos(\varphi)\overrightarrow{e_x} 
+            + \sin(\theta)\sin(\varphi)\overrightarrow{e_y}
+            + \cos(\theta)\overrightarrow{e_z}
             
-            <h2>Définition</h2>
+        \end{align} $$
+      </div>
+      
+      <div>
+        Enfin le vecteur \(\overrightarrow{e_\theta}\) est directement perpendiculaire à
+        \(\overrightarrow{ e_r }\) et s’écrit donc&#x202f;:<br/>
+        $$ \begin{align}
+          \overrightarrow{e_\theta} & = \cos(\theta)\overrightarrow{ u }
+                        - \sin(\theta)\overrightarrow{ e_z } \\
+          & = \cos(\theta)\times\left( \cos(\varphi)\overrightarrow{ e_x } 
+                         + \sin(\varphi)\overrightarrow{ e_y } \right ) 
+                      - \sin(\theta)\overrightarrow{ e_z } \\
+          & = \cos(\theta) \cos(\varphi) \overrightarrow{ e_x }
+            + \cos(\theta) \sin(\varphi) \overrightarrow{ e_y }
+            - \sin(\theta) \overrightarrow{ e_z }
+        \end{align} $$
+      </div>
+      
+      <h2>Dérivées temporelles par rapport au repère 
+        \( R = \left(
+        O, \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z }
+        \right) \)
+      </h2>
+      
+      <h3>Dérivée temporelle du vecteur \( \overrightarrow{ e_r } \) mobile dans \(R\)</h3>
+      
+      <div>
+      $$ \begin{align}
+        { \left.\frac{d\overrightarrow{ e_r }}{dt} \right| }_{ R } & =
+        
+        { \left. \frac{d}{dt} \left( \sin(\theta)cos(\varphi)\overrightarrow{ e_x } 
+        + \sin(\theta)\sin(\varphi)\overrightarrow{ e_y } 
+        + \cos(\theta)\overrightarrow{ e_z } \right) \right| }_{ R } \\
+        
+        & = \left( \dot{\theta}\cos(\theta)cos(\varphi)
+             - \dot{\varphi}\sin(\theta)sin(\varphi) \right) \overrightarrow{ e_x } \\
+        & \quad  + \left( \dot{\theta}\cos(\theta)\sin(\varphi)
+             + \dot{\varphi}\sin(\theta)\cos(\varphi) \right)\overrightarrow{ e_y } \\
+        & \quad - \dot{\theta}\sin(\theta)\overrightarrow{ e_z } \\
+          
+        & = \dot{\theta}\left( \cos(\theta)cos(\varphi)\overrightarrow{ e_x }
+          + \cos(\theta)\sin(\varphi) \overrightarrow{ e_y } 
+          - \sin(\theta)\overrightarrow{ e_z } \right) \\
+        & \quad + \dot{\varphi}\left(-\sin(\theta)sin(\varphi) \overrightarrow{ e_x }
+                       +\sin(\theta)\cos(\varphi)\overrightarrow{ e_y }\right)\\
+          
+        & = \dot{\theta}\left( \cos(\theta)cos(\varphi)\overrightarrow{ e_x }
+            + \cos(\theta)\sin(\varphi) \overrightarrow{ e_y } 
+            - \sin(\theta)\overrightarrow{ e_z } \right) \\
+        & \quad + \dot{\varphi}\sin(\theta)\left(-sin(\varphi) \overrightarrow{ e_x }
+                          + \cos(\varphi)\overrightarrow{ e_y } \right) \\
+          
+        & =  \dot{\theta}\overrightarrow{ e_\theta }
+           + \dot{\varphi}\sin{\theta}\overrightarrow{ e_\varphi }
+      \end{align} $$
+      </div>
+      
+      <h3>Dérivée temporelle du vecteur \(\overrightarrow{e_\theta}\) mobile dans \(R\)</h3>
+      
+      <div>
+        $$ \begin{align}
+          { \left.\frac{d\overrightarrow{ e_\theta }}{dt} \right| }_{ R } & =
+          
+          { \left. \frac{d}{dt} \left(
+          \cos(\theta)cos(\varphi)\overrightarrow{ e_x } 
+          + \cos(\theta)\sin(\varphi)\overrightarrow{ e_y }
+          - \sin(\theta)\overrightarrow{ e_z }
+          \right) \right| }_{R} \\
+          
+          & = \left( -\dot{\theta}\sin(\theta)cos(\varphi) 
+              - \dot{\varphi}\cos(\theta)sin(\varphi) \right)\overrightarrow{ e_x } \\
+          & \quad + \left( -\dot{\theta}\sin(\theta)sin(\varphi)
+              + \dot{\varphi}\cos(\theta)cos(\varphi) \right)\overrightarrow{ e_y } \\
+          & \quad - \left( \dot{\theta}\cos(\theta) \right)\overrightarrow{ e_z } \\
             
-            <p>
-                Soit un point fixe \(O\) (appelé origine), et une base orthonormée directe 
-                \( \left(
-                    \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z }
-                   \right) \) fixe.
-                Le vecteur position se note&#x202f;:</br>
-                $$
-                \overrightarrow{ OM } =
-                x\overrightarrow{ e_x }
-                + y\overrightarrow{ e_y }
-                + z\overrightarrow{ e_z }
-                $$
-                L’abscisse \(x\), l’ordonnée \(y\) et la cote \(z\) sont les coordonnées
-                cartésiennes du point \(M\).
-            </p>
+          & = - \dot{\theta}\left( 
+              \sin(\theta)cos(\varphi)\overrightarrow{ e_x } 
+              + \sin(\theta)sin(\varphi)\overrightarrow{ e_y } 
+              + \cos(\theta)\overrightarrow{ e_z } \right) \\
+           & \quad + \dot{\varphi}\cos(\theta)\left( 
+              -sin(\varphi)\overrightarrow{ e_x }
+              + cos(\varphi)\overrightarrow{ e_y } \right) \\
+              
+          & = - \dot{\theta}\overrightarrow{ e_r }
+            + \dot{\varphi}\cos(\theta)\overrightarrow{ e_\varphi }
+        \end{align} $$
+      </div>
+      
+      <h3>Dérivée temporelle du vecteur \(\overrightarrow{e_\varphi}\) mobile dans \(R\)</h3>
+      
+      <div>
+        $$ \begin{align}
+          { \left.\frac{d\overrightarrow{ e_\varphi }}{dt} \right| }_{ R } & = 
+          { \left. \frac{d}{dt} \left(
+          -\sin(\varphi)\overrightarrow{ e_x } + \cos(\varphi)\overrightarrow{ e_y }
+          \right) \right| }_{R} \\
+          & = -\dot{\varphi}\cos(\varphi)\overrightarrow{ e_x } 
+            -\dot{\varphi}\sin(\varphi)\overrightarrow{ e_y }
+        \end{align} $$
+      </div>
+      
+      <div>
+        Calculons l’expression suivante&#x202f;:<br/>
+        $$ \begin{align}
+          \sin(\theta)\overrightarrow{ e_r } + \cos(\theta)\overrightarrow{ e_\theta } & = 
+          \left(\sin(\theta)^2\cos(\varphi)
+                    +\cos(\theta)^2\cos(\varphi)\right)\overrightarrow{ e_x } \\
             
-            <h2>Dérivées temporelles par rapport au repère 
-                \(\left(
-                    O, \overrightarrow{e_x}, \overrightarrow{e_y}, \overrightarrow{e_z}
-                \right)\)
-            </h2>
-            
-            <p>
-                Les vecteurs \(\overrightarrow{ e_x }\), \(\overrightarrow{ e_y }\) et
-                \(\overrightarrow{ e_z }\) étant fixes dans le repère de référence \( \left( O, 
-                \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z } \right) \),
-                leur dérivée par rapport au temps est nulle.
-            </p>
-            
-            <h1>Coordonnées cylindriques</h1>
-            
-            <h2>Définition</h2>
-            
-            <p>
-                Soit le repère \( \left( O,\overrightarrow{e_x}, \overrightarrow{e_y},
-                \overrightarrow{e_z} \right) \) précédemment défini.</br>
-                Soit \(M\) un point que l’on cherche à repérer.</br>
-                L’axe privilégié du problème est placé suivant \(\left(O,\overrightarrow{ e_z }
-                \right)\).</br>
-                Soit \(H\) le projeté de \(M\) sur le plan \( \left( O,\overrightarrow{ e_x },
-                \overrightarrow{ e_y } \right) \), et \(Z\) le projeté de M sur l’axe \(\left(O,
-                \overrightarrow{ e_z }\right)\).
-            </p>
-            
-            <p>
-                Le point \(M\) est repéré par&#x202f;:</br>
-                &emsp;&mdash;&#x2005;\(r\) la distance de \(M\) à l’axe \(\left(O,
-                \overrightarrow{ e_z }\right)\), soit la distance \(ZM\)&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\theta\) l’angle  \( \left( \overrightarrow{ e_x },
-                \overrightarrow{ OM }  \right) \)&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(z\) la distance \(HM\).
-            </p>
-            
-            <p>
-                La base locale associée à ce système de coordonnées cylindriques est notée 
-                \( \left( \overrightarrow{ e_r }, \overrightarrow{ e_\theta },
-                \overrightarrow{ e_z } \right) \) avec&#x202f;:</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_r } = \frac{\overrightarrow{OH}}{OH}\),
-                c’est le vecteur radial&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_\theta }\) se déduit de
-                \(\overrightarrow{ e_r }\)d’une rotation de \(\frac{\pi}{2}\) autour 
-                de \(\left(O,\overrightarrow{ e_z }\right)\), c’est le vecteur
-                orthoradial&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_z }\) complète le trièdre direct 
-                (\(\overrightarrow{ e_z } = \overrightarrow{ e_r } \wedge 
-                \overrightarrow{ e_\theta }\)).
-            </p>
-            
-            <figure>
-                <img src="ressources/coordonnées_cylindriques.png">
-                <figcaption>schéma coordonnées cylindriques</figcaption>
-            </figure>
-            
-            <p>
-                Le vecteur position se note&#x202f;:</br>
-                $$ \overrightarrow{ OM } = r\overrightarrow{ e_r } + z\overrightarrow{ e_z } $$
-                Le rayon polaire \(r\), angle polaire \(\theta\) et la cote \(z\) sont les
-                coordonnées cylindriques du point \(M\).
-            </p>
-            
-            <p>
-                La position de chaque point doit être définie par un unique triplet
-                \( \left( r,\theta,z \right) \). \(r\) ne varie donc que de \(0\)  à \(\infty \),
-                \(\theta\) varie de \(0\) à \(2\pi\) et \(z\) varie de \(-\infty \) à \(\infty \).
-            </p>
-            
-            <h2>Projection des vecteurs mobiles dans le repère
-                \( R = \left(  O, \overrightarrow{ e_x }, \overrightarrow{ e_y },
-                \overrightarrow{ e_z } \right) \)
-            </h2>
-            
-            <p>
-                $$ \begin{align}
-                \overrightarrow{e_r} & = \cos{\theta} \overrightarrow{ e_x } 
-                + \sin{\theta} \overrightarrow{ e_y } \\
-                \overrightarrow{e_\theta} & = -\sin{\theta} \overrightarrow{ e_x }
-                + \cos{\theta} \overrightarrow{ e_y }
-                \end{align} $$
-            </p>
-            
-            <h2>Dérivées temporelles par rapport au repère 
-                \( R = \left(  O, \overrightarrow{ e_x }, \overrightarrow{ e_y },
-                \overrightarrow{ e_z } \right) \)
-            </h2>
+          & \quad + \left(\sin(\theta)^2\sin(\varphi)
+                    +\cos(\theta)^2\sin(\varphi)\right)\overrightarrow{ e_y } \\
+          
+          & = \cos(\varphi)\overrightarrow{ e_x } + \sin(\varphi)\overrightarrow{ e_y }
+          
+        \end{align} $$
+      </div>
+      
+      <div>
+        D’où&#x202f;:<br/>
+        $$ { \left.\frac{d\overrightarrow{ e_\varphi }}{dt} \right| }_{ R } =
+          -\dot{\varphi}\sin(\theta)\overrightarrow{ e_r }
+          - \dot{\varphi}\cos(\theta)\overrightarrow{ e_\theta } $$
+      </div>
 
-            <h3>Dérivée temporelle du vecteur \(\overrightarrow{ e_r }\) mobile dans \(R\)</h3>
-            
-            <p>
-            $$ \begin{align}
-                { \left. \frac{ d\overrightarrow{e_r} }{ dt } \right | }_{R}
-                & = { \left.  \frac{d}{dt}\left( \cos(\theta) \overrightarrow{ e_x }
-                    + \sin(\theta) \overrightarrow{ e_y }\right) \right| }_{R} \\
-                
-                & = \frac{d\cos(\theta)}{dt}\overrightarrow{ e_x } 
-                    + \cos(\theta) { \left. \frac{d\overrightarrow{ e_x }}{dt}\right | }_{R}
-                    + \frac{d\sin(\theta)}{dt}\overrightarrow{ e_y }
-                    + \sin(\theta) { \left. \frac{d\overrightarrow{ e_y }}{dt}\right | }_{R} \\
-                
-                & = -\dot{\theta}\sin(\theta) \overrightarrow{ e_x }
-                  + \dot{\theta}\cos(\theta) \overrightarrow{ e_y } \\
-                
-                & = \dot{\theta}\overrightarrow{ e_\theta } \\
-            \end{align}
-            $$
-            </p>
-            
-            <h3>Dérivée temporelle du vecteur \(\overrightarrow{ e_\theta }\) mobile dans \(R\)</h3>
-            
-            <p>
-            $$ \begin{align}
-                { \left. \frac{ d \overrightarrow{ e_\theta } }{ dt } \right | }_{R}
-                & = { \left. \frac{d}{dt} \left( -\sin(\theta)\overrightarrow{e_x}
-                  + \cos(\theta)\overrightarrow{e_y} \right) \right| }_{R} \\
-                
-                & = -\dot{\theta}\cos(\theta) \overrightarrow{ e_x }
-                  - \dot{\theta}\sin(\theta) \overrightarrow{ e_y } \\
-                
-                & = -\dot{\theta}\overrightarrow{e_r}
-            \end{align} $$
-            </p>
-            
-            <h1>Coordonnées sphériques</h1>
-            
-            <h2>Définition</h2>
-            
-            <p>
-                Soit le repère \( R= \left( O,\overrightarrow{e_x}, \overrightarrow{e_y},
-                \overrightarrow{e_z} \right) \) précédemment défini.</br>
-                Soit \(M\) un point que l’on cherche à repérer.</br>
-                Soit \(H\) le projeté de \(M\) sur le plan \( \left( O,\overrightarrow{ e_x },
-                \overrightarrow{ e_y } \right) \).
-            </p>
-            
-            <p>
-                Le point \(M\) est repéré par&#x202f;:</br>
-                &emsp;&mdash;&#x2005;\(r\) la distance de \(M\) au point \(O\)&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\theta\) l’angle \( \left(\overrightarrow{ e_z },
-                \overrightarrow{ OM }\right) \)&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\varphi\) l’angle \( \left(\overrightarrow{ e_x },
-                \overrightarrow{ OH }\right) \).
-            </p>
-            
-            <p>
-                La base locale associée à ce système de coordonnées sphériques est notée 
-                \( \left( \overrightarrow{ e_r }, \overrightarrow{ e_\theta },
-                \overrightarrow{ e_\varphi } \right) \) avec&#x202f;:</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_r } = \frac{\overrightarrow{OM}}{OM}\),
-                c’est le vecteur radial&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_\theta }\) est alors un vecteur du plan
-                vectoriel \( \left(\overrightarrow{ e_z },\overrightarrow{ e_r }\right) \) et se
-                déduit de \(\overrightarrow{ e_r }\) d’une rotation de \(\frac{\pi}{2}\), c’est le
-                vecteur orthoradial&#x202f;;</br>
-                &emsp;&mdash;&#x2005;\(\overrightarrow{ e_\varphi }\) complète le trièdre direct 
-                (\(\overrightarrow{ e_\varphi } = \overrightarrow{ e_r } \wedge
-                \overrightarrow{ e_\theta }\)). C’est un vecteur du plan vectoriel
-                \( \left(\overrightarrow{ e_x },\overrightarrow{ e_y }\right) \) car il est
-                orthogonal à \( \overrightarrow{ e_z } \).
-            </p>
-            
-            <figure>
-                <img src="ressources/coordonnées_sphériques.jpg" >
-                <figcaption>schéma coordonnées sphériques</figcaption>
-            </figure>
-            
-            <p>
-                Le vecteur position se note&#x202f;:</br>
-                $$ \overrightarrow{ OM } = r\overrightarrow{ e_r }$$
-                Le rayon \(r\), la colatitude \(\theta\) et l’azimut \(\varphi\) sont les
-                coordonnées sphériques du point \(M\).
-            </p>
-            
-            <p>
-                La position de chaque point doit être définie par un unique triplet
-                \( \left( r,\theta,\varphi \right) \). \(r\) ne varie donc que de \(0\) à
-                \(\infty \), \(\theta\) varie de \(0\) à \(\pi\) et \(\varphi\) varie de \(0 \) à
-                \(2\pi \).
-            </p>
-            
-            <h2>Projection des vecteurs mobiles dans le repère
-                \( R = \left(  
-                O, \overrightarrow{e_x}, \overrightarrow{e_y}, \overrightarrow{e_z}
-                \right) \)
-            </h2>
-            
-            <p>
-                Exprimons les vecteurs \(\overrightarrow{ e_r }\), \(\overrightarrow{ e_\theta }\)
-                et \(\overrightarrow{ e_\varphi }\) dans le repère \( \left( O,
-                \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z } \right) \).
-            </p>
-            
-            <p>
-                Soit \(H\) la projection de \(M\) sur le plan \( \left( O, \overrightarrow{ e_x },
-                \overrightarrow{ e_y } \right) \).</br>
-                Le vecteur unitaire \(\overrightarrow{ u } \) suivant la droite \((OH)\) a pour
-                expression&#x202f;:</br>
-                $$
-                \overrightarrow{u} = \cos(\varphi)\overrightarrow{e_x} 
-                + \sin(\varphi)\overrightarrow{e_y}
-                $$
-                Le vecteur \(\overrightarrow{e_\varphi}\) est directement perpendiculaire à
-                \(\overrightarrow{ u }\) et s’écrit donc&#x202f;:</br>
-                $$
-                    \overrightarrow{ e_\varphi } = -\sin(\varphi)\overrightarrow{e_x} 
-                                                   +\cos(\varphi)\overrightarrow{e_y}
-                $$
-            </p>
-            
-            <p>
-                On peut en déduire l’expression du vecteur \(\overrightarrow{e_r}\)&#x202f;:</br>
-                $$ \begin{align}
-                
-                    \overrightarrow{ e_r } & = \sin(\theta)\overrightarrow{u} 
-                                             + \cos(\theta)\overrightarrow{ e_z } \\
-                                             
-                    & = \sin(\theta)\times\left( \cos(\varphi)\overrightarrow{e_x} 
-                      + \sin(\varphi)\overrightarrow{e_y} \right)
-                      + \cos(\theta)\overrightarrow{e_z} \\
-                    
-                    & = \sin(\theta)cos(\varphi)\overrightarrow{e_x} 
-                      + \sin(\theta)\sin(\varphi)\overrightarrow{e_y}
-                      + \cos(\theta)\overrightarrow{e_z}
-                      
-                \end{align} $$
-            </p>
-            
-            <p>
-                Enfin le vecteur \(\overrightarrow{e_\theta}\) est directement perpendiculaire à
-                \(\overrightarrow{ e_r }\) et s’écrit donc&#x202f;:</br>
-                $$ \begin{align}
-                    \overrightarrow{e_\theta} & = \cos(\theta)\overrightarrow{ u }
-                                                - \sin(\theta)\overrightarrow{ e_z } \\
-                    & = \cos(\theta)\times\left( \cos(\varphi)\overrightarrow{ e_x } 
-                                               + \sin(\varphi)\overrightarrow{ e_y } \right ) 
-                                          - \sin(\theta)\overrightarrow{ e_z } \\
-                    & = \cos(\theta) \cos(\varphi) \overrightarrow{ e_x }
-                      + \cos(\theta) \sin(\varphi) \overrightarrow{ e_y }
-                      - \sin(\theta) \overrightarrow{ e_z }
-                \end{align} $$
-            </p>
-            
-            <h2>Dérivées temporelles par rapport au repère 
-                \( R = \left(
-                O, \overrightarrow{ e_x }, \overrightarrow{ e_y }, \overrightarrow{ e_z }
-                \right) \)
-            </h2>
-            
-            <h3>Dérivée temporelle du vecteur \( \overrightarrow{ e_r } \) mobile dans \(R\)</h3>
-            
-            <p>
-            $$ \begin{align}
-                { \left.\frac{d\overrightarrow{ e_r }}{dt} \right| }_{ R } & =
-                
-                { \left. \frac{d}{dt} \left( \sin(\theta)cos(\varphi)\overrightarrow{ e_x } 
-                + \sin(\theta)\sin(\varphi)\overrightarrow{ e_y } 
-                + \cos(\theta)\overrightarrow{ e_z } \right) \right| }_{ R } \\
-                
-                & = \left( \dot{\theta}\cos(\theta)cos(\varphi)
-                       - \dot{\varphi}\sin(\theta)sin(\varphi) \right) \overrightarrow{ e_x } \\
-                & \quad  + \left( \dot{\theta}\cos(\theta)\sin(\varphi)
-                       + \dot{\varphi}\sin(\theta)\cos(\varphi) \right)\overrightarrow{ e_y } \\
-                & \quad - \dot{\theta}\sin(\theta)\overrightarrow{ e_z } \\
-                    
-                & = \dot{\theta}\left( \cos(\theta)cos(\varphi)\overrightarrow{ e_x }
-                    + \cos(\theta)\sin(\varphi) \overrightarrow{ e_y } 
-                    - \sin(\theta)\overrightarrow{ e_z } \right) \\
-                & \quad + \dot{\varphi}\left(-\sin(\theta)sin(\varphi) \overrightarrow{ e_x }
-                                           +\sin(\theta)\cos(\varphi)\overrightarrow{ e_y }\right)\\
-                    
-                & = \dot{\theta}\left( \cos(\theta)cos(\varphi)\overrightarrow{ e_x }
-                        + \cos(\theta)\sin(\varphi) \overrightarrow{ e_y } 
-                        - \sin(\theta)\overrightarrow{ e_z } \right) \\
-                & \quad + \dot{\varphi}\sin(\theta)\left(-sin(\varphi) \overrightarrow{ e_x }
-                                                    + \cos(\varphi)\overrightarrow{ e_y } \right) \\
-                    
-                & =  \dot{\theta}\overrightarrow{ e_\theta }
-                   + \dot{\varphi}\sin{\theta}\overrightarrow{ e_\varphi }
-            \end{align} $$
-            </p>
-            
-            <h3>Dérivée temporelle du vecteur \(\overrightarrow{e_\theta}\) mobile dans \(R\)</h3>
-            
-            <p>
-                $$ \begin{align}
-                    { \left.\frac{d\overrightarrow{ e_\theta }}{dt} \right| }_{ R } & =
-                    
-                    { \left. \frac{d}{dt} \left(
-                    \cos(\theta)cos(\varphi)\overrightarrow{ e_x } 
-                    + \cos(\theta)\sin(\varphi)\overrightarrow{ e_y }
-                    - \sin(\theta)\overrightarrow{ e_z }
-                    \right) \right| }_{R} \\
-                    
-                    & = \left( -\dot{\theta}\sin(\theta)cos(\varphi) 
-                            - \dot{\varphi}\cos(\theta)sin(\varphi) \right)\overrightarrow{ e_x } \\
-                    & \quad + \left( -\dot{\theta}\sin(\theta)sin(\varphi)
-                            + \dot{\varphi}\cos(\theta)cos(\varphi) \right)\overrightarrow{ e_y } \\
-                    & \quad - \left( \dot{\theta}\cos(\theta) \right)\overrightarrow{ e_z } \\
-                        
-                    & = - \dot{\theta}\left( 
-                            \sin(\theta)cos(\varphi)\overrightarrow{ e_x } 
-                            + \sin(\theta)sin(\varphi)\overrightarrow{ e_y } 
-                            + \cos(\theta)\overrightarrow{ e_z } \right) \\
-                   & \quad + \dot{\varphi}\cos(\theta)\left( 
-                            -sin(\varphi)\overrightarrow{ e_x }
-                            + cos(\varphi)\overrightarrow{ e_y } \right) \\
-                            
-                    & = - \dot{\theta}\overrightarrow{ e_r }
-                        + \dot{\varphi}\cos(\theta)\overrightarrow{ e_\varphi }
-                \end{align} $$
-            </p>
-            
-            <h3>Dérivée temporelle du vecteur \(\overrightarrow{e_\varphi}\) mobile dans \(R\)</h3>
-            
-            <p>
-                $$ \begin{align}
-                    { \left.\frac{d\overrightarrow{ e_\varphi }}{dt} \right| }_{ R } & = 
-                    { \left. \frac{d}{dt} \left(
-                    -\sin(\varphi)\overrightarrow{ e_x } + \cos(\varphi)\overrightarrow{ e_y }
-                    \right) \right| }_{R} \\
-                    & = -\dot{\varphi}\cos(\varphi)\overrightarrow{ e_x } 
-                        -\dot{\varphi}\sin(\varphi)\overrightarrow{ e_y }
-                \end{align} $$
-            </p>
-            
-            <p>
-                Calculons l’expression suivante&#x202f;:</br>
-                $$ \begin{align}
-                    \sin(\theta)\overrightarrow{ e_r } + \cos(\theta)\overrightarrow{ e_\theta } & = 
-                    \left(\sin(\theta)^2\cos(\varphi)
-                                        +\cos(\theta)^2\cos(\varphi)\right)\overrightarrow{ e_x } \\
-                        
-                    & \quad + \left(\sin(\theta)^2\sin(\varphi)
-                                        +\cos(\theta)^2\sin(\varphi)\right)\overrightarrow{ e_y } \\
-                    
-                    & = \cos(\varphi)\overrightarrow{ e_x } + \sin(\varphi)\overrightarrow{ e_y }
-                    
-                \end{align} $$
-            </p>
-            
-            <p>
-                D’où&#x202f;:</br>
-                $$ { \left.\frac{d\overrightarrow{ e_\varphi }}{dt} \right| }_{ R } =
-                    -\dot{\varphi}\sin(\theta)\overrightarrow{ e_r }
-                    - \dot{\varphi}\cos(\theta)\overrightarrow{ e_\theta } $$
-            </p>
-
-        </section>
-    </body>
+    </section>
+  </body>
 </html>
