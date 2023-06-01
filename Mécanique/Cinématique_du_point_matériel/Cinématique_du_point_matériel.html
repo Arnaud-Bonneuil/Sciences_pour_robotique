@@ -1,1042 +1,830 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Cinématique du point matériel</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
-        <link rel="stylesheet" type="text/css" media="print" 
-              href="../../CSS_et_JS/styles_impr.css"/>
-        <script 
-            type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script> 
-        <script type="text/javascript" src="../../CSS_et_JS/visibilite_div.js"></script> 
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <title>Cinématique du point matériel</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../CSS_et_JS/styles.css"/>
+    <script 
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script> 
+    <script type="text/javascript" src="../../CSS_et_JS/visibilite_div.js"></script> 
+  </head>
+  <body>
 
-        <header>
-            <div id="application_document">Mécanique</div>
-            <div id="titre_document">Cinématique du point matériel</div>
-        </header>
+    <header>
+      <div id="application_document">Mécanique</div>
+      <div id="titre_document">Cinématique du point matériel</div>
+    </header>
 
-        <section>
+    <section>
 
-            <h1>Domaine d’étude</h1>
+      <h1>Domaine d’étude</h1>
+      
+      <div>
+        L’objet de la cinématique du point est d’étudier le mouvement d’un point au cours du temps
+        indépendamment des causes qui produisent le mouvement. Les objectifs sont la détermination
+        des grandeurs cinématiques telles que les vecteurs accélération, vitesse, position et
+        l’équation horaire de la trajectoire de ce point par rapport à un référentiel choisi par
+        l’observateur.
+      </div>
+        
+      <h1>Définitions</h1>
+      
+      <h2>Point matériel</h2>
+      
+      <div>
+        On appelle point matériel ou systeme ponctuel un système mécanique de taille macroscopique
+        mais de dimension négligeable devant son déplacement. Le système mécanique est alors
+        modélisé par un point géométrique sans dimension et sans forme auquel est associée sa masse.
+      </div>
+      
+      <h2>Événement</h2>
+      
+      <div>
+        Les phénomènes physiques peuvent être considérés comme un ensemble d’événements,
+        c’est-à-dire des phénomènes élémentaires qui se produisent en des endroits déterminés de
+        l’espace et à un instant donné.
+      </div>
+      
+      <h2>Temps</h2>
+      
+      <div>
+        En mécanique newtonienne, le temps est une variable scalaire indépendante (généralement
+        représentée par la lettre \(t\)) qui repère l’instant où un évenement s’est produit. Le
+        temps ne varie que dans un sens tel que la cause précède l’effet.<br/>
+        Quand on sait classer la succession temporelle des évènements on dit que l’on a établit une
+        chronologie.<br/>
+        On suppose que le temps est uniforme&#x202f;: les lois de la physique sont invariantes par
+        translation dans le temps.
+      </div>
+      
+      <h2>Repère d’espace</h2>
+      
+      <div>
+        On appelle repère d’espace un ensemble de points dont les distances sont invariables au
+        cours du temps. Un tel ensemble est aussi appelé un solide de référence. Par exemple une
+        table, un bateau, la terre peuvent servir de repère d’espace.
+      </div>
+      
+      <h2>Système de coordonnées</h2>
+      
+      <div>
+        On exprime la position d’un objet par rapport à un 
+        <a href="../../Mathématiques/Systèmes_de_coordonées/Systèmes_de_coordonées.html"
+           target="_blank">système de coordonnées</a>
+        qui est constitué d’un ensemble de trois axes dont chacun correspond à une direction de
+        l’espace et qui est considéré comme fixe par rapport à un repère d’espace. On dit que le
+        système de coordonnées est lié au repère.
+      </div>
+      
+      <h2>Système de référence</h2>
+      
+      <div>
+        On utilise pour l’étude de tout mouvement un système de référence ou référentiel formé d’un
+        repère d’espace (repère de référence) et d’un système chronométrique (horloge) dont la
+        variable est le temps.
+      </div>
+      
+      <div>
+        L’hypothèse fondamentale de la cinématique classique est que le temps reste le même dans
+        tous les systèmes de référence. Changer de référentiel revient donc simplement à un problème
+        de changement de repère de référence. L’étude du mouvement d’un point d’un solide se fait
+        donc toujours en précisant le repère de référence.
+      </div>
+      
+      <h1>Trajectoire d’un point matériel</h1>
+      
+      <div>
+        On appelle trajectoire d’un point mobile \(M\) par rapport à un repère de référence
+        \(R\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3}\right)\),
+        l’ensemble des points liés à \(R\) avec lesquels le point \(M\) vient en coïncidence au
+        cours de son mouvement par rapport à \(R\).<br/>
+        Cette trajectoire est notée \(\Gamma(M)\). Elle est déterminée en exprimant le vecteur
+        \(\overrightarrow{OM}\) dans le repère \(R\). On obtient ainsi l’équation paramétrique de la
+        trajectoire.
+      </div>
+      
+      <h1>Vitesse et accélération d’un point matériel</h2>
             
-            <p>
-                L’objet de la cinématique du point est d'étudier le mouvement d’un point au cours du
-                temps indépendamment des causes qui produisent le mouvement. Les objectifs sont la 
-                détermination des grandeurs cinématiques telles que les vecteurs accélération, 
-                vitesse, position et l’équation horaire de la trajectoire de ce point par rapport à 
-                un référentiel choisi par l'observateur.
-            </p>
-                
-            <h1>Définitions</h1>
-            
-            <h2>Point matériel</h2>
-            
-            <p>
-                On appelle point matériel ou systeme ponctuel un système mécanique de taille 
-                macroscopique mais de dimension négligeable devant son déplacement. Le système 
-                mécanique est alors modélisé par un point géométrique sans dimension et sans forme 
-                auquel est associée sa masse.
-            </p>
-            
-            <h2>Événement</h2>
-            
-            <p>
-                Les phénomènes physiques peuvent être considérés comme un ensemble d’événements, 
-                c’est-à-dire des phénomènes élémentaires qui se produisent en des endroits 
-                déterminés de l’espace et à un instant donné.
-            </p>
-            
-            <h2>Temps</h2>
-            
-            <p>
-                En mécanique newtonienne, le temps est une variable scalaire indépendante
-                (généralement représentée par la lettre \(t\)) qui repère l’instant où un évenement 
-                s’est produit. Le temps ne varie que dans un sens tel que la cause précède l’effet.
-                Quand on sait classer la succession temporelle des évènements on dit que l’on a 
-                établit une chronologie.</br>
-                On suppose que le temps est uniforme&nbsp;: les lois de la physique sont invariantes
-                par translation dans le temps.
-            </p>
-            
-            <h2>Repère d’espace</h2>
-            
-            <p>
-                On appelle repère d’espace un ensemble de points dont les distances sont invariables
-                au cours du temps. Un tel ensemble est aussi appelé un solide de référence. Par 
-                exemple une table, un bateau, la terre peuvent servir de repère d’espace.
-            </p>
-            
-            <h2>Système de coordonnées</h2>
-            
-            <p>
-                On exprime la position d’un objet par rapport à un 
-                <a href="../../Mathématiques/Systèmes_de_coordonées/Systèmes_de_coordonées.html"
-                   target="_blank">système de coordonnées</a>
-                qui est constitué d’un ensemble de trois axes dont chacun correspond à une direction
-                de l’espace et qui est considéré comme fixe par rapport à un repère d’espace. On dit
-                que le système de coordonnées est lié au repère.
-            </p>
-            
-            <h2>Système de référence</h2>
-            
-            <p>
-                On utilise pour l’étude de tout mouvement un système de référence ou référentiel
-                formé d’un repère d’espace (repère de référence) et d’un système chronométrique 
-                (horloge) dont la variable est le temps.
-            </p>
-            
-            <p>
-                L’hypothèse fondamentale de la cinématique classique est que le temps reste le même
-                dans tous les systèmes de référence. Changer de référentiel revient donc simplement 
-                à un problème de changement de repère de référence. L’étude du mouvement d’un point
-                d’un solide se fait donc toujours en précisant le repère de référence.
-            </p>
-            
-            <h1>Trajectoire d’un point matériel</h1>
-            
-            <p>
-                On appelle trajectoire d’un point mobile \(M\) par rapport à un repère de référence
-                \(R\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3}\right)\),
-                l’ensemble des points liés à \(R\) avec lesquels le point \(M\) vient en coïncidence
-                au cours de son mouvement par rapport à \(R\).<br />
-                Cette trajectoire est notée \(\Gamma(M)\). Elle est déterminée en exprimant le 
-                vecteur \(\overrightarrow{OM}\) dans le repère \(R\). On obtient ainsi l’équation 
-                paramétrique de la trajectoire.                        
-            </p>
-            
-            <h1>Vitesse et accélération d’un point matériel</h2>
-                        
-            <h2>Définitions</h2>
-            
-            <h3>Vitesse</h3>
-            
-            <p>
-                Un même déplacement peut se faire pendant des durées différentes. Le rapport de la 
-                distance parcourue \(d\)  sur la durée \(\delta t\) mise pour la parcourir appelé 
-                vitesse moyenne \(V_m = \frac{d}{\delta t}\) peut caractériser cette différence. Il 
-                est plus intéressant de définir la vitesse instantanée (vitesse à un instant \(t\), 
-                celle par exemple qui apparaît sur le compteur de vitesse d’un véhicule) qui peut 
-                prendre des valeurs très différentes de celle de la vitesse moyenne.
-            </p>
-            
-            <p>
-                Soit un point \(M\) mobile par rapport à un repère
-                \(R\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3} \right)\).
-            </p>
-            
-            <p>
-                La vitesse instantanée peut se définir comme une vitesse moyenne entre la position 
-                \(M_1=M(t)\) du point mobile à la date \(t\) et la position \(M_2=M(t+\delta t)\) de
-                ce même point à la date \(t+\delta t\) où \(\delta t\) représente une durée très 
-                faible. Cette vitesse moyenne tend d’autant plus vers la vitesse instantanée à la 
-                date \(t\) que la durée \(\delta t\) tend vers zéro. Le vecteur position 
-                \( \overrightarrow{OM} \) est une fonction du temps et la vitesse instantanée 
-                correspond alors à la dérivée par rapport au temps du vecteur position&nbsp;:<br />
-                $$ 
-                    \overrightarrow{v_{M/R}(t)} = \lim_{\delta t \rightarrow \infty} 
-                    {\frac{ \overrightarrow{OM(t+\delta t)} - \overrightarrow{OM(t)}}{\delta t}}
-                $$
-            </p>
-            
-            <p>
-                Lorsqu’on considère une durée élémentaire \(dt\) «&nbsp;infiniment petite&nbsp;» le 
-                point mobile passe d’une position \(M\) à une position \(M^\prime \)
-                «&nbsp;infiniment proche&nbsp;» de \(M\). Le déplacement élémentaire correspondant 
-                peut s’écrire&nbsp;: \( \overrightarrow{MM^\prime} = \overrightarrow{OM^\prime} - 
-                \overrightarrow{OM} = d\overrightarrow{OM} \). La durée élémentaire est choisi 
-                suffisamment petite pour que la vitesse moyenne sur le déplacement élémentaire
-                coïncide avec la vitesse instantanée.
-            </p>
-            
-            <p>
-                Avec ces notations, le vecteur vitesse, vitesse du point \(M\) par rapport à \(R\) à
-                l’instant \(t\), dérivée du vecteur position \( \overrightarrow{OM} \), 
-                s’écrit&nbsp;:</br>
-                $$ \boxed{ 
-                    \overrightarrow{v_{M/R}(t)}=\left.\frac{d\overrightarrow{OM(t)}}{dt}\right|_{R} 
-                }$$
-            </p>
-            
-            
-            <h3>Accélération</h3>    
-            
-            <p>
-                Tout comme le vecteur vitesse qui rend compte de la variation du vecteur position 
-                par rapport au temps, le vecteur accélération va rendre compte des variations du 
-                vecteur vitesse par rapport au temps. Le vecteur accélération correspond donc à la 
-                dérivée par rapport au temps du vecteur vitesse c’est-à-dire aussi à la dérivée 
-                seconde du vecteur position.
-            </p>
-            
-            <p>
-                L’accélération du point \(M\) par rapport à \(R\) à l’instant \(t\) est&nbsp;:<br />
-                $$ \boxed{
-                    \overrightarrow{a_{M/R}(t)}=
-                      \left. \frac{  d  \overrightarrow{ v_{M/R}(t) } }{ dt } \right| _{ R }
-                    = \left. \frac{ d^2 \overrightarrow{ OM(t) } }{ dt^2 } \right| _{ R }
-                }$$
-            </p>
-            
-            <p>
-                Le vecteur accélération correspond à la variations du vecteur vitesse par unité de 
-                temps. L’accélération s’exprime, dans le système international, en mètres divisés 
-                par des secondes au carré.
-            </p>    
+      <h2>Définitions</h2>
+      
+      <h3>Vitesse</h3>
+      
+      <div>
+        Un même déplacement peut se faire pendant des durées différentes. Le rapport de la distance
+        parcourue \(d\) sur la durée \(\delta t\) mise pour la parcourir appelé vitesse moyenne
+        \(V_m = \frac{d}{\delta t}\) peut caractériser cette différence. Il est plus intéressant de
+        définir la vitesse instantanée (vitesse à un instant \(t\), celle par exemple qui apparaît
+        sur le compteur de vitesse d’un véhicule) qui peut prendre des valeurs très différentes de
+        celle de la vitesse moyenne.
+      </div>
+      
+      <div>
+        Soit un point \(M\) mobile par rapport à un repère
+        \(R\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3} \right)\).
+      </div>
+      
+      <div>
+        La vitesse instantanée peut se définir comme une vitesse moyenne entre la position
+        \(M_1=M(t)\) du point mobile à la date \(t\) et la position \(M_2=M(t+\delta t)\) de ce même
+        point à la date \(t+\delta t\) où \(\delta t\) représente une durée très faible. Cette
+        vitesse moyenne tend d’autant plus vers la vitesse instantanée à la date \(t\) que la durée
+        \(\delta t\) tend vers zéro. Le vecteur position \( \overrightarrow{OM} \) est une fonction
+        du temps et la vitesse instantanée correspond alors à la dérivée par rapport au temps du
+        vecteur position&#x202f;:<br/>
+        $$ 
+          \overrightarrow{v_{M/R}(t)} = \lim_{\delta t \rightarrow \infty} 
+          {\frac{ \overrightarrow{OM(t+\delta t)} - \overrightarrow{OM(t)}}{\delta t}}
+        $$
+      </div>
+      
+      <div>
+        Lorsqu’on considère une durée élémentaire \(dt\) <q>infiniment petite</q> le point mobile
+        passe d’une position \(M\) à une position \(M^\prime\) <q>infiniment proche</q> de \(M\). Le
+        déplacement élémentaire correspondant peut s’écrire&#x202f;: \( \overrightarrow{MM^\prime} =
+        \overrightarrow{OM^\prime} - \overrightarrow{OM} = d\overrightarrow{OM} \). La durée
+        élémentaire est choisi suffisamment petite pour que la vitesse moyenne sur le déplacement
+        élémentaire coïncide avec la vitesse instantanée.
+      </div>
+      
+      <div>
+        Avec ces notations, le vecteur vitesse, vitesse du point \(M\) par rapport à \(R\) à
+        l’instant \(t\), dérivée du vecteur position \( \overrightarrow{OM} \), 
+        s’écrit&#x202f;:</br>
+        $$ \boxed{ 
+          \overrightarrow{v_{M/R}(t)}=\left.\frac{d\overrightarrow{OM(t)}}{dt}\right|_{R} 
+        }$$
+      </div>
+      
+      
+      <h3>Accélération</h3>  
+      
+      <div>
+        Tout comme le vecteur vitesse qui rend compte de la variation du vecteur position par
+        rapport au temps, le vecteur accélération va rendre compte des variations du vecteur vitesse
+        par rapport au temps. Le vecteur accélération correspond donc à la dérivée par rapport au
+        temps du vecteur vitesse c’est-à-dire aussi à la dérivée seconde du vecteur position.
+      </div>
+      
+      <div>
+        L’accélération du point \(M\) par rapport à \(R\) à l’instant \(t\) est&#x202f;:<br />
+        $$ \boxed{
+          \overrightarrow{a_{M/R}(t)}=
+            \left. \frac{  d  \overrightarrow{ v_{M/R}(t) } }{ dt } \right| _{ R }
+          = \left. \frac{ d^2 \overrightarrow{ OM(t) } }{ dt^2 } \right| _{ R }
+        }$$
+      </div>
+      
+      <div>
+        Le vecteur accélération correspond à la variations du vecteur vitesse par unité de temps.
+        L’accélération s’exprime, dans le système international, en mètres divisés par des secondes
+        au carré.
+      </div>
 
-            <h2>Remarque</h2>
-            
-            <p>
-                La dérivation se fait donc par rapport au temps et au repère de référence.<br />
-                Par contre, les vecteurs position, vitesse et accélération pourront être projetés 
-                dans un autre repère, mobile ou non par rapport au repère \(R\), de façon à obtenir 
-                les expressions les plus simples possibles.
-            </p>
-            
-            <h2>Propriétés</h2>
-            
-            <p>
-                Soit un point \(M\) mobile par rapport à un repère \(R\left(O,\overrightarrow{e_1},
-                \overrightarrow{e_2},\overrightarrow{e_3}\right)\).<br />
-                Soit \(\Gamma(M)\) la trajectoire de  \(M\) par rapport à \(R\).
-            </p>
-            
-            <p>
-                On définit&nbsp;:<br />
-                &emsp;&mdash;&nbsp;une orientation de \(\Gamma(M)\)&#x202f;;<br />
-                &emsp;&mdash;&nbsp;une abscisse curviligne \(s\) à partir d’une origine arbitraire 
-                \(M_0\)&#x202f;;<br />
-                &emsp;&mdash;&nbsp;\(\vec{t}\) le vecteur unitaire tangent en \(M\) à 
-                \(\Gamma(M)\).<br />
-                Le plan osculateur en \(M\) est la limite du plan 
-                \(\left(\vec{t_1},\vec{t_2}\right)\) lorsque \(s_2\) tend vers \(s_1\).
-            </p>
-            
-            <p>
-                On définit alors le repère de Frenet \(\left(M,\vec{t},\vec{n},\vec{z}\right)\) 
-                avec&nbsp;;<br />
-                &emsp;&mdash;&nbsp;\(\vec{n}\) normale principale en \(M\) à \(\Gamma(M)\) 
-                appartenant au plan osculateur et tel que \(\left(\vec{t},
-                \vec{n}\right)=\frac{\pi}{2}\)&#x202f;;<br />
-                &emsp;&mdash;&nbsp;\(\vec { z } =\vec { t } \wedge \vec { n }\).
-            </p>
-            
-            <p>
-                Les formules de Frenet s’écrivent alors&nbsp;;<br />
-                $$ 
-                    \vec { t } = { \left. \frac{ d\overrightarrow{OM} } {ds} \right| }_{R}
-                $$
-                $$
-                    \frac{\vec{n}}{\rho} = { \left. \frac{ d\vec{t} } {ds}  \right| }_{R}
-                $$
-                \(\rho\) est le rayon de courbure algébrique. Si \(C\) est le centre de courbure, on
-                a&nbsp;: \( \overrightarrow{MC} = \rho \vec{n}\).<br />
-                \(\rho\) est positif lorsque \(\vec{n}\) est dirigé vers la concavité de la 
-                trajectoire.
-            </p>
-            
-            <p>
-                L’expression du vecteur vitesse dans le repère de Frenet devient&nbsp;:
-                $$ \begin{align}
-                    \overrightarrow { v_{ M/R }(t) } & = 
-                    \left. \frac { d\overrightarrow { OM(t) }  }{ dt }  \right| _{ R } \\
-                     & = \frac { d \overrightarrow{ O M } }{ ds } \cdot \frac{ ds }{ dt } \\
-                     & = \dot { s } \vec { t } 
-                \end{align} $$
-                On en déduit que la vitesse d’un point est colinéaire à la tangente à sa
-                trajectoire.
-            </p>
-            
-            <p>
-                L’expression du vecteur accélération dans le repère de Frenet devient&nbsp;:
-                $$ \begin{align}
-                    \overrightarrow{ a_{M/R}(t) } & = 
-                    \left. \frac {  d\overrightarrow { v_{M/R}(t) } }{ dt } \right| _{ R } \\
-                    & = \frac { d \dot { s } \vec { t } }{ dt } \\
-                    & = \ddot{s} \vec{t} + \dot{s} \frac{ d \vec{t} }{ dt } \\
-                    & = \ddot{s} \vec{t} + \dot{s} \frac{ d \vec{t} }{ ds }  
-                                                                         \times \frac{ ds }{ dt } \\
-                    & = \ddot{s} \vec{t} + \frac{\dot{s}^2}{\rho} \vec{n}
-                \end{align} $$
-                On en déduit que l’accélération d’un point appartient au plan osculateur et est 
-                dirigée vers la concavité de sa trajectoire.
-            </p>
-            
-            <h1>Mouvements simples</h1>
-            
-            <h2>Mouvement rectiligne</h2>
-            
-            <p>
-                La trajectoire décrite est une droite.
-            </p>
-            
-            <h3>Mouvement rectiligne uniforme</h3>
-            
-            <p>
-                Le mouvement est dit rectiligne uniforme si le vecteur vitesse est constant.
-            </p>
-            
-            <h3>Mouvement rectiligne uniformément accéléré</h3>
-            
-            <p>
-                Le mouvement est dit rectiligne uniformément accéléré (on dit aussi rectiligne 
-                uniformément varié) si le vecteur accélération est constant et que les vecteurs 
-                accélération et vitesse sont colinéaires.
-            </p>
-            
-            <h2>Mouvement circulaire uniforme</h2>
-            
-            <p>
-                Le mouvement est dit circulaire uniforme si la trajectoire décrite est un cercle et 
-                que la norme du vecteur vitesse est constante.
-            </p>
-            
-            <h1>Expression de la vitesse et de l’accélération</h1>
-            
-            <h2>Expression en coordonnées cartésiennes</h2>
-            
-            <h3>Position</h3>
-            
-            <p>
-                Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
-                façon suivante&nbsp;:</br>
-                $$ 
-                    \overrightarrow{ OM } = x\overrightarrow{ e_x } + y\overrightarrow{ e_y } 
-                                            + z\overrightarrow{ e_z }
-                $$
-            </p>
-            
-            <h3>Vitesse</h3>
-            
-            <p>
-                La vitesse du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                     \overrightarrow{v_{M/R}(t)} & = 
-                                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{ R } \\
-                    & = { \left. \frac{d}{dt}
-                            \left( 
-                                x\overrightarrow{e_x} +y\overrightarrow{e_y} +z\overrightarrow{e_z}
-                            \right)\right| }_{ R } \\
-                    
-                    & = \frac{dx}{dt}\overrightarrow{e_x} 
-                        + x {\left.\frac{d\overrightarrow{e_x}}{dt}\right|}_{R}
-                        +\frac{dy}{dt}\overrightarrow{e_y} 
-                        + y {\left.\frac{d\overrightarrow{e_y}}{dt}\right|}_{R}
-                        +\frac{dz}{dt}\overrightarrow{e_z} 
-                        + z {\left.\frac{d\overrightarrow{e_z}}{dt}\right|}_{R}
-                \end{align} $$
-                
-                $$ \boxed{ 
-                    \overrightarrow{v_{M/R}(t)} = \dot{x}\overrightarrow{ e_x }
-                                                + \dot{y}\overrightarrow{ e_y } 
-                                                + \dot{z}\overrightarrow{ e_z } 
-                } $$
-            </p>
-            
-            <h3>Accélération</h3>
-            
-            <p>
-                L’accélération du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                    \overrightarrow { a_{M/R}(t) } & = 
-                                 { \left. \frac{ d\overrightarrow{v_{M/R}}}{ dt } \right| }_{ R } \\
-                    & = { \left. \frac{d}{dt} \left( 
-                                                      \dot{x}\overrightarrow{ e_x } 
-                                                    + \dot{y}\overrightarrow{ e_y } 
-                                                    + \dot{z}\overrightarrow{ e_z }
-                                              \right) 
-                        \right| }_{ R }
-                \end{align} $$
-                
-                $$ \boxed{ 
-                    \overrightarrow { a_{M/R}(t) } =  \ddot{x}\overrightarrow{e_x} 
-                                                    + \ddot{y}\overrightarrow{e_y} 
-                                                    + \ddot{z}\overrightarrow{e_z} 
-                } $$
-            </p>
-            
-            <h2>Expression en coordonnées cylindriques</h2>
-            
-            <h3>Position</h3>
-            
-            <p>
-                Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
-                façon suivante&nbsp;:</br>
-                $$ 
-                    \overrightarrow{ OM } = r\overrightarrow{ e_r } +  z\overrightarrow{ e_z }
-                $$
-            </p>
-            
-            <h3>Vitesse</h3>
-            
-            <p>
-                La vitesse du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                     \overrightarrow{v_{M/R}(t)} & = 
-                                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{ R } \\
-                    
-                    & = {\left. \frac{d}{dt} \left(
-                                                  r\overrightarrow{ e_r } +  z\overrightarrow{ e_z } 
-                                             \right)
-                         \right|}_{ R }\\
-                    
-                    & = \frac{dr}{dt}\overrightarrow{ e_r } 
-                    + r { \left. \frac{d\overrightarrow{ e_r }}{dt} \right| }_{ R } 
-                    + \frac{dz}{dt}\overrightarrow{ e_z } 
-                    + z { \left. \frac{d\overrightarrow{ e_z }}{dt} \right| }_{ R }
-                \end{align} $$    
-                
-                $$ \boxed{ 
-                 \overrightarrow{v_{M/R}(t)} =  \dot{r}\overrightarrow{ e_r } 
-                 + r\dot{\theta}\overrightarrow{ e_\theta } 
-                 + \dot{z}\overrightarrow{ e_z }
-                }$$
-            </p>
-
-            <h3>Accélération</h3>
-            
-            <p>
-                L’accélération du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                    \overrightarrow { a_{M/R}(t) } & = 
-                              { \left. \frac{ d\overrightarrow{ v_{M/R} } }{ dt } \right| }_{ R } \\
-                    
-                    & = { \left. \frac{d}{dt} \left( 
-                                                    \dot{r}\overrightarrow{ e_r } 
-                                                    + r\dot{\theta}\overrightarrow{ e_\theta } 
-                                                    + \dot{z}\overrightarrow{ e_z } 
-                                              \right)
-                          \right| }_{ R } \\
-                    
-                    & = \ddot{r}\overrightarrow{ e_r } 
-                        + \dot{r} {\left. \frac{d\overrightarrow{ e_r }}{dt} \right|}_{R}
-                        + \dot{r}\dot{\theta}\overrightarrow{ e_\theta } 
-                        + r\ddot{\theta}\overrightarrow{ e_\theta } 
-                        + r\dot{\theta} {\left. \frac{d\overrightarrow{ e_\theta }}{dt} \right|}_{R}
-                        + \ddot{z}\overrightarrow{ e_z } 
-                        + \dot{z} {\left. \frac{d\overrightarrow{ e_z }}{dt} \right|}_{R} \\
-                        
-                    & = \ddot{r}\overrightarrow{ e_r } 
-                        + \dot{r}\dot{\theta}\overrightarrow{ e_\theta }    
-                        + \dot{r}\dot{\theta}\overrightarrow{ e_\theta } 
-                        + r\ddot{\theta}\overrightarrow{ e_\theta }
-                        - r\dot{\theta}\dot{\theta}\overrightarrow{ e_r }
-                        + \ddot{z}\overrightarrow{ e_z }
-                \end{align} $$
-                
-                $$ \boxed{
-                    \overrightarrow { a_{M/R}(t) } = 
-                        \left( \ddot{r} - r\dot{\theta}^2  \right) \overrightarrow{e_r} 
-                        + \left(2\dot{r}\dot{\theta}+r\ddot{\theta}\right) \overrightarrow{e_\theta} 
-                        + \ddot{z}\overrightarrow{e_z} 
-                }$$
-            </p>
-            
-            <h2>Expression en coordonnées sphériques</h2>
-            
-            <h3>Position</h3>
-            
-            <p>
-                Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
-                façon suivante&nbsp;:</br>
-                $$
-                    \overrightarrow{ OM } = r\overrightarrow{ e_r }
-                $$
-            </p>
-            
-            <h3>Vitesse</h3>
-            
-            <p>
-                La vitesse du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                    \overrightarrow{v_{M/R}(t)} & = 
-                                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{R} \\
-                    
-                    & = { \left. \frac{d\left( r\overrightarrow{ e_r } \right)}{dt} \right| }_{R} \\
-                    
-                    & = \frac{dr}{dt}\overrightarrow{e_r} 
-                        + r{ \left.\frac{d\overrightarrow{e_r}}{dt} \right| }_{R}
-                \end{align} $$    
-                $$\boxed{
-                    \overrightarrow{v_{M/R}(t)} = \dot{r} \overrightarrow{e_r} 
-                    + r\dot{\theta}\overrightarrow{e_\theta} 
-                    + r\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
-                } $$
-            </p>
-
-            <h3>Accélération</h3>
-            
-            <p>
-                L’accélération du point \(M\) par rapport à \(R\) est&nbsp;:</br>
-                $$ \begin{align}
-                    \overrightarrow{a_{M/R}(t)} & = 
-                                          {\left.\frac{d\overrightarrow{v_{M/R}}}{dt}\right|}_{R}\\
-                    
-                    & = { \left. \frac{d}{dt} \left( 
-                            \dot{r} \overrightarrow{e_r} 
-                            + r\dot{\theta}\overrightarrow{e_\theta} 
-                            + r\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
-                        \right) \right| }_{ R } \\
-                        
-                    & = \ddot{r}\overrightarrow{e_r} 
-                        + \dot{r}{\left.\frac{d\overrightarrow{e_r}}{dt}\right|}_{R}
-                        + \dot{r}\dot{\theta}\overrightarrow{e_\theta} 
-                        + r\ddot{\theta}\overrightarrow{e_\theta} 
-                        + r\dot{\theta}{\left.\frac{d\overrightarrow{e_\theta} }{dt}\right|}_{R}
-                        + \dot{r}\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
-                        + r\dot{\theta}\cos(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
-                        + r\sin(\theta)\ddot{\varphi}\overrightarrow{e_\varphi} \\
-                    & + r\sin(\theta)\dot{\varphi}
-                                        {\left.\frac{d\overrightarrow{e_\varphi}}{dt}\right|}_{R} \\
-
-                    & = \ddot{r}\overrightarrow{e_r}
-                        + \dot{r}\left(\dot{\theta}\overrightarrow{ e_\theta } 
-                                      + \dot{\varphi}\sin{\theta}\overrightarrow{ e_\varphi }\right)
-                        + \dot{r}\dot{\theta}\overrightarrow{e_\theta} 
-                        + r\ddot{\theta}\overrightarrow{e_\theta} 
-                        + r\dot{\theta}\left(- \dot{\theta}\overrightarrow{ e_r } 
-                                      + \dot{\varphi}\cos(\theta)\overrightarrow{ e_\varphi }\right)
-                        + \dot{r}\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi} \\
-                    & + r\dot{\theta}\cos(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
-                        + r\sin(\theta)\ddot{\varphi}\overrightarrow{e_\varphi}
-                        + r\sin(\theta)\dot{\varphi}
-                             \left(-\dot{\varphi}\sin(\theta)\overrightarrow{e_r} 
-                                        -\dot{\varphi}\cos(\theta)\overrightarrow{ e_\theta }\right)
-                \end{align} $$
-            
-                $$ \boxed{ \begin{align}
-                    \overrightarrow{a_{M/R}(t)} & =
-                        \left(
-                            \ddot{r}
-                            - r\dot{\theta}^2
-                            - r \sin^2(\theta)\dot{\varphi}^2
-                        \right)
-                        \overrightarrow{e_r} \\
-                    & + \left(
-                            2\dot{r}\dot{\theta}
-                            + r\ddot{\theta} 
-                            - r\dot{\varphi}^2\sin(\theta)\cos(\theta)
-                        \right)
-                        \overrightarrow{ e_\theta } \\
-                    & + \left(
-                            2\dot{r}\dot{\varphi}\sin(\theta) 
-                            + 2r\dot{\theta}\dot{\varphi}\cos(\theta) 
-                            + r\sin(\theta)\ddot{\varphi}
-                        \right)
-                        \overrightarrow{ e_\varphi } 
-                \end{align} } $$
-            </p>
-            
-            <h1>Changement de référentiel</h1>
-            
-            <p>
-                Considérons deux repères de l’espace&nbsp;:</br>
-                &emsp;&mdash;&nbsp;un repère 
-                \(R =\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3}\right)\)
-                où la position d’un point \(P\) est donnée par le vecteur \(\overrightarrow{OP} = 
-                x_1\overrightarrow{e_1} + x_2\overrightarrow{e_2} 
-                + x_3\overrightarrow{e_3}\)&#x202f;;</br>
-                &emsp;&mdash;&nbsp;un repère
-                \( R^{\prime} = \left( O^{\prime}, \overrightarrow{e^{\prime}_1},
-                \overrightarrow{e^{\prime}_2}, \overrightarrow{e^{\prime}_3} \right) \)
-                où la position du même point \(P\) est donnée par le vecteur
-                \(\overrightarrow{O^{\prime}P} = x^{\prime}_1\overrightarrow{e^{\prime}_1} 
-                + x^{\prime}_2\overrightarrow{e^{\prime}_2}
-                +x^{\prime}_3\overrightarrow{e^{\prime}_3}\).</br>
-                Considérons le repère \(R\) comme fixe et le repère \(R^{\prime}\) comme mobile. 
-            </p>
-            
-            <p>
-                Il faut préciser le sens de ce qui a été affirmé ci-dessus&nbsp;: la distinction 
-                entre repère fixe et mobile est arbitraire et conventionnelle, comme la relativité 
-                galiléenne nous l’assure&nbsp;: on ne peut pas privilégier, en nature, aucun repère 
-                en le qualifiant de «&nbsp;fixe&nbsp;», voire, il n’existe rien en nature qu’on 
-                puisse considérer comme absolument immobile, de telle sorte que tout autre mouvement
-                soit mesuré par rapport à cet observateur. Au contraire, chaque observateur peut 
-                être considéré comme conventionnellement immobile, et ainsi faisant on évaluera les 
-                mouvements relatifs à cet observateur, sans jamais pouvoir les  qualifier de 
-                mouvements absolus. Souvent, on dit que Galilée a abattu le concept, lié à la 
-                cosmologie de Ptolémée, d’espace absolu, en introduisant le concept d’espace 
-                relatif.
-            </p>
-            
-            <p>
-                L’objet de l’étude est d’exprimer la vitesse et l’accélération du point \(P\) à 
-                partir de ses coordonnées par rapport au référentiel mobile (coordonnées relatives) 
-                et du mouvement d'entraînement du référentiel mobile.
-            </p>
-            
-            <h2>Composition des vitesses</h2>
-            
-            <p>
-                On appelle vitesse absolue du point \(P\), la vitesse du point \(P\) par rapport au 
-                référentiel fixe, c’est le vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{v_{abs}} = \overrightarrow{v_{P/R}}
-                                             = { \left.\frac{d\overrightarrow{OP}}{dt} \right| }_{R}
-                $$
-                Or la relation de Chasles nous donne \( \overrightarrow{OP} = 
-                \overrightarrow{OO^{\prime}} + \overrightarrow{O^{\prime}P} \), d’où&nbsp;:</br>
-                $$
-                    \overrightarrow{v_{P/R}} = { \left.\frac{d\overrightarrow{OP}}{dt} \right| }_{R}
-                    = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R } 
-                    + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R }
-                $$
-            </p>
-                    
-            <h3>Formule de la base mobile</h3>
-            
-            <p>
-                Calculons la quantité \( { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} 
-                \right| }_{ R } \).</br>
-                $$ \begin{align}
-                    { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R } 
-                    & = { \left.\frac{d}{dt}\left( 
-                                                 x^{\prime}_1\overrightarrow{e^{\prime}_1}
-                                                +x^{\prime}_2\overrightarrow{e^{\prime}_2}
-                                                +x^{\prime}_3\overrightarrow{e^{\prime}_3}
-                                           \right)
-                          \right| }_{ R } \\
-                    & = \dot{x^{\prime}_1}\overrightarrow{e^{\prime}_1} 
-                        + x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt}\right|}_{R}
-                        + \dot{x^{\prime}_2}\overrightarrow{e^{\prime}_2}
-                        + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt}\right|}_{R}
-                        + \dot{x^{\prime}_3}\overrightarrow{e^{\prime}_3} 
-                        + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt}\right|}_{R}\\
-                    & = { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
-                     + x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt} \right| }_{ R }
-                     + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt} \right| }_{ R }
-                     + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt} \right| }_{ R }
-                \end{align} $$
-            <p>
-                
-            <p>
-                Il faut donc exprimer la dérivée temporelle des vecteurs \(e^{\prime}_i\) par 
-                rapport au référentiel \(R\).</br>
-                Considérons des variations élémentaires d’angle \(d\theta_i = \omega_{i}dt\) autour 
-                des axes \( \left(O^{\prime},\overrightarrow{e^{\prime}_i} \right) \).</br>
-                Le vecteur \(\overrightarrow{e^{\prime}_1}\) varie de 
-                \(d\overrightarrow{e^{\prime}_1} = d\theta_3\overrightarrow{e^{\prime}_2} 
-                - d\theta_2\overrightarrow{e^{\prime}_3} \).</br>
-                Le vecteur \(\overrightarrow{e^{\prime}_2}\) varie de 
-                \(d\overrightarrow{e^{\prime}_2} = d\theta_1\overrightarrow{e^{\prime}_3} 
-                - d\theta_3\overrightarrow{e^{\prime}_1} \).</br>
-                Le vecteur \(\overrightarrow{e^{\prime}_3}\) varie de 
-                \(d\overrightarrow{e^{\prime}_3} = d\theta_2\overrightarrow{e^{\prime}_1} 
-                - d\theta_1\overrightarrow{e^{\prime}_2} \).</br>
-                On a alors&nbsp;:</br>
-                $$ \begin{align}
-                    x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt} \right| }_{ R }
-                    + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt} \right| }_{ R }
-                    + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt} \right| }_{ R }
-                    & = 
-                      x^{\prime}_1 \left( \omega_{3}\overrightarrow{e^{\prime}_2} 
-                                                 - \omega_{2}\overrightarrow{e^{\prime}_3} \right)
-                    + x^{\prime}_2 \left( \omega_{1}\overrightarrow{e^{\prime}_3}
-                                                 - \omega_{3}\overrightarrow{e^{\prime}_1} \right)
-                    + x^{\prime}_3 \left( \omega_{2}\overrightarrow{e^{\prime}_1} 
-                                                 - \omega_{1}\overrightarrow{e^{\prime}_2}\right) \\
-                    & = 
-                      \left( \omega_{2}x^{\prime}_3 
-                      - \omega_{3}x^{\prime}_2 \right) \overrightarrow{e^{\prime}_1}
-                      + \left( \omega_{3}x^{\prime}_1 
-                      - \omega_{1}x^{\prime}_3 \right) \overrightarrow{e^{\prime}_2}
-                      + \left( \omega_{1}x^{\prime}_2 
-                      - \omega_{2}x^{\prime}_1 \right) \overrightarrow{e^{\prime}_3} \\
-                    & = 
-                    { \left( \begin{matrix} \omega_1 \\ 
-                                            \omega_2 \\ 
-                                            \omega_3 \end{matrix} \right) }_{ R^{\prime} } 
-                    \wedge 
-                    { \left( \begin{matrix} x^{\prime}_1 \\ 
-                                            x^{\prime}_2 \\ 
-                                            x^{\prime}_3 \end{matrix} \right) }_{ R^{\prime} }
-                \end{align} $$
-            </p>
-
-            <p>
-                Le vecteur \( \overrightarrow{\Omega_{R^{\prime}/R}} = 
-                { \left( \begin{matrix} \omega_1 \\ \omega_2 \\ \omega_3 \end{matrix} \right) }
-                _{ R^{\prime} }\) est appelé vecteur instantané de rotation du repère \(R^{\prime}\)
-                par rapport au repère \(R\).
-            </p>
-            
-            <p>
-                On écrit alors la formule de la base mobile, aussi appelée formule de 
-                Bour&nbsp;:</br>
-                $$ \boxed{
-                    { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R } = 
-                    { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} 
-                }$$
-            </p>
-
-            <p>
-                De manière générale, pour tout vecteur \(\overrightarrow{u}\) fixe dans 
-                \(R^{\prime}\) on a&nbsp;:</br>
-                $$ \boxed{
-                    {\left.\frac{d\overrightarrow{u}}{dt} \right|}_{ R } = 
-                                    \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{u}
-                } $$
-            </p>
-            
-            <h3>Première loi de la cinématique</h3>
-            
-            <p>
-                Reprenons le calcul de la vitesse du point \(P\) dans le référentiel \(R\).</br>
-                $$ \begin{align}
-                    \overrightarrow{v_{P/R}} & = 
-                                             { \left.\frac{d\overrightarrow{OP}}{dt} \right|}_{R} \\
-                    & = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R } 
-                                  + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{R}\\    
-                    & = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R }
-                        + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
-                        + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P}
-                \end{align} $$
-                $$ \boxed{ 
-                    \overrightarrow{v_{P/R}} =  \overrightarrow{v_{P/R^{\prime}}} 
-                    + \overrightarrow{v_{O^{\prime}/R}}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} }
-                $$
-                
-            </p>
-            
-            <p>
-                On appelle vitesse relative la vitesse du point \(P\) par rapport au repère 
-                \(R^{\prime}\), c’est le vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{v_{rel}} = \overrightarrow{v_{P/R^{\prime}}}
-                $$
-            </p>
-            
-            <p>
-                On appelle vitesse d’entraînement la vitesse du point \(P\) par rapport au repère 
-                \(R\) considéré comme fixe dans le repère \(R^{\prime}\), c’est le 
-                vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{v_{ent}} = \overrightarrow{v_{O^{\prime}/R}} 
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P}
-                $$
-            </p>
-            
-            
-            <h2>Composition des accélérations</h2>
-            
-            <p>
-                On appelle accélération absolue du point \(P\), l’accélération du point \(P\) par 
-                rapport au référentiel fixe, c’est le vecteur&nbsp;:</br>
-                $$ \begin{align}
-                    \overrightarrow{a_{abs}} = \overrightarrow{a_{P/R}} & = 
-                                       { \left.\frac{d\overrightarrow{v_{P/R}}}{dt} \right| }_{R} \\
-                    & = { \left.\frac{d{}}{dt} \left( 
-                          \overrightarrow{v_{P/R^{\prime}}} 
-                        + \overrightarrow{v_{O^{\prime}/R}}
-                        + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} 
-                                               \right) 
-                          \right| }_{R}
-                \end{align} $$
-            </p>
-            
-            <p>
-                Calculons chacun des termes séparément.
-                $$ \begin{align}
-                    {\left.\frac{d{\overrightarrow{v_{P/R^{\prime}}}}}{dt}\right|}_{R} & = 
-                    {\left.\frac{d{\overrightarrow{v_{P/R^{\prime}}}}}{dt}\right|}_{R^{\prime}}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}}
-                                                           \wedge\overrightarrow{v_{P/R^{\prime}}}\\
-                    & = \overrightarrow{a_{P/R^{\prime}}} + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                                            \wedge \overrightarrow{v_{P/R^{\prime}}}
-                \end{align} $$
-
-                $$
-                    { \left. \frac{d{ \overrightarrow{v_{O^{\prime}/R}} }}{dt} \right| }_{R} = 
-                                                                   \overrightarrow{a_{O^{\prime}/R}}
-                $$
-
-                $$ \begin{align}
-                    { \left. \frac{d{ }}{dt} \left( \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                       \wedge \overrightarrow{O^{\prime}P} \right) \right| }_{R} & = 
-                    { \left. \frac{d{ \overrightarrow{\Omega_{R^{\prime}/R}} }}{dt}  \right| }_{R} 
-                                       \wedge \overrightarrow{O^{\prime}P}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}}
-                              \wedge {\left.\frac{d{\overrightarrow{O^{\prime}P}}}{dt}\right|}_{R}\\
-                      
-                    & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
-                                                                 \wedge \overrightarrow{O^{\prime}P}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge 
-                        \left(
-                            {\left.\frac{d\overrightarrow{O^{\prime}P}}{dt}\right|}_{ R^{\prime}}
-                            + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                                                 \wedge \overrightarrow{O^{\prime}P}  
-                        \right) \\  
-                      
-                    & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt} \right|}_{R}
-                                                                 \wedge \overrightarrow{O^{\prime}P}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                        \wedge {\left.\frac{d\overrightarrow{O^{\prime}P}}{dt}\right|}_{ R^{\prime}}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                        \wedge \overrightarrow{\Omega_{R^{\prime}/R}} 
-                        \wedge \overrightarrow{O^{\prime}P} \\
-                    
-                    & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
-                        \wedge \overrightarrow{O^{\prime}P}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}}\wedge \overrightarrow{v_{P/R^{\prime}}} 
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                        \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
-                        \wedge \overrightarrow{O^{\prime}P}
-                \end{align} $$
-            </p>
-            
-            <p>
-                D’où finalement&nbsp;:</br>
-                $$
-                    \overrightarrow{a_{abs}} = \overrightarrow{a_{P/R^{\prime}}}
-                        + \overrightarrow{a_{O^{\prime}/R}} 
-                        + {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
-                                                                 \wedge \overrightarrow{O^{\prime}P}
-                        + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
-                                \wedge \overrightarrow{O^{\prime}P}
-                        + 2 \times \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                \wedge \overrightarrow{v_{P/R^{\prime}}}
-                $$
-            </p>
-            
-            <p>
-                On appelle accélération relative l’accélération du point \(P\) par rapport au repère
-                \(R^{\prime}\). C’est le vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{a_{rel}} = \overrightarrow{a_{P/R^{\prime}}}
-                $$
-            </p>
-            
-            <p>
-                On appelle accélération d’entrainement l’accélération d’un point \(P^{\prime}\) 
-                immobile dans \(R^{\prime}\) coïncidant avec le point \(P\) à l’instant \(t\). C’est
-                le vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{a_{ent}} = \overrightarrow{a_{O^{\prime}/R}} 
-                    + { \left. \frac{d{ \overrightarrow{\Omega_{R^{\prime}/R}} }}{dt}  \right| }_{R} 
-                        \wedge \overrightarrow{O^{\prime}P}
-                    + \overrightarrow{\Omega_{R^{\prime}/R}} 
-                        \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
-                        \wedge \overrightarrow{O^{\prime}P}
-                $$
-            </p>
-            
-            <p>
-                On appelle accélération de Coriolis le vecteur&nbsp;:</br>
-                $$
-                    \overrightarrow{a_{cor}} = 2 \times \overrightarrow{\Omega_{R^{\prime}/R}} 
-                                                            \wedge \overrightarrow{v_{P/R^{\prime}}}
-                $$
-            </p>
-            
-
-            <h1>Applications</h1>
-<!--            
-            <h2>
-                <a class="show_hide" href="" 
-                onclick="javascript:visibilite_div('Sauvetage_en_mer'); return false;"
-                style="text-decoration:none;" >
-                Sauvetage en mer</a>
-            </h2>
-            
-            <div id="Sauvetage_en_mer" style="display:none;">
-            
-            <p>
-                Un sauveteur situé sur la plage doit secourir un baigneur (situé dans l’eau) en 
-                détresse. Sachant que le sauveteur court à la vitesse \(v_s\) sur le sable et nage à
-                la vitesse \(v_e\) dans l’eau, déterminer sa trajectoire optimale pour rejoindre au 
-                plus vite le baigneur.
-            </p>
-            
-            <p>
-                Exprimons le temps de parcours du sauveteur (\(t\))&nbsp;:</br>
-                $$t = t_s + t_e $$
-                Avec&nbsp;:</br>
-                \(t_s\), temps de parcours sur la sable \( = \frac{SE}{v_s} \),</br>
-                et \(t_e\), temps de parcours dans l’eau \( = \frac{EB}{v_m} \).
-            </p>
-            
-            </div>
--->            
-            <h2>
-                <a class="show_hide" href="" 
-                onclick="javascript:visibilite_div('Bataille_navale'); return false;"
-                style="text-decoration:none;" >
-                Bataille navale</a>
-            </h2>
-            
-            <div id="Bataille_navale" style="display:none;">
-            
-            <p>
-                Un navire \(N\) est animé d’un mouvement rectiligne et uniforme de vitesse 
-                \(\overrightarrow{v}\), le long d’une droite \((D)\). Un sous-marin immobile \(S\) 
-                tire    une torpille \(T\) à l’instant où l’angle \(\left(\overrightarrow{NS}, 
-                \overrightarrow{v} \right)\) a la valeur \(\alpha\). \(T\) étant animée d’un 
-                mouvement rectiligne et uniforme de vitesse \(\overrightarrow{u}\).</br>
-                1.&nbsp;Quelle doit être la valeur de l’angle de tir \(\theta = \left( 
-                \overrightarrow{u},\overrightarrow{SN}\right)\) si l’on veut couler N&#x202f;?</br>
-                2.&nbsp;Si l’on veut que \(T\) atteigne \(N\) en un temps minimum, à quel instant, 
-                c’est à dire pour quelle valeur de \(\alpha\), convient-il de tirer&#x202f;? (on 
-                donnera la relation entre \(\alpha\) et \(\theta\)). Calculer la valeur de l’angle 
-                de tir \(\theta\) correspondante.
-            </p>
-            
-            <figure>
-                <img src="ressources/bataille_navale.png">
-            </figure>
-
-            <h3>Preparatif</h3>
-            
-            <p>
-                On muni l’espace d’un repère \(R =\left(O,\overrightarrow{e_x},\overrightarrow{e_y},
-                \overrightarrow{e_z}\right)\), (\(\left(\overrightarrow{e_x},\overrightarrow{e_y},
-                \overrightarrow{e_z}\right)\) formant un base orthonormée directe) tel 
-                que&nbsp;:</br>
-                &emsp;&mdash;&nbsp;\(O\) appartient à la droite D tel que O = N(t=0)&#x202f;;</br>
-                &emsp;&mdash;&nbsp;\(\overrightarrow{ e_x }\) est colinéaire à 
-                \(\overrightarrow{v}\)&#x202f;;</br>
-                &emsp;&mdash;&nbsp;\(\overrightarrow{v}\) et \(\overrightarrow{u}\) appartiennent au
-                plan \( \left(\overrightarrow{ e_x }, \overrightarrow{ e_y } \right) \).
-            </p>
-            
-            <p>
-                On note \(d\) la distance \(NS\).
-            </p>
-            
-            <h3>Question 1</h3>
-            
-            <p>
-                On calcule la position de \(N\)&nbsp;:</br>
-                $$
-                    \overrightarrow { ON(t) } =\int { \overrightarrow { v } dt }
-                $$
-                Or \(\overrightarrow{v}\) est constant et égal à v\(\overrightarrow{e_x}\), 
-                d’où&nbsp;:</br>
-                $$
-                    \overrightarrow { ON(t) } = vt\overrightarrow{e_x} + cte
-                $$
-                La constante est nulle car \( N(t=0) = O \). D’où finalement&nbsp;:</br>
-                $$
-                    \boxed{ \overrightarrow { ON(t) } = vt\overrightarrow{e_x} }
-                $$
-            </p>
-            
-            <p>
-                On calcule la position de \(T\)&nbsp;:</br>
-                $$
-                    \overrightarrow { OT(t) } =\int { \overrightarrow { u } dt }
-                $$
-                Or \(\overrightarrow{u}\) est constant et égal à
-                \(-u\cos(\alpha+\theta)\overrightarrow{e_x} 
-                + u\sin(\alpha+\theta)\overrightarrow{e_y}\), d’où&nbsp;:</br>
-                $$
-                    \overrightarrow { OT(t) } = -ut\cos(\alpha+\theta)\overrightarrow{e_x} 
-                                                   + ut\sin(\alpha+\theta)\overrightarrow{e_y} + cte
-                $$
-                Or à les coordonnées du point \(T\) à \(t=0\) sont \(( d*\cos(\alpha), 
-                -d\times\sin(\alpha) )\).D’où finalement&nbsp;:</br>
-                $$
-                    \boxed{ \overrightarrow { OT(t) } = \left( -ut\cos(\alpha+\theta) 
-                    + d\times\cos(\alpha) \right)\overrightarrow{e_x} 
-                    + \left( ut\sin(\alpha+\theta) - d*\sin(\alpha) \right)\overrightarrow{e_y} }
-                $$
-            </p>
-            
-            <p>
-                On note \(t_1\) l’instant de l’impact entre la torpille et le navire. À cet instant 
-                les points \(N\) et \(T\) sont confondus. 
-                On a&nbsp;:</br>
-                $$ 
-                \left\{ 
-                    \begin{eqnarray} 
-                        v{t}_{1} & = & -u{t}_{1}\times\cos(\alpha+\theta)+d\times\cos(\alpha)\\
-                        0 & = & ut_{ 1 }\times\sin  (\alpha +\theta )-d\times \sin  (\alpha )
-                    \end{eqnarray} 
-                \right.
-                $$
-                L’instant de l’impact est donc&nbsp;:</br>
-                $$
-                    t_1 = \frac { d\times \sin  (\alpha ) }{ u\times \sin  (\alpha +\theta ) }
-                $$
-            </p>
-            
-            <p>
-                En insérant ce résultat dans la première équation, il vient&nbsp;:</br>
-                $$ \begin{align}
-                    vt _1 & = -ut_1\times\cos(\alpha+\theta) + d\times\cos(\alpha) \\
-                    v\frac{d\times \sin(\alpha)}{u\times\sin(\alpha +\theta)} & = 
-                        -u\frac { d\times \sin  (\alpha ) }{ u\times \sin  (\alpha +\theta ) }
-                                                  \times\cos(\alpha+\theta) + d\times\cos(\alpha) \\
-                    \frac{v}{u}\times\sin(\alpha ) & = - sin(\alpha)\times\cos(\alpha+\theta)
-                                                         + \cos(\alpha)\times\sin(\alpha +\theta) \\
-                    \frac{v}{u}\times\sin(\alpha ) & = - sin(\alpha) \times 
-                            \left( \cos(\alpha)\cos(\theta) - \sin(\alpha)\sin(\theta) \right) 
-                            + \cos(\alpha) \times \left( \sin(\alpha)\cos(\theta) 
-                            + \cos(\alpha)\sin(\theta) \right) \\
-                    \frac{v}{u}\times\sin(\alpha ) & = - sin(\alpha)\cos(\alpha)\cos(\theta) 
-                        + \sin^2(\alpha)\sin(\theta)
-                        + \cos(\alpha)\sin(\alpha)\cos(\theta)
-                        + \cos^2(\alpha)\sin(\theta) \\
-                    \frac{v}{u}\times\sin(\alpha ) & = \sin(\theta)
-                                                      \left( \cos^2(\alpha) + \sin^2(\alpha) \right)
-                \end{align} $$
-                D’où l’angle de tir \(\theta\) pour couler le navire est tel que&nbsp;:</br>
-                $$ \boxed{    \sin(\theta) = \frac{v}{u}\times\sin(\alpha ) } $$
-            </p>
-            
-            <h3>Question 2</h3>
-
-            <p>
-                La vitesse de la torpille étant constante, le temps de parcours de la torpille est 
-                minimum si la distance est minimale.</br>
-                La distance est minimale quand le point d’impact (\(I\)) est à la verticale du point
-                \(S\).
-            </p>
-                
-            <p>
-                C’est-à-dire quand le triangle \(N(t=0)IS\) est rectangle (en \(I\)), ce qui 
-                donne&nbsp;:</br>
-                $$
-                \begin{align}
-                    & \alpha + \theta + \frac{\pi}{2} = \pi \\
-                    \Leftrightarrow & \alpha = \frac{\pi}{2} - \theta
-                \end{align}$$
-            </p>
-            
-            <p>
-                Ou encore, on peut considérer que dans ce cas, la composante selon 
-                \(\overrightarrow{e_x}\) de \(\overrightarrow{OT}\) doit rester constante, ce qui
-                donne&nbsp;:</br>
-                $$ \begin{align}
-                    & \frac{d}{dt}\left( -ut\cos(\alpha+\theta) + d\times\cos(\alpha) \right) = 0 \\
-                    \Leftrightarrow & -u\cos(\alpha+\theta) = 0  \\
-                    \Leftrightarrow & \alpha+\theta = \frac{\pi}{2} \\
-                    \Leftrightarrow & \alpha = \frac{\pi}{2} - \theta
-                \end{align} $$
-            </p>
-            <p>
-                Calculons alors l’angle de tir dans ce cas&nbsp;:</br>
-                $$ \begin{align}
-                    \sin(\theta) & = \frac{v}{u}\times\sin(\alpha )\\
-                    \sin(\theta) & = \frac{v}{u}\times\sin\left( \frac{\pi}{2} - \theta\right) \\
-                    \sin(\theta) & = \frac{v}{u}\times\left(\sin\left(\frac{\pi}{2}\right)
-                    \cos(\theta) - \cos\left( \frac{\pi}{2}\right)\sin(\theta) \right) \\
-                    \tan(\theta) & = \frac{v}{u}
-                \end{align} $$
-                Soit&nbsp;:</br>
-                $$
-                    \boxed{ \theta = \arctan\left(\frac{v}{u}\right) }
-                $$
-            </p>
+      <h2>Remarque</h2>
+      
+      <div>
+        La dérivation se fait donc par rapport au temps et au repère de référence.<br/>
+        Par contre, les vecteurs position, vitesse et accélération pourront être projetés dans un
+        autre repère, mobile ou non par rapport au repère \(R\), de façon à obtenir les expressions
+        les plus simples possibles.
+      </div>
+      
+      <h2>Propriétés</h2>
+      
+      <div>
+        Soit un point \(M\) mobile par rapport à un repère \(R\left(O,\overrightarrow{e_1},
+        \overrightarrow{e_2},\overrightarrow{e_3}\right)\).<br />
+        Soit \(\Gamma(M)\) la trajectoire de  \(M\) par rapport à \(R\).
+      </div>
+      
+      <div>
+        On définit&#x202f;:
+        <ul>
+          <li>une orientation de \(\Gamma(M)\)</li>
+          <li>une abscisse curviligne \(s\) à partir d’une origine arbitraire \(M_0\)</li>
+          <li>\(\vec{t}\) le vecteur unitaire tangent en \(M\) à \(\Gamma(M)\)</li>
+        </ul>
+        Le plan osculateur en \(M\) est la limite du plan 
+        \(\left(\vec{t_1},\vec{t_2}\right)\) lorsque \(s_2\) tend vers \(s_1\).
+      </div>
+      
+      <div>
+        On définit alors le repère de Frenet \(\left(M,\vec{t},\vec{n},\vec{z}\right)\) 
+        avec&#x202f;:
+        <ul>
+          <li>\(\vec{n}\) normale principale en \(M\) à \(\Gamma(M)\) appartenant au plan osculateur
+            et tel que \(\left(\vec{t}, \vec{n}\right)=\frac{\pi}{2}\)</li>
+          <li>\(\vec { z } =\vec { t } \wedge \vec { n }\)</li>
+        </ul>
+      </div>
+      
+      <div>
+        Les formules de Frenet s’écrivent alors&#x202f;:<br />
+        $$ 
+          \vec { t } = { \left. \frac{ d\overrightarrow{OM} } {ds} \right| }_{R}
+        $$
+        $$
+          \frac{\vec{n}}{\rho} = { \left. \frac{ d\vec{t} } {ds}  \right| }_{R}
+        $$
+        \(\rho\) est le rayon de courbure algébrique. Si \(C\) est le centre de courbure, on
+        a&#x202f;: \( \overrightarrow{MC} = \rho \vec{n}\).<br />
+        \(\rho\) est positif lorsque \(\vec{n}\) est dirigé vers la concavité de la 
+        trajectoire.
+      </div>
+      
+      <div>
+        L’expression du vecteur vitesse dans le repère de Frenet devient&#x202f;:
+        $$ \begin{align}
+          \overrightarrow { v_{ M/R }(t) } & = 
+          \left. \frac { d\overrightarrow { OM(t) }  }{ dt }  \right| _{ R } \\
+           & = \frac { d \overrightarrow{ O M } }{ ds } \cdot \frac{ ds }{ dt } \\
+           & = \dot { s } \vec { t } 
+        \end{align} $$
+        On en déduit que la vitesse d’un point est colinéaire à la tangente à sa trajectoire.
+      </div>
+      
+      <div>
+        L’expression du vecteur accélération dans le repère de Frenet devient&#x202f;:
+        $$ \begin{align}
+          \overrightarrow{ a_{M/R}(t) } & = 
+          \left. \frac {  d\overrightarrow { v_{M/R}(t) } }{ dt } \right| _{ R } \\
+          & = \frac { d \dot { s } \vec { t } }{ dt } \\
+          & = \ddot{s} \vec{t} + \dot{s} \frac{ d \vec{t} }{ dt } \\
+          & = \ddot{s} \vec{t} + \dot{s} \frac{ d \vec{t} }{ ds }  
+                                     \times \frac{ ds }{ dt } \\
+          & = \ddot{s} \vec{t} + \frac{\dot{s}^2}{\rho} \vec{n}
+        \end{align} $$
+        On en déduit que l’accélération d’un point appartient au plan osculateur et est dirigée vers
+        la concavité de sa trajectoire.
+      </div>
+      
+      <h1>Mouvements simples</h1>
+      
+      <h2>Mouvement rectiligne</h2>
+      
+      <div>
+        La trajectoire décrite est une droite.
+      </div>
+      
+      <h3>Mouvement rectiligne uniforme</h3>
+      
+      <div>
+        Le mouvement est dit rectiligne uniforme si le vecteur vitesse est constant.
+      </div>
+      
+      <h3>Mouvement rectiligne uniformément accéléré</h3>
+      
+      <div>
+        Le mouvement est dit rectiligne uniformément accéléré (on dit aussi rectiligne uniformément
+        varié) si le vecteur accélération est constant et que les vecteurs accélération et vitesse
+        sont colinéaires.
+      </div>
+      
+      <h2>Mouvement circulaire uniforme</h2>
+      
+      <div>
+        Le mouvement est dit circulaire uniforme si la trajectoire décrite est un cercle et que la
+        norme du vecteur vitesse est constante.
+      </div>
+      
+      <h1>Expression de la vitesse et de l’accélération</h1>
+      
+      <h2>Expression en coordonnées cartésiennes</h2>
+      
+      <h3>Position</h3>
+      
+      <div>
+        Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
+        façon suivante&#x202f;:</br>
+        $$ 
+          \overrightarrow{ OM } = x\overrightarrow{ e_x } + y\overrightarrow{ e_y } 
+                      + z\overrightarrow{ e_z }
+        $$
+      </div>
+      
+      <h3>Vitesse</h3>
+      
+      <div>
+        La vitesse du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+           \overrightarrow{v_{M/R}(t)} & = 
+                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{ R } \\
+          & = { \left. \frac{d}{dt}
+              \left( 
+                x\overrightarrow{e_x} +y\overrightarrow{e_y} +z\overrightarrow{e_z}
+              \right)\right| }_{ R } \\
           
-            </div>
+          & = \frac{dx}{dt}\overrightarrow{e_x} 
+            + x {\left.\frac{d\overrightarrow{e_x}}{dt}\right|}_{R}
+            +\frac{dy}{dt}\overrightarrow{e_y} 
+            + y {\left.\frac{d\overrightarrow{e_y}}{dt}\right|}_{R}
+            +\frac{dz}{dt}\overrightarrow{e_z} 
+            + z {\left.\frac{d\overrightarrow{e_z}}{dt}\right|}_{R}
+        \end{align} $$
+        
+        $$ \boxed{ 
+          \overrightarrow{v_{M/R}(t)} = \dot{x}\overrightarrow{ e_x }
+                        + \dot{y}\overrightarrow{ e_y } 
+                        + \dot{z}\overrightarrow{ e_z } 
+        } $$
+      </div>
+      
+      <h3>Accélération</h3>
+      
+      <div>
+        L’accélération du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+          \overrightarrow { a_{M/R}(t) } & = 
+                 { \left. \frac{ d\overrightarrow{v_{M/R}}}{ dt } \right| }_{ R } \\
+          & = { \left. \frac{d}{dt} \left( 
+                            \dot{x}\overrightarrow{ e_x } 
+                          + \dot{y}\overrightarrow{ e_y } 
+                          + \dot{z}\overrightarrow{ e_z }
+                        \right) 
+            \right| }_{ R }
+        \end{align} $$
+        
+        $$ \boxed{ 
+          \overrightarrow { a_{M/R}(t) } =  \ddot{x}\overrightarrow{e_x} 
+                          + \ddot{y}\overrightarrow{e_y} 
+                          + \ddot{z}\overrightarrow{e_z} 
+        } $$
+      </div>
+      
+      <h2>Expression en coordonnées cylindriques</h2>
+      
+      <h3>Position</h3>
+      
+      <div>
+        Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
+        façon suivante&#x202f;:</br>
+        $$ 
+          \overrightarrow{ OM } = r\overrightarrow{ e_r } +  z\overrightarrow{ e_z }
+        $$
+      </div>
+      
+      <h3>Vitesse</h3>
+      
+      <div>
+        La vitesse du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+           \overrightarrow{v_{M/R}(t)} & = 
+                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{ R } \\
+          
+          & = {\left. \frac{d}{dt} \left(
+                          r\overrightarrow{ e_r } +  z\overrightarrow{ e_z } 
+                       \right)
+             \right|}_{ R }\\
+          
+          & = \frac{dr}{dt}\overrightarrow{ e_r } 
+          + r { \left. \frac{d\overrightarrow{ e_r }}{dt} \right| }_{ R } 
+          + \frac{dz}{dt}\overrightarrow{ e_z } 
+          + z { \left. \frac{d\overrightarrow{ e_z }}{dt} \right| }_{ R }
+        \end{align} $$  
+        
+        $$ \boxed{ 
+         \overrightarrow{v_{M/R}(t)} =  \dot{r}\overrightarrow{ e_r } 
+         + r\dot{\theta}\overrightarrow{ e_\theta } 
+         + \dot{z}\overrightarrow{ e_z }
+        }$$
+      </div>
+
+      <h3>Accélération</h3>
+      
+      <div>
+        L’accélération du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+          \overrightarrow { a_{M/R}(t) } & = 
+                { \left. \frac{ d\overrightarrow{ v_{M/R} } }{ dt } \right| }_{ R } \\
+          
+          & = { \left. \frac{d}{dt} \left( 
+                          \dot{r}\overrightarrow{ e_r } 
+                          + r\dot{\theta}\overrightarrow{ e_\theta } 
+                          + \dot{z}\overrightarrow{ e_z } 
+                        \right)
+              \right| }_{ R } \\
+          
+          & = \ddot{r}\overrightarrow{ e_r } 
+            + \dot{r} {\left. \frac{d\overrightarrow{ e_r }}{dt} \right|}_{R}
+            + \dot{r}\dot{\theta}\overrightarrow{ e_\theta } 
+            + r\ddot{\theta}\overrightarrow{ e_\theta } 
+            + r\dot{\theta} {\left. \frac{d\overrightarrow{ e_\theta }}{dt} \right|}_{R}
+            + \ddot{z}\overrightarrow{ e_z } 
+            + \dot{z} {\left. \frac{d\overrightarrow{ e_z }}{dt} \right|}_{R} \\
             
-            </section>
-    </body>
+          & = \ddot{r}\overrightarrow{ e_r } 
+            + \dot{r}\dot{\theta}\overrightarrow{ e_\theta }  
+            + \dot{r}\dot{\theta}\overrightarrow{ e_\theta } 
+            + r\ddot{\theta}\overrightarrow{ e_\theta }
+            - r\dot{\theta}\dot{\theta}\overrightarrow{ e_r }
+            + \ddot{z}\overrightarrow{ e_z }
+        \end{align} $$
+        
+        $$ \boxed{
+          \overrightarrow { a_{M/R}(t) } = 
+            \left( \ddot{r} - r\dot{\theta}^2  \right) \overrightarrow{e_r} 
+            + \left(2\dot{r}\dot{\theta}+r\ddot{\theta}\right) \overrightarrow{e_\theta} 
+            + \ddot{z}\overrightarrow{e_z} 
+        }$$
+      </div>
+      
+      <h2>Expression en coordonnées sphériques</h2>
+      
+      <h3>Position</h3>
+      
+      <div>
+        Dans ce système de cordonnée, le vecteur \( \overrightarrow{ OM } \) s’exprime de la
+        façon suivante&#x202f;:</br>
+        $$
+          \overrightarrow{ OM } = r\overrightarrow{ e_r }
+        $$
+      </div>
+      
+      <h3>Vitesse</h3>
+      
+      <div>
+        La vitesse du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+          \overrightarrow{v_{M/R}(t)} & = 
+                  { \left. \frac{ d \overrightarrow{ OM } }{ dt } \right| }_{R} \\
+          
+          & = { \left. \frac{d\left( r\overrightarrow{ e_r } \right)}{dt} \right| }_{R} \\
+          
+          & = \frac{dr}{dt}\overrightarrow{e_r} 
+            + r{ \left.\frac{d\overrightarrow{e_r}}{dt} \right| }_{R}
+        \end{align} $$  
+        $$\boxed{
+          \overrightarrow{v_{M/R}(t)} = \dot{r} \overrightarrow{e_r} 
+          + r\dot{\theta}\overrightarrow{e_\theta} 
+          + r\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
+        } $$
+      </div>
+
+      <h3>Accélération</h3>
+      
+      <div>
+        L’accélération du point \(M\) par rapport à \(R\) est&#x202f;:</br>
+        $$ \begin{align}
+          \overrightarrow{a_{M/R}(t)} & = 
+                      {\left.\frac{d\overrightarrow{v_{M/R}}}{dt}\right|}_{R}\\
+          
+          & = { \left. \frac{d}{dt} \left( 
+              \dot{r} \overrightarrow{e_r} 
+              + r\dot{\theta}\overrightarrow{e_\theta} 
+              + r\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
+            \right) \right| }_{ R } \\
+            
+          & = \ddot{r}\overrightarrow{e_r} 
+            + \dot{r}{\left.\frac{d\overrightarrow{e_r}}{dt}\right|}_{R}
+            + \dot{r}\dot{\theta}\overrightarrow{e_\theta} 
+            + r\ddot{\theta}\overrightarrow{e_\theta} 
+            + r\dot{\theta}{\left.\frac{d\overrightarrow{e_\theta} }{dt}\right|}_{R}
+            + \dot{r}\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
+            + r\dot{\theta}\cos(\theta)\dot{\varphi}\overrightarrow{e_\varphi} \\
+          & + r\sin(\theta)\ddot{\varphi}\overrightarrow{e_\varphi}
+            + r\sin(\theta)\dot{\varphi}{\left.\frac{d\overrightarrow{e_\varphi}}{dt}\right|}_{R} \\
+
+          & = \ddot{r}\overrightarrow{e_r}
+            + \dot{r}\left(\dot{\theta}\overrightarrow{ e_\theta } 
+                    + \dot{\varphi}\sin{\theta}\overrightarrow{ e_\varphi }\right)
+            + \dot{r}\dot{\theta}\overrightarrow{e_\theta} 
+            + r\ddot{\theta}\overrightarrow{e_\theta} 
+            + r\dot{\theta}\left(- \dot{\theta}\overrightarrow{ e_r } 
+                    + \dot{\varphi}\cos(\theta)\overrightarrow{ e_\varphi }\right) \\
+          & + \dot{r}\sin(\theta)\dot{\varphi}\overrightarrow{e_\varphi} 
+            + r\dot{\theta}\cos(\theta)\dot{\varphi}\overrightarrow{e_\varphi}
+            + r\sin(\theta)\ddot{\varphi}\overrightarrow{e_\varphi} \\
+          & + r\sin(\theta)\dot{\varphi}
+               \left(-\dot{\varphi}\sin(\theta)\overrightarrow{e_r} 
+                    -\dot{\varphi}\cos(\theta)\overrightarrow{ e_\theta }\right)
+        \end{align} $$
+      
+        $$ \boxed{ \begin{align}
+          \overrightarrow{a_{M/R}(t)} & =
+            \left(
+              \ddot{r}
+              - r\dot{\theta}^2
+              - r \sin^2(\theta)\dot{\varphi}^2
+            \right)
+            \overrightarrow{e_r} \\
+          & + \left(
+              2\dot{r}\dot{\theta}
+              + r\ddot{\theta} 
+              - r\dot{\varphi}^2\sin(\theta)\cos(\theta)
+            \right)
+            \overrightarrow{ e_\theta } \\
+          & + \left(
+              2\dot{r}\dot{\varphi}\sin(\theta) 
+              + 2r\dot{\theta}\dot{\varphi}\cos(\theta) 
+              + r\sin(\theta)\ddot{\varphi}
+            \right)
+            \overrightarrow{ e_\varphi } 
+        \end{align} } $$
+      </div>
+      
+      <h1>Changement de référentiel</h1>
+      
+      <div>
+        Considérons deux repères de l’espace&#x202f;:
+        <ul>
+          <li>un repère 
+            \(R =\left(O,\overrightarrow{e_1},\overrightarrow{e_2},\overrightarrow{e_3}\right)\)
+            où la position d’un point \(P\) est donnée par le vecteur \(\overrightarrow{OP} = 
+            x_1\overrightarrow{e_1} + x_2\overrightarrow{e_2} 
+            + x_3\overrightarrow{e_3}\)</li>
+          <li>un repère
+            \( R^{\prime} = \left( O^{\prime}, \overrightarrow{e^{\prime}_1},
+            \overrightarrow{e^{\prime}_2}, \overrightarrow{e^{\prime}_3} \right) \)
+            où la position du même point \(P\) est donnée par le vecteur
+            \(\overrightarrow{O^{\prime}P} = x^{\prime}_1\overrightarrow{e^{\prime}_1} 
+            + x^{\prime}_2\overrightarrow{e^{\prime}_2}
+            +x^{\prime}_3\overrightarrow{e^{\prime}_3}\).</li>
+        Considérons le repère \(R\) comme fixe et le repère \(R^{\prime}\) comme mobile. 
+      </div>
+      
+      <div>
+        Il faut préciser le sens de ce qui a été affirmé ci-dessus&#x202f;;: la distinction entre
+        repère fixe et mobile est arbitraire et conventionnelle, comme la relativité galiléenne nous
+        l’assure&#x202f;: on ne peut pas privilégier, en nature, aucun repère en le qualifiant de
+        <q>fixe</q>, voire, il n’existe rien en nature qu’on puisse considérer comme absolument
+        immobile, de telle sorte que tout autre mouvement soit mesuré par rapport à cet observateur.
+        Au contraire, chaque observateur peut être considéré comme conventionnellement immobile, et
+        ainsi faisant on évaluera les mouvements relatifs à cet observateur, sans jamais pouvoir les
+        qualifier de mouvements absolus. Souvent, on dit que Galilée a abattu le concept, lié à la 
+        cosmologie de Ptolémée, d’espace absolu, en introduisant le concept d’espace relatif.
+      </div>
+      
+      <div>
+        L’objet de l’étude est d’exprimer la vitesse et l’accélération du point \(P\) à partir de
+        ses coordonnées par rapport au référentiel mobile (coordonnées relatives) et du mouvement
+        d’entraînement du référentiel mobile.
+      </div>
+      
+      <h2>Composition des vitesses</h2>
+      
+      <div>
+        On appelle vitesse absolue du point \(P\), la vitesse du point \(P\) par rapport au 
+        référentiel fixe, c’est le vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{v_{abs}} = \overrightarrow{v_{P/R}}
+                       = { \left.\frac{d\overrightarrow{OP}}{dt} \right| }_{R}
+        $$
+        Or la relation de Chasles nous donne \( \overrightarrow{OP} = 
+        \overrightarrow{OO^{\prime}} + \overrightarrow{O^{\prime}P} \), d’où&#x202f;:</br>
+        $$
+          \overrightarrow{v_{P/R}} = { \left.\frac{d\overrightarrow{OP}}{dt} \right| }_{R}
+          = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R } 
+          + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R }
+        $$
+      </div>
+          
+      <h3>Formule de la base mobile</h3>
+      
+      <div>
+        Calculons la quantité \({\left.\frac{d\overrightarrow{O^{\prime}P}}{dt}\right|}_{R}\).</br>
+        $$ \begin{align}
+          { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R } 
+          & = { \left.\frac{d}{dt}\left( 
+                         x^{\prime}_1\overrightarrow{e^{\prime}_1}
+                        +x^{\prime}_2\overrightarrow{e^{\prime}_2}
+                        +x^{\prime}_3\overrightarrow{e^{\prime}_3}
+                       \right)
+              \right| }_{ R } \\
+          & = \dot{x^{\prime}_1}\overrightarrow{e^{\prime}_1} 
+            + x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt}\right|}_{R}
+            + \dot{x^{\prime}_2}\overrightarrow{e^{\prime}_2}
+            + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt}\right|}_{R}
+            + \dot{x^{\prime}_3}\overrightarrow{e^{\prime}_3} 
+            + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt}\right|}_{R}\\
+          & = { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
+           + x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt} \right| }_{ R }
+           + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt} \right| }_{ R }
+           + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt} \right| }_{ R }
+        \end{align} $$
+      </div>
+        
+      <div>
+        Il faut donc exprimer la dérivée temporelle des vecteurs \(e^{\prime}_i\) par 
+        rapport au référentiel \(R\).</br>
+        Considérons des variations élémentaires d’angle \(d\theta_i = \omega_{i}dt\) autour 
+        des axes \( \left(O^{\prime},\overrightarrow{e^{\prime}_i} \right) \).</br>
+        Le vecteur \(\overrightarrow{e^{\prime}_1}\) varie de 
+        \(d\overrightarrow{e^{\prime}_1} = d\theta_3\overrightarrow{e^{\prime}_2} 
+        - d\theta_2\overrightarrow{e^{\prime}_3} \).</br>
+        Le vecteur \(\overrightarrow{e^{\prime}_2}\) varie de 
+        \(d\overrightarrow{e^{\prime}_2} = d\theta_1\overrightarrow{e^{\prime}_3} 
+        - d\theta_3\overrightarrow{e^{\prime}_1} \).</br>
+        Le vecteur \(\overrightarrow{e^{\prime}_3}\) varie de 
+        \(d\overrightarrow{e^{\prime}_3} = d\theta_2\overrightarrow{e^{\prime}_1} 
+        - d\theta_1\overrightarrow{e^{\prime}_2} \).</br>
+        On a alors&#x202f;:</br>
+        $$ \begin{align}
+          x^{\prime}_1{\left.\frac{d\overrightarrow{e^{\prime}_1}}{dt} \right| }_{ R }
+          + x^{\prime}_2{\left.\frac{d\overrightarrow{e^{\prime}_2}}{dt} \right| }_{ R }
+          + x^{\prime}_3{\left.\frac{d\overrightarrow{e^{\prime}_3}}{dt} \right| }_{ R }
+          & = 
+            x^{\prime}_1 \left( \omega_{3}\overrightarrow{e^{\prime}_2} 
+                         - \omega_{2}\overrightarrow{e^{\prime}_3} \right)
+          + x^{\prime}_2 \left( \omega_{1}\overrightarrow{e^{\prime}_3}
+                         - \omega_{3}\overrightarrow{e^{\prime}_1} \right) \\
+          & \quad\quad + x^{\prime}_3 \left( \omega_{2}\overrightarrow{e^{\prime}_1} 
+                         - \omega_{1}\overrightarrow{e^{\prime}_2}\right) \\
+          & = 
+            \left( \omega_{2}x^{\prime}_3 
+            - \omega_{3}x^{\prime}_2 \right) \overrightarrow{e^{\prime}_1}
+            + \left( \omega_{3}x^{\prime}_1 
+            - \omega_{1}x^{\prime}_3 \right) \overrightarrow{e^{\prime}_2} \\
+           & \quad\quad + \left( \omega_{1}x^{\prime}_2 
+            - \omega_{2}x^{\prime}_1 \right) \overrightarrow{e^{\prime}_3} \\
+          & = 
+          { \left( \begin{matrix} \omega_1 \\ 
+                      \omega_2 \\ 
+                      \omega_3 \end{matrix} \right) }_{ R^{\prime} } 
+          \wedge 
+          { \left( \begin{matrix} x^{\prime}_1 \\ 
+                      x^{\prime}_2 \\ 
+                      x^{\prime}_3 \end{matrix} \right) }_{ R^{\prime} }
+        \end{align} $$
+      </div>
+
+      <div>
+        Le vecteur \( \overrightarrow{\Omega_{R^{\prime}/R}} = 
+        { \left( \begin{matrix} \omega_1 \\ \omega_2 \\ \omega_3 \end{matrix} \right) }
+        _{ R^{\prime} }\) est appelé vecteur instantané de rotation du repère \(R^{\prime}\)
+        par rapport au repère \(R\).
+      </div>
+      
+      <div>
+        On écrit alors la formule de la base mobile, aussi appelée formule de Bour&#x202f;:</br>
+        $$ \boxed{
+          { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R } = 
+          { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
+          + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} 
+        }$$
+      </div>
+
+      <div>
+        De manière générale, pour tout vecteur \(\overrightarrow{u}\) fixe dans 
+        \(R^{\prime}\) on a&#x202f;:</br>
+        $$ \boxed{
+          {\left.\frac{d\overrightarrow{u}}{dt} \right|}_{ R } = 
+                  \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{u}
+        } $$
+      </div>
+      
+      <h3>Première loi de la cinématique</h3>
+      
+      <div>
+        Reprenons le calcul de la vitesse du point \(P\) dans le référentiel \(R\).</br>
+        $$ \begin{align}
+          \overrightarrow{v_{P/R}} & = 
+                       { \left.\frac{d\overrightarrow{OP}}{dt} \right|}_{R} \\
+          & = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R } 
+                  + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{R}\\  
+          & = { \left.\frac{d\overrightarrow{OO^{\prime}}}{dt} \right| }_{ R }
+            + { \left.\frac{d\overrightarrow{O^{\prime}P}}{dt} \right| }_{ R^{\prime} }
+            + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P}
+        \end{align} $$
+        $$ \boxed{ 
+          \overrightarrow{v_{P/R}} =  \overrightarrow{v_{P/R^{\prime}}} 
+          + \overrightarrow{v_{O^{\prime}/R}}
+          + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} }
+        $$
+        
+      </div>
+      
+      <div>
+        On appelle vitesse relative la vitesse du point \(P\) par rapport au repère 
+        \(R^{\prime}\), c’est le vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{v_{rel}} = \overrightarrow{v_{P/R^{\prime}}}
+        $$
+      </div>
+      
+      <div>
+        On appelle vitesse d’entraînement la vitesse du point \(P\) par rapport au repère 
+        \(R\) considéré comme fixe dans le repère \(R^{\prime}\), c’est le 
+        vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{v_{ent}} = \overrightarrow{v_{O^{\prime}/R}} 
+          + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P}
+        $$
+      </div>
+      
+      
+      <h2>Composition des accélérations</h2>
+      
+      <div>
+        On appelle accélération absolue du point \(P\), l’accélération du point \(P\) par 
+        rapport au référentiel fixe, c’est le vecteur&#x202f;:</br>
+        $$ \begin{align}
+          \overrightarrow{a_{abs}} = \overrightarrow{a_{P/R}} & = 
+                     { \left.\frac{d\overrightarrow{v_{P/R}}}{dt} \right| }_{R} \\
+          & = { \left.\frac{d{}}{dt} \left( 
+              \overrightarrow{v_{P/R^{\prime}}} 
+            + \overrightarrow{v_{O^{\prime}/R}}
+            + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge \overrightarrow{O^{\prime}P} 
+                         \right) 
+              \right| }_{R}
+        \end{align} $$
+      </div>
+      
+      <div>
+        Calculons chacun des termes séparément.
+        $$ \begin{align}
+          {\left.\frac{d{\overrightarrow{v_{P/R^{\prime}}}}}{dt}\right|}_{R} & = 
+          {\left.\frac{d{\overrightarrow{v_{P/R^{\prime}}}}}{dt}\right|}_{R^{\prime}}
+          + \overrightarrow{\Omega_{R^{\prime}/R}}
+                               \wedge\overrightarrow{v_{P/R^{\prime}}}\\
+          & = \overrightarrow{a_{P/R^{\prime}}} + \overrightarrow{\Omega_{R^{\prime}/R}} 
+                              \wedge \overrightarrow{v_{P/R^{\prime}}}
+        \end{align} $$
+
+        $$
+          { \left. \frac{d{ \overrightarrow{v_{O^{\prime}/R}} }}{dt} \right| }_{R} = 
+                                   \overrightarrow{a_{O^{\prime}/R}}
+        $$
+
+        $$ \begin{align}
+          { \left. \frac{d{ }}{dt} \left( \overrightarrow{\Omega_{R^{\prime}/R}} 
+                     \wedge \overrightarrow{O^{\prime}P} \right) \right| }_{R} & = 
+          { \left. \frac{d{ \overrightarrow{\Omega_{R^{\prime}/R}} }}{dt}  \right| }_{R} 
+                     \wedge \overrightarrow{O^{\prime}P}
+          + \overrightarrow{\Omega_{R^{\prime}/R}}
+                \wedge {\left.\frac{d{\overrightarrow{O^{\prime}P}}}{dt}\right|}_{R}\\
+            
+          & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
+                                 \wedge \overrightarrow{O^{\prime}P}
+          + \overrightarrow{\Omega_{R^{\prime}/R}} \wedge 
+            \left(
+              {\left.\frac{d\overrightarrow{O^{\prime}P}}{dt}\right|}_{ R^{\prime}}
+              + \overrightarrow{\Omega_{R^{\prime}/R}} 
+                                 \wedge \overrightarrow{O^{\prime}P}  
+            \right) \\  
+            
+          & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt} \right|}_{R}
+                                 \wedge \overrightarrow{O^{\prime}P}
+          + \overrightarrow{\Omega_{R^{\prime}/R}} 
+            \wedge {\left.\frac{d\overrightarrow{O^{\prime}P}}{dt}\right|}_{ R^{\prime}}
+          + \overrightarrow{\Omega_{R^{\prime}/R}} 
+            \wedge \overrightarrow{\Omega_{R^{\prime}/R}} 
+            \wedge \overrightarrow{O^{\prime}P} \\
+          
+          & = {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
+            \wedge \overrightarrow{O^{\prime}P}
+          + \overrightarrow{\Omega_{R^{\prime}/R}}\wedge \overrightarrow{v_{P/R^{\prime}}} 
+          + \overrightarrow{\Omega_{R^{\prime}/R}} 
+            \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
+            \wedge \overrightarrow{O^{\prime}P}
+        \end{align} $$
+      </div>
+      
+      <div>
+        D’où finalement&#x202f;:</br>
+        $$
+          \overrightarrow{a_{abs}} = \overrightarrow{a_{P/R^{\prime}}}
+            + \overrightarrow{a_{O^{\prime}/R}} 
+            + {\left.\frac{d{\overrightarrow{\Omega_{R^{\prime}/R}}}}{dt}\right|}_{R} 
+                                 \wedge \overrightarrow{O^{\prime}P}
+            + \overrightarrow{\Omega_{R^{\prime}/R}} 
+                \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
+                \wedge \overrightarrow{O^{\prime}P}
+            + 2 \times \overrightarrow{\Omega_{R^{\prime}/R}} 
+                \wedge \overrightarrow{v_{P/R^{\prime}}}
+        $$
+      </div>
+      
+      <div>
+        On appelle accélération relative l’accélération du point \(P\) par rapport au repère
+        \(R^{\prime}\). C’est le vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{a_{rel}} = \overrightarrow{a_{P/R^{\prime}}}
+        $$
+      </div>
+      
+      <div>
+        On appelle accélération d’entrainement l’accélération d’un point \(P^{\prime}\) 
+        immobile dans \(R^{\prime}\) coïncidant avec le point \(P\) à l’instant \(t\). C’est
+        le vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{a_{ent}} = \overrightarrow{a_{O^{\prime}/R}} 
+          + { \left. \frac{d{ \overrightarrow{\Omega_{R^{\prime}/R}} }}{dt}  \right| }_{R} 
+            \wedge \overrightarrow{O^{\prime}P}
+          + \overrightarrow{\Omega_{R^{\prime}/R}} 
+            \wedge \overrightarrow{\Omega_{R^{\prime}/R}}
+            \wedge \overrightarrow{O^{\prime}P}
+        $$
+      </div>
+      
+      <div>
+        On appelle accélération de Coriolis le vecteur&#x202f;:</br>
+        $$
+          \overrightarrow{a_{cor}} = 2 \times \overrightarrow{\Omega_{R^{\prime}/R}} 
+                              \wedge \overrightarrow{v_{P/R^{\prime}}}
+        $$
+      </div>
+
+      </section>
+  </body>
 </html>
