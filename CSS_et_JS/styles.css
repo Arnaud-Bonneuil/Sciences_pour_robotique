@@ -121,7 +121,7 @@ h4:before {
 /**************************************************************************************************\ 
 Paragraphes
 \**************************************************************************************************/
-div:not(#application_document, #titre_document){
+div:not(#application_document, #titre_document, .MathJax_Display){
   font-family: "Times New Roman", serif; 
   font-size: 12pt;
   text-align: justify;
@@ -130,7 +130,6 @@ div:not(#application_document, #titre_document){
   margin-left: var(--marge-gauche);
   margin-right: var(--marge-droite);
 }
-
 
 /* Idem div*/
 ul{
