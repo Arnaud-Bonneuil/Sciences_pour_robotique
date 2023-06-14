@@ -48,5 +48,6 @@ Pour les énumérations avec sous-termes \&#x202f;:\<br />
 * « : alt + 0171 
 * » : alt + 0187
 * ’ : alt + 0146
+* … : alt + 0133
 
-Pour le reste voir https://fr.wikipedia.org/wiki/Combinaisons_de_touche_Alt
+Pour le reste, voir : https://fr.wikipedia.org/wiki/Combinaisons_de_touche_Alt
